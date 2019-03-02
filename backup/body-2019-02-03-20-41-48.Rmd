@@ -1,0 +1,46 @@
+# About the Author {-}
+
+Frida Gomam is a famous lady. Police will always let her go.
+\mainmatter
+
+# Introduction
+
+Now unplug your Internet cable, and start doing some serious work.
+
+We have a nice figure in Figure \@ref(fig:hello), and also a table in Table \@ref(tab:iris).
+
+```{r hello, fig.cap='A figure.'}
+par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19)
+```
+
+```{r iris}
+knitr::kable(
+  head(iris), caption = 'The boring iris data.',
+  booktabs = TRUE
+)
+```
+
+More chapters to come in `02-foo.Rmd`, `03-bar`.Rmd, ...
+# The FOO Method
+
+We talk about the _FOO_ method\index{FOO} in this chapter.
+
+\cleardoublepage 
+
+# (APPENDIX) Appendix {-}
+
+# More to Say
+
+Yeah! I have finished my book, but I have more to say about some topics. Let me explain them in this appendix.
+
+To know more about **bookdown**, see https://bookdown.org.
+`r if (knitr:::is_html_output()) '# References {-}'`
+
+```{r include=FALSE}
+# generate a BibTeX database automatically for some R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+

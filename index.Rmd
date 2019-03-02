@@ -1,0 +1,194 @@
+--- 
+title: "R NA PRÁTICA: Estatística Descomplicada com R"
+author: "José Evandeilton lopes"
+date: "`r Sys.Date()`"
+documentclass: style/krantz
+bibliography: [bib/articles.bib, bib/book.bib, bib/packages.bib]
+biblio-style: apalike
+link-citations: yes
+colorlinks: no
+lot: yes
+lof: yes
+site: bookdown::bookdown_site
+description: "A book example for a Chapman & Hall book."
+github-repo: evandeilton/rnpbook
+fontsize: 12pt                    #edit JEL
+monofont: "Source Code Pro"       #edit JEL 'Sans'
+monofontoptions: "Scale=0.7"      #edit JEL
+#cover-image: images/cover.jpg
+output:
+  bookdown::pdf_book:
+    includes:
+      in_header: tex/preamble_yihui_crc.tex
+      before_body: tex/before_body_yihui_crc.tex
+      after_body: tex/after_body_yihui_crc.tex
+    keep_tex: yes
+    dev: "cairo_pdf"
+    #latex_engine: xelatex
+    citation_package: natbib
+    template: null
+    pandoc_args: --top-level-division=chapter
+    toc_depth: 3
+    toc_unnumbered: no
+    toc_appendix: yes
+    quote_footer: ["\\VA{", "}{}"]
+---
+
+```{r setup, include=FALSE}
+options(
+  htmltools.dir.version = FALSE,
+  formatR.indent = 2,
+  width = 55,
+  digits = 4,
+  # edit: JEL
+  scipen = 99999
+)
+
+# instalar pacotes CRAN
+pacotes <- c("tidyverse","lubridate", "magrittr","broom","stringr",
+             "plotly","ggplot2","data.table","citr","DT",
+             "formatR", "svglite","tufte","kableExtra","ggmosaic")
+lapply(pacotes, function(pkg) {
+  if (system.file(package = pkg) == '') install.packages(pkg)
+})
+lapply(pacotes, function(pkg) {require(pkg, character.only = TRUE, warn.conflicts = TRUE)})
+
+# Instalar rnp
+if(!require(rnp)){
+  devtools::install_github("evandeilton/rnp")
+}
+
+options(digits = 4, scipen = 99999,
+        htmltools.dir.version = FALSE, formatR.indent = 2,
+        width = 55, digits = 4, warnPartialMatchAttr = FALSE, 
+        warnPartialMatchDollar = FALSE,
+        htmltools.dir.version = FALSE
+        )
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(tidy = FALSE, 
+                      cache.extra = packageVersion('tufte'),
+                      fig.align = 'center',
+                      external = TRUE,
+                      echo = TRUE,
+                      warning = FALSE,
+                      fig.pos = 'H'
+                      #fig.width = 8 , fig.height=8
+                      )
+  a4width <- 8.3
+  a4height <- 11.7
+
+knitr::opts_chunk$set(fig.width=12, fig.height=8) 
+knitr::opts_knit$get('rmarkdown.pandoc.to')
+
+# Configura a formatção das tabelas em 
+tb_formata   <- if(knitr::is_html_output()) "pandoc" else "latex"
+tipo_grafico <- if(knitr::is_html_output()) "plotly" else "ggplot"
+
+#tb_formata <- getOption("kableExtra.auto_format", default = TRUE)
+#  if (tb_formata) auto_set_format()
+```
+
+# Introdução {-}
+
+Bem vindo ao módulo I de Estatística descomplicada com o R NA PRÁTICA. Este é o primeiro módulo desta série de quatro módulos e contem pará os principais conceitos estatísticos até análise descritiva. O objetivo maior desta parte é revisar os conceitos mais importantes do inicio dos estudos estatísticos. Abordaremos a parte conceitual com algumas definições e termos estatísticos, tabelas de frequências, bem como as principais medidas descritivas (média, mediana e outras). Veremos por fim, os principais gráficos estatísticos mais utilizados. Para reforçar os conhecimentos, faremos muitos exercícios práticos com apoio do R com foco em bases de dados reais do [INEP](http://portal.inep.gov.br/web/guest/dados) - Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira do ano de 2017.
+
+No final deste módulo você será capaz de:
+
+  - Definir estatística;
+  - Compreender os principais tipos de variáveis;
+  - Entender o que é e como utilizar tabelas de frequências;
+  - Trabalhar com as principais medidas estatísticas (media, mediana, desvio padrão, etc.);
+  - Entender correlação e covariância;
+  - Construir gráficos estatísticos para os tipos corretas de dados.
+
+## Motivação {-}
+
+A Estatística está em tudo! É atribuída a [H.G. Wells](https://www.sciencedirect.com/science/article/pii/0315086079901010) a seguinte frase:
+
+> "Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write. --- H.G. Wells"
+
+Que em português se traduz em algo como:
+
+> "O conhecimento estatístico um dia será tão necessário para uma cidadania eficiente quanto a habilidade de ler e escrever."
+
+Veja alguns exemplos de onde a estatística pode ser aplicada:
+
+ - **Na sua lista de compras:** Sim, é importante medir as diferenças de preços dos produtos e o percentual de seu salário gasto com alimentos pra não ficar sem grana por aluguel;
+ 
+ - **Na previsão do tempo:** Sair sem guarda-chuva ou de bicicleta num dia de chuva, nem pensar. Mas você não saberia o que fazer pela manhã se observasse o dia claro e sem sinais de chuva. Somente uma previsão estatística confiável seria capaz de te ajudar a decidir antecipadamente;
+ 
+ - **Na pesquisa científica:** Toda pesquisa científica usa estatística. Se não utilizar é porque não é científica mas sim, especulativa;
+ 
+ - **Em seguros:** Seguros de vida, de veículos, de saúde, dental, daquele [bumbum siliconado](https://www.moneytips.com/how-much-is-my-butt-worth). Tudo envolve estatística. É através dela que os estatísticos constroem os melhores modelos com base em variáveis históricas e nas segmentações de perfis de cada grupo de indivíduos;
+ 
+ - **Em pesquisas médicas:** Controle de epidemias, vacinas, taxas de sobrevida, taxas de recuperação de tecidos e ossos, regressão de doenças infecciosas, testes de grupos de risco e uma infinidade de situações utilizam estatística para prever, aumentar e melhorar processos que trazem ganho para a saúde e vida das pessoas;
+ 
+ - **Em testes de qualidade:** A estatística bate forte na hora de uma empresa obter uma certificação ISO. Seja no controle estatístico de processos, gráficos de controle e/ou gestão da qualidade, sem esta ciência estes nichos não teriam os mesmos resultados;
+ 
+ - **No monitoramento de ataques de vírus:** A empresa Kaspesrki por exemplo, coleta dados globais de vírus e sintetiza em um mapa do globo virtual denominado [cybermap](https://cybermap.kaspersky.com/pt). Através dele o usuário pode navegar e obter estatísticas relevantes sobre atividades de vírus nos países pelo mundo.
+ 
+ - **No IDH e expectativa de vida:** O IDH (Índice de Desenvolvimento Humano) de um país é um bom indicador de desenvolvimento do mesmo. Não tem como calcular IDH sem modelos estatísticos.
+
+## Prerequisitos {-}
+
+Para fazer o melhor proveito deste material, temos as seguintes recomendações:
+
+  * Tenha um computador com acesso á internet para poder assistir aos vídeos, fazer pesquisa e download dos materiais do curso;
+  * Dedique pelo menos 2 horas da sua semana para ler o material e resolver os exercícios propostos;
+  * Sempre que alguma dúvida surgir e não conseguir resolver com ajuda do material, contatar o professor via plataforma para obter suporte adicional;
+  * Algum conhecimento prévio da linguagem R ou lógica de programação.
+  
+## Ambiente de trabalho {-}
+
+Este curso não tem a intenção de ensinar detalhadamente programação em R, pois o foco é em estatística. Contudo, sempre que necessário explicaremos algumas funções e comandos utilizados nos scripts. Além disso, para todos os exemplos e exercícios, deixaremos os códigos gerados como forma de estudo e revisão para que tudo possa ser replicado pelo aluno.
+
+Se você sentir dificuldade em compreender algum conceito em linguagem R, recomendamos fazer o nosso curso [R NA PRÁTICA: Data Wrangling com R para Ciência de Dados](https://www.udemy.com/r-na-pratica-ciencia-de-dados/learn/v4/overview) ou qualquer outro do seu interesse para obter mais conhecimentos dobre a linguagem R.
+
+### Pacotes{-}
+
+Trabalharemos sempre que possível com o operador ` %>% (pipe)` e com funções dos pacotes do [`tidyverse`](https://www.tidyverse.org/) e outros relacionados. 
+
+Trabalharemos com o [software R](https://cloud.r-project.org/) e com a IDE (Ambiente de Desenvolvimento Integrado, traduzindo do inglês) de desenvolvimento em R [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/#download). Nos links você poderá baixar os dois programas e configurar de acordo com o seu sistema operacional.
+
+Especialmente para o R NA PRÁTICA, desenvolvemos o pacote `rnp` que poderá ser baixado direto to `github`. Este pacote possui recursos deste livro e também de outros materiais do R NA PRÁTICA.
+Rode o comando abaixo para instalar, caso ainda não tenha o pacote.
+
+```{r, message=FALSE}
+require(devtools, quietly = TRUE)
+if(!require("rnp")) {
+ devtools::install_github("evandeilton/rnp") 
+}
+```
+
+Não nos restringimos apenas a este, remendamos caso ainda não tenha, instalar os pacotes listados a seguir:
+
+```{r, echo=TRUE, eval=FALSE}
+pacotes <- c("tidyverse","lubridate", "magrittr","broom",
+             "stringr", "plotly", "ggplot2","data.table")
+for(i in pacotes){
+  if(!require(package = i, character.only = TRUE)){
+    install.packages(i, dependencies = TRUE)
+  }
+}
+```
+
+### Conjuntos de dados {-}
+
+Trabalharemos com conjuntos de dados do Censo do Ensino Superior no Brasil feito anualmente pelo [INEP (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira)](www.inep.gov.br/), especificamente para o ano de 2017. Os dados podem ser baixados diretamente na seção de microdados do site neste link [Censo da Educação Superior de 2017](http://portal.inep.gov.br/microdados), ou se preferir, baixar diretamente com o comando abaixo. Em seguinda descompactar os dados utilizando seu descompactador favorito.
+
+```{r, eval=FALSE}
+# Informa o ano dos dados e o local completo de onde deseja salvar os dados
+# conforme exemplos abaixo. Recomendamos criar uma pasta para salvar os
+# dados e tornar mais acessíveis nas aulas.
+rnp::rnp_get_inep_censo(ano = 2017, salvar = "Dados/INEP/")
+```
+
+Você poderá também ler os dados sem decompactar com o pacote `readr`, mas recomendamos descompartar para leitura mais rápida com `data.table`.
+
+```{r, eval=FALSE}
+base_curso <- readr::read_delim("Dados/INEP/DADOS/DM_CURSO.zip", 
+                        delim = "|", locale = locale(encoding = "Latin1"))
+```
+
+---
+

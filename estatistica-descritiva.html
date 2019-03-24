@@ -22,10 +22,9 @@
   <meta name="twitter:description" content="Capítulo - 2 Estatística descritiva | R NA PRÁTICA: Estatística Descomplicada com R" />
   
 
-<meta name="author" content="José Evandeilton lopes">
+<meta name="author" content="José Evandeilton Lopes">
 
 
-<meta name="date" content="2019-03-23">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -534,7 +533,7 @@ kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span 
 <p>A tabela <a href="estatistica-descritiva.html#tab:tab05">2.3</a> exemplifica a utilização da tabela de frequências gerada para as variáveis <code>escolaridade</code> e <code>sexo</code> do docente. A primeira coluna da tabela representa o tipo de estatística e a visão que ela foi calculada. Por exemplo, a frequência absoluta de doutores em relação ao total da base é <span class="math inline">\(f_{a(total)} = 160.827\)</span> que equivale à relativa <span class="math inline">\(f_{r(total)} = \frac{160.827}{392.036} = 0.410\)</span>.</p>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-33" class="exercise"><strong>Exercício 2.1  </strong></span>Qual a frequência relativa docentes doutores do sexo feminino?
+<span id="exr:unnamed-chunk-31" class="exercise"><strong>Exercício 2.1  </strong></span>Qual a frequência relativa docentes doutores do sexo feminino?
 </div>
 
 
@@ -545,7 +544,7 @@ kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span 
 <br />
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-35" class="exercise"><strong>Exercício 2.2  </strong></span>Qual a frequência relativa docentes feminino que são doutores?
+<span id="exr:unnamed-chunk-33" class="exercise"><strong>Exercício 2.2  </strong></span>Qual a frequência relativa docentes feminino que são doutores?
 </div>
 
 
@@ -656,7 +655,7 @@ dplyr<span class="op">::</span><span class="kw">glimpse</span>(base_curso[,<span
 ## $ CO_OCDE_AREA_DETALHADA  &lt;int&gt; 146, 345, 380, 522, …</code></pre>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-38" class="exercise"><strong>Exercício 2.3  </strong></span>Faça uma análise de frequências da variável <code>DESC_TP_CATEGORIA_ADMINISTRATIVA</code> e responda qual a taxa de cursos por IES tipo pública.
+<span id="exr:unnamed-chunk-36" class="exercise"><strong>Exercício 2.3  </strong></span>Faça uma análise de frequências da variável <code>DESC_TP_CATEGORIA_ADMINISTRATIVA</code> e responda qual a taxa de cursos por IES tipo pública.
 </div>
 
 
@@ -669,7 +668,7 @@ dplyr<span class="op">::</span><span class="kw">glimpse</span>(base_curso[,<span
                <span class="dt">caption =</span> <span class="st">&quot;ex: Frequências para categoria administrativa (cursos)&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-40">Tabela 2.4: </span>ex: Frequências para categoria administrativa (cursos)</caption>
+<caption><span id="tab:unnamed-chunk-38">Tabela 2.4: </span>ex: Frequências para categoria administrativa (cursos)</caption>
 <thead>
 <tr class="header">
 <th align="left">classe</th>
@@ -726,7 +725,7 @@ dplyr<span class="op">::</span><span class="kw">glimpse</span>(base_curso[,<span
 </table>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-41" class="exercise"><strong>Exercício 2.4  </strong></span>Represente graficamente a variável <code>DESC_TP_CATEGORIA_ADMINISTRATIVA</code> e interprete quais as categorias de maior e menor influência.
+<span id="exr:unnamed-chunk-39" class="exercise"><strong>Exercício 2.4  </strong></span>Represente graficamente a variável <code>DESC_TP_CATEGORIA_ADMINISTRATIVA</code> e interprete quais as categorias de maior e menor influência.
 </div>
 
 
@@ -745,10 +744,10 @@ p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="ot">NULL</span>, <span class="dt">y =</span> <span class="ot">NULL</span>, <span class="dt">fill =</span> <span class="ot">NULL</span>, <span class="dt">title =</span> <span class="st">&quot;&quot;</span>) <span class="op">+</span>
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme_gray</span>() <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>() <span class="op">+</span>
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme</span>(<span class="dt">axis.line =</span> <span class="kw">element_blank</span>())</code></pre></div>
-<p><img src="ebookrnp_files/figure-html/unnamed-chunk-43-1.png" width="480" style="display: block; margin: auto;" /> As categorias privada com e sem fins lucrativos representam 70,1% dos dados, sendo as mais representativas. Públicas municipais são minoria (1,4%) e especial apenas (0.2%). Acho que políticas públicas para aumentar a participação de cursos especiais devem ser melhoradas.</p>
+<p><img src="ebookrnp_files/figure-html/unnamed-chunk-41-1.png" width="480" style="display: block; margin: auto;" /> As categorias privada com e sem fins lucrativos representam 70,1% dos dados, sendo as mais representativas. Públicas municipais são minoria (1,4%) e especial apenas (0.2%). Acho que políticas públicas para aumentar a participação de cursos especiais devem ser melhoradas.</p>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-44" class="exercise"><strong>Exercício 2.5  </strong></span>Olhando para a variável <code>DESC_TP_GRAU_ACADEMICO</code> responda quais as categorias de maior e menor ocorrências de cursos. Desconsidere a categoria missing.
+<span id="exr:unnamed-chunk-42" class="exercise"><strong>Exercício 2.5  </strong></span>Olhando para a variável <code>DESC_TP_GRAU_ACADEMICO</code> responda quais as categorias de maior e menor ocorrências de cursos. Desconsidere a categoria missing.
 </div>
 
 
@@ -772,21 +771,21 @@ GrauAcad &lt;-<span class="st"> </span>base_curso <span class="op">%&gt;%</span>
 <span class="st">  ggplot2::labs(x = NULL, y = NULL, fill = NULL, title = &quot;&quot;) +</span>
 <span class="st">  ggplot2::theme_gray() + coord_flip() +</span>
 <span class="st">  ggplot2::theme(axis.line = element_blank())</span></code></pre></div>
-<p><img src="ebookrnp_files/figure-html/unnamed-chunk-46-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p><img src="ebookrnp_files/figure-html/unnamed-chunk-44-1.png" width="480" style="display: block; margin: auto;" /></p>
 <p>Como o gráfico mostra, 59,6% dos cursos são de bacharelado frente a 20,6% de licenciatura. Estamos formando poucos professores?</p>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-47" class="exercise"><strong>Exercício 2.6  </strong></span>Represnete a variável <code>DESC_TP_GRAU_ACADEMICO</code> como um gráfico de barras e interprete os reusltados para cursos tecnologicos em relação aos cursos de licneciatura.
+<span id="exr:unnamed-chunk-45" class="exercise"><strong>Exercício 2.6  </strong></span>Represnete a variável <code>DESC_TP_GRAU_ACADEMICO</code> como um gráfico de barras e interprete os reusltados para cursos tecnologicos em relação aos cursos de licneciatura.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-48" class="exercise"><strong>Exercício 2.7  </strong></span>A variável DESC_TP_ORGANIZACAO_ACADEMICA descreve características do tipo de organização, estude esta variável graficamente.
+<span id="exr:unnamed-chunk-46" class="exercise"><strong>Exercício 2.7  </strong></span>A variável DESC_TP_ORGANIZACAO_ACADEMICA descreve características do tipo de organização, estude esta variável graficamente.
 </div>
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-49" class="exercise"><strong>Exercício 2.8  </strong></span>Analise conjuntamente as variáveis DESC_IN_POSSUI_LABORATORIO e DESC_TP_CATEGORIA_ADMINISTRATIVA para verificar a existência de laboratórios nos cursos públicos e privados.
+<span id="exr:unnamed-chunk-47" class="exercise"><strong>Exercício 2.8  </strong></span>Analise conjuntamente as variáveis DESC_IN_POSSUI_LABORATORIO e DESC_TP_CATEGORIA_ADMINISTRATIVA para verificar a existência de laboratórios nos cursos públicos e privados.
 </div>
 
 </div>
@@ -820,7 +819,7 @@ Figura 2.4: Na média, tudo bem
 </blockquote>
 
 <div class="example">
-<span id="exm:unnamed-chunk-51" class="example"><strong>Exemplo 2.1  </strong></span>Com base no conjunto de dados de IES, vamos calcular algumas médias.
+<span id="exm:unnamed-chunk-49" class="example"><strong>Exemplo 2.1  </strong></span>Com base no conjunto de dados de IES, vamos calcular algumas médias.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_ies <span class="op">%&gt;%</span><span class="st"> </span>
@@ -855,7 +854,7 @@ Figura 2.4: Na média, tudo bem
 </blockquote>
 
 <div class="example">
-<span id="exm:unnamed-chunk-52" class="example"><strong>Exemplo 2.2  </strong></span>Com base no conjunto de dados de IES, vamos calcular a média da receita própria ponderada pelo total de técnicos.
+<span id="exm:unnamed-chunk-50" class="example"><strong>Exemplo 2.2  </strong></span>Com base no conjunto de dados de IES, vamos calcular a média da receita própria ponderada pelo total de técnicos.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_ies <span class="op">%&gt;%</span><span class="st"> </span>
@@ -891,7 +890,7 @@ Figura 2.4: Na média, tudo bem
 </blockquote>
 
 <div class="example">
-<span id="exm:unnamed-chunk-53" class="example"><strong>Exemplo 2.3  </strong></span>No conjunto de dados <code>c(0, 1, 2, 3, 4, 5, 6)</code> qual é a mediana?
+<span id="exm:unnamed-chunk-51" class="example"><strong>Exemplo 2.3  </strong></span>No conjunto de dados <code>c(0, 1, 2, 3, 4, 5, 6)</code> qual é a mediana?
 </div>
 
 <p>Neste caso a mediana é 3, porque a amostra tem tamanho 7 e 3 é o elemento que separa os dados 50% / 50%. No R utilizamos a função <code>median()</code> para calcular a mediana.</p>
@@ -901,7 +900,7 @@ Figura 2.4: Na média, tudo bem
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># OBS: na.rm remove elementos nulos da amostra, quando existirem</span></code></pre></div>
 
 <div class="example">
-<span id="exm:unnamed-chunk-55" class="example"><strong>Exemplo 2.4  </strong></span>No conjunto de dados <code>c(2, 3, 4, 5, 6, 7)</code> qual é a mediana?
+<span id="exm:unnamed-chunk-53" class="example"><strong>Exemplo 2.4  </strong></span>No conjunto de dados <code>c(2, 3, 4, 5, 6, 7)</code> qual é a mediana?
 </div>
 
 <p>Neste caso a mediana é <span class="math inline">\(\frac{4 + 5}{2} = 4.5\)</span>, porque a amostra tem tamanho 6 e sendo que 4 e 5 são os elementos que estão no centro.</p>
@@ -967,7 +966,7 @@ Figura 2.4: Na média, tudo bem
 <p>Na tabela <a href="estatistica-descritiva.html#tab:tab08">2.7</a> vemos que a classe modal é a que contém idades entre 20 e 36 anos, pois ela representa 28,6% da amostra. Com base na classe modal, temos que <span class="math inline">\(M_o = \frac{36+20}{2} = 28\)</span> anos.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-57" class="example"><strong>Exemplo 2.5  </strong></span>Dadas as amostras genéricas <code>x = {2, 5, 3, 4, 4}, y = {5,5,7,7,6,1,2,1}, z = {9,1,7,8,4}</code> determine, quando existir e moda e sua classificação.
+<span id="exm:unnamed-chunk-55" class="example"><strong>Exemplo 2.5  </strong></span>Dadas as amostras genéricas <code>x = {2, 5, 3, 4, 4}, y = {5,5,7,7,6,1,2,1}, z = {9,1,7,8,4}</code> determine, quando existir e moda e sua classificação.
 </div>
 
 <p>Uma forma de verificar se um conjunto de dados possui moda é verificar se tem algum valor que se repete ao longo da amostra. Isso pode ser feito através das funções <code>table()</code> e <code>duplicated()</code>. Enquanto a primeira faz uma tabulação dos valores ou das classes, a segunda varre a variável buscando quem são os valores que ocorrem mais de uma veze retornando <code>TRUE</code>, caso algum se repita. Vejamos a solução.</p>
@@ -1000,7 +999,7 @@ Figura 2.5: Centralidade
 <p>Utilize a base de dados das IES para responder à questão a seguir.</p>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-59" class="exercise"><strong>Exercício 2.9  </strong></span>Interprete a média e mediana para as seguintes variáveis: QT_TEC_MEDIO_FEM, QT_TEC_MEDIO_MASC, QT_TEC_SUPERIOR_FEM e QT_TEC_SUPERIOR_MASC.
+<span id="exr:unnamed-chunk-57" class="exercise"><strong>Exercício 2.9  </strong></span>Interprete a média e mediana para as seguintes variáveis: QT_TEC_MEDIO_FEM, QT_TEC_MEDIO_MASC, QT_TEC_SUPERIOR_FEM e QT_TEC_SUPERIOR_MASC.
 </div>
 
 
@@ -1021,7 +1020,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(tb, <span class="dt
              <span class="dt">caption =</span> <span class="st">&quot;ex: Média e mediana técnicos (IES)&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-61">Tabela 2.8: </span>ex: Média e mediana técnicos (IES)</caption>
+<caption><span id="tab:unnamed-chunk-59">Tabela 2.8: </span>ex: Média e mediana técnicos (IES)</caption>
 <thead>
 <tr class="header">
 <th></th>
@@ -1078,7 +1077,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(tb, <span class="dt
 <p>Em R calculamos o desvio padrão de uma variável com a função <code>sd()</code> e a variância com a função <code>var()</code>.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-62" class="example"><strong>Exemplo 2.6  </strong></span>Calcule a média, desvio padrão e a variância da idade dos docentes das IES.
+<span id="exm:unnamed-chunk-60" class="example"><strong>Exemplo 2.6  </strong></span>Calcule a média, desvio padrão e a variância da idade dos docentes das IES.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_docentes <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1111,7 +1110,7 @@ Figura 2.6: Centralidade
 <p><span class="math display">\[R = X_{(n)} - X_{(1)} = Max(X) - Min(X)\]</span></p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-65" class="example"><strong>Exemplo 2.7  </strong></span>Qual a amplitude da idade dos docentes?
+<span id="exm:unnamed-chunk-63" class="example"><strong>Exemplo 2.7  </strong></span>Qual a amplitude da idade dos docentes?
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Ordenando os dados do menor para o maior</span>
@@ -1140,7 +1139,7 @@ R2 &lt;-<span class="st"> </span><span class="kw">max</span>(idade) <span class=
 </ul>
 
 <div class="example">
-<span id="exm:unnamed-chunk-67" class="example"><strong>Exemplo 2.8  </strong></span>Vamos determinar e interpretar o coefiente de variação da receita das IES em relação ao total de técnicos.
+<span id="exm:unnamed-chunk-65" class="example"><strong>Exemplo 2.8  </strong></span>Vamos determinar e interpretar o coefiente de variação da receita das IES em relação ao total de técnicos.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_ies <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1178,7 +1177,7 @@ R2 &lt;-<span class="st"> </span><span class="kw">max</span>(idade) <span class=
 <p>Junto com esta estatística surge também dois conceitos importantes que são os limites superiores <span class="math inline">\(LS\)</span> e inferiores <span class="math inline">\(LI\)</span> para decidir se determinado ponto é <strong>discrepante</strong> ou não. Uma dada medida é dita discrepante ou <em>outlier</em> quando ela está muito diferente da maioria das medidas realizadas. É demonstrado que no intervalo determinado por <span class="math inline">\(LI=Q_1-1.5 \times IQR\)</span> e <span class="math inline">\(LS=Q_3+1.5 \times IQR\)</span> temos 99% dos dados, assim qualquer valor que cair fora deste intervalo em geral, pode ser chamado de <em>outlier</em>.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-69" class="example"><strong>Exemplo 2.9  </strong></span>Vamos determinar se existe algum outlier no conjunto de dados das idades dos docentes das IES.
+<span id="exm:unnamed-chunk-67" class="example"><strong>Exemplo 2.9  </strong></span>Vamos determinar se existe algum outlier no conjunto de dados das idades dos docentes das IES.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_docentes <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1208,7 +1207,7 @@ R2 &lt;-<span class="st"> </span><span class="kw">max</span>(idade) <span class=
 <p>Ainda na base das IES, analise através de estatísticas de dispersão as questões a seguir.</p>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-71" class="exercise"><strong>Exercício 2.10  </strong></span>A despesa anual com docentes é representada pela variáve <code>VL_DESPESA_PESSOAL_DOCENTE</code>. Interprete estatísticas de dispersão para esta variável.
+<span id="exr:unnamed-chunk-69" class="exercise"><strong>Exercício 2.10  </strong></span>A despesa anual com docentes é representada pela variáve <code>VL_DESPESA_PESSOAL_DOCENTE</code>. Interprete estatísticas de dispersão para esta variável.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tb &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_summary</span>(base_ies<span class="op">$</span>VL_DESPESA_PESSOAL_DOCENTE)[<span class="op">-</span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)]
@@ -1216,7 +1215,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(<span class="kw">t<
              <span class="dt">caption =</span> <span class="st">&quot;ex: Média e mediana técnicos (IES)&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-72">Tabela 2.9: </span>ex: Média e mediana técnicos (IES)</caption>
+<caption><span id="tab:unnamed-chunk-70">Tabela 2.9: </span>ex: Média e mediana técnicos (IES)</caption>
 <thead>
 <tr class="header">
 <th align="right">Min</th>
@@ -1251,7 +1250,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(<span class="kw">t<
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-74" class="exercise"><strong>Exercício 2.11  </strong></span>Qual o top 10 IES com maior receita própria? Dica: Para resolver este problema, isolamos as variáveis <code>NO_IES</code> e <code>VL_RECEITA_PROPRIA</code> ordenada da maior para a menor.
+<span id="exr:unnamed-chunk-72" class="exercise"><strong>Exercício 2.11  </strong></span>Qual o top 10 IES com maior receita própria? Dica: Para resolver este problema, isolamos as variáveis <code>NO_IES</code> e <code>VL_RECEITA_PROPRIA</code> ordenada da maior para a menor.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_ies <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1290,7 +1289,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(<span class="kw">t<
 <p>Os histogramas são um tipo de gráfico de barras para variáveis numéricas e servem principalmente para analisar visualmente a centralidade e dispersão dos dados. No processo de construção do histograma, os dados são categorizados em classes e as frequências são contadas. No eixo horizontal geralmente são mostradas as classes e eixo vertical as frequências que podem ser absolutas ou relativas.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-76" class="example"><strong>Exemplo 2.10  </strong></span>Vamos criar um histograma para a variável idade dos docentes.
+<span id="exm:unnamed-chunk-74" class="example"><strong>Exemplo 2.10  </strong></span>Vamos criar um histograma para a variável idade dos docentes.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">ggplot</span>(base_docentes, <span class="kw">aes</span>(<span class="dt">x =</span> idade))
@@ -1315,7 +1314,7 @@ Figura 2.7: Histograma idade do docente
 <p>Gráficos de densidade possuem aplicação semelhante aos histogramas, porém são mais indicados pata amostras grandes. Ele evidenciam a melhor curva que representam os dados. Este tipo de gráfico nos ajuda também a verificar a distribuição de probabilidade aproximada que os dados podem seguir.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-77" class="example"><strong>Exemplo 2.11  </strong></span>Vamos criar agora um gráfico de densidade para a variável idade dos docentes.
+<span id="exm:unnamed-chunk-75" class="example"><strong>Exemplo 2.11  </strong></span>Vamos criar agora um gráfico de densidade para a variável idade dos docentes.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">ggplot</span>(base_docentes, <span class="kw">aes</span>(<span class="dt">x =</span> idade))
@@ -1346,7 +1345,7 @@ Figura 2.9: Definindo um Box-plot
 <p>A figura <a href="estatistica-descritiva.html#fig:fig10">2.9</a> ilustra os elementos que compõem um Box-plot. Perceba que visualmente ele contempla as estatísticas <span class="math inline">\(Q_1\)</span>, <span class="math inline">\(Q_2\)</span> (mediana), <span class="math inline">\(Q_3, IQR, LI,LS\)</span> e <em>outliers</em>. Com base nestas estatísticas, uma variável numéricas estará bem caracterizada.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-78" class="example"><strong>Exemplo 2.12  </strong></span>Ainda para os dados de idade, vamos montar um Box-plot
+<span id="exm:unnamed-chunk-76" class="example"><strong>Exemplo 2.12  </strong></span>Ainda para os dados de idade, vamos montar um Box-plot
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">ggplot</span>(base_docentes, <span class="kw">aes</span>(<span class="dt">y =</span> idade))
@@ -1374,7 +1373,7 @@ Figura 2.10: Box-plot idade do docente
 <p>O gráfico de pontos é um gráfico bidimensional onde cada eixo representa os valores de uma variável. Este tipo de gráfico é ótimo para analisar a correlação de duas variáveis bem como sua dispersão, pois cada ponto representa a ligação dos elementos das duas variáveis.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-79" class="example"><strong>Exemplo 2.13  </strong></span>Para lustrar vamos traçar um gráfico de pontos para a receita próprias das IES pelo total de técnicos na base das IES. Obs.: como temos muitos autliers na variável de receita própria, vamos limitar a 10.000.000 (dez milhões de reais por ano)
+<span id="exm:unnamed-chunk-77" class="example"><strong>Exemplo 2.13  </strong></span>Para lustrar vamos traçar um gráfico de pontos para a receita próprias das IES pelo total de técnicos na base das IES. Obs.: como temos muitos autliers na variável de receita própria, vamos limitar a 10.000.000 (dez milhões de reais por ano)
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span>base_ies <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1423,7 +1422,7 @@ Figura 2.12: Gráfico de pontos total de técnicos (&lt;50) versus receita próp
 <p>Em R podemos agrupar uma variável numérica de muitas formas, umas delas é através das estatísticas de quartis, decis ou percentis dependendo do tamanho da base, com a função <code>quantile()</code> combinada com a função <code>cut()</code>. Outra forma é através do conhecimento próprio do analista com os operadores relacionais do R: <code>&lt;, &gt;, &gt;=, &lt;=, ==, !=, %in%</code> combinadas com <code>ifelse()</code>.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-80" class="example"><strong>Exemplo 2.14  </strong></span>Vamos categorizar a variável receita próprias das IES de duas formas distintas: por quartis e por operadores relacionais com quatro faixas.
+<span id="exm:unnamed-chunk-78" class="example"><strong>Exemplo 2.14  </strong></span>Vamos categorizar a variável receita próprias das IES de duas formas distintas: por quartis e por operadores relacionais com quatro faixas.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## Categorizando por quartis
@@ -1536,7 +1535,7 @@ kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span 
 <p>Em muitas situações da análise de dados, estamos interessados em analisar a influência de uma variável categórica sob uma ou mais variáveis numéricas. Felizmente, a grande maioria das medidas estatísticas aprendidas até agora se aplicam a este tipo de análise que exige estatísticas agrupadas.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-81" class="example"><strong>Exemplo 2.15  </strong></span>Vamos calcular estatísticas descritivas de idade dos docentes (em anos) por escolaridade.
+<span id="exm:unnamed-chunk-79" class="example"><strong>Exemplo 2.15  </strong></span>Vamos calcular estatísticas descritivas de idade dos docentes (em anos) por escolaridade.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_docentes <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1636,7 +1635,7 @@ kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span 
 </ul>
 
 <div class="example">
-<span id="exm:unnamed-chunk-83" class="example"><strong>Exemplo 2.16  </strong></span>Represente visualmente a análise da tabela <a href="estatistica-descritiva.html#tab:tab11">2.11</a> através de Box-plots.
+<span id="exm:unnamed-chunk-81" class="example"><strong>Exemplo 2.16  </strong></span>Represente visualmente a análise da tabela <a href="estatistica-descritiva.html#tab:tab11">2.11</a> através de Box-plots.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span>base_docentes <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1666,8 +1665,8 @@ p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme</span>(<span class="dt">axis.line.x =</span> <span class="kw">element_line</span>(), 
                  <span class="dt">axis.text.x =</span> <span class="ot">NULL</span>, 
                  <span class="dt">axis.line.y =</span> <span class="kw">element_blank</span>())</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-84"></span>
-<img src="ebookrnp_files/figure-html/unnamed-chunk-84-1.png" alt="Box-plot de idade vs escolaridade por sexo" width="480" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-82"></span>
+<img src="ebookrnp_files/figure-html/unnamed-chunk-82-1.png" alt="Box-plot de idade vs escolaridade por sexo" width="480" />
 <p class="caption">
 Figura 2.14: Box-plot de idade vs escolaridade por sexo
 </p>
@@ -1677,7 +1676,7 @@ Figura 2.14: Box-plot de idade vs escolaridade por sexo
 </ul>
 
 <div class="example">
-<span id="exm:unnamed-chunk-85" class="example"><strong>Exemplo 2.17  </strong></span>Represente visualmente a análise da tabela <a href="estatistica-descritiva.html#tab:tab11">2.11</a> desta vez utilizando <em>densityplot</em>.
+<span id="exm:unnamed-chunk-83" class="example"><strong>Exemplo 2.17  </strong></span>Represente visualmente a análise da tabela <a href="estatistica-descritiva.html#tab:tab11">2.11</a> desta vez utilizando <em>densityplot</em>.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span>base_docentes <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1705,8 +1704,8 @@ p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</
                  <span class="dt">axis.text.x =</span> <span class="ot">NULL</span>, 
                  <span class="dt">axis.line.y =</span> <span class="kw">element_blank</span>()) <span class="op">+</span>
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Idade&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Densidade&quot;</span>, <span class="dt">fill =</span> <span class="ot">NULL</span>, <span class="dt">title =</span> <span class="st">&quot;&quot;</span>)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-86"></span>
-<img src="ebookrnp_files/figure-html/unnamed-chunk-86-1.png" alt="Densidade de idade vs escolaridade por sexo" width="480" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-84"></span>
+<img src="ebookrnp_files/figure-html/unnamed-chunk-84-1.png" alt="Densidade de idade vs escolaridade por sexo" width="480" />
 <p class="caption">
 Figura 2.16: Densidade de idade vs escolaridade por sexo
 </p>
@@ -1723,8 +1722,8 @@ p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme</span>(<span class="dt">axis.line.x =</span> <span class="kw">element_line</span>(), 
                  <span class="dt">axis.text.x =</span> <span class="ot">NULL</span>, 
                  <span class="dt">axis.line.y =</span> <span class="kw">element_blank</span>())</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-87"></span>
-<img src="ebookrnp_files/figure-html/unnamed-chunk-87-1.png" alt="Colunas de idade vs escolaridade por sexo" width="480" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-85"></span>
+<img src="ebookrnp_files/figure-html/unnamed-chunk-85-1.png" alt="Colunas de idade vs escolaridade por sexo" width="480" />
 <p class="caption">
 Figura 2.17: Colunas de idade vs escolaridade por sexo
 </p>
@@ -1740,8 +1739,8 @@ p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme</span>(<span class="dt">axis.line.x =</span> <span class="kw">element_line</span>(), 
                  <span class="dt">axis.text.x =</span> <span class="ot">NULL</span>, 
                  <span class="dt">axis.line.y =</span> <span class="kw">element_blank</span>())</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-88"></span>
-<img src="ebookrnp_files/figure-html/unnamed-chunk-88-1.png" alt="Histograma de idade vs escolaridade" width="480" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-86"></span>
+<img src="ebookrnp_files/figure-html/unnamed-chunk-86-1.png" alt="Histograma de idade vs escolaridade" width="480" />
 <p class="caption">
 Figura 2.18: Histograma de idade vs escolaridade
 </p>
@@ -1758,7 +1757,7 @@ Figura 2.18: Histograma de idade vs escolaridade
 <p>Sendo que <span class="math inline">\(\bar X\)</span> e <span class="math inline">\(\bar Y\)</span> são as médias das variáveis X e Y.</p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-89" class="example"><strong>Exemplo 2.18  </strong></span>Vamos calcular a covariância para <code>TotalTecnicos</code> e <code>ReceitaPropria</code>nos dados das IES
+<span id="exm:unnamed-chunk-87" class="example"><strong>Exemplo 2.18  </strong></span>Vamos calcular a covariância para <code>TotalTecnicos</code> e <code>ReceitaPropria</code>nos dados das IES
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_ies <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1768,7 +1767,7 @@ Figura 2.18: Histograma de idade vs escolaridade
                <span class="dt">caption =</span> <span class="st">&quot;Análise de covariância&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-90">Tabela 2.12: </span>Análise de covariância</caption>
+<caption><span id="tab:unnamed-chunk-88">Tabela 2.12: </span>Análise de covariância</caption>
 <thead>
 <tr class="header">
 <th></th>
@@ -1840,7 +1839,7 @@ Figura 2.19: Tendência da correlação
 </table>
 
 <div class="example">
-<span id="exm:unnamed-chunk-91" class="example"><strong>Exemplo 2.19  </strong></span>Para o exemplo anterior, determinar e interpretar a correlação entre as duas variáveis. Incluia a variével <code>DespesaPesquisa</code>.
+<span id="exm:unnamed-chunk-89" class="example"><strong>Exemplo 2.19  </strong></span>Para o exemplo anterior, determinar e interpretar a correlação entre as duas variáveis. Incluia a variével <code>DespesaPesquisa</code>.
 </div>
 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_ies <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1851,7 +1850,7 @@ Figura 2.19: Tendência da correlação
                <span class="dt">caption =</span> <span class="st">&quot;Análise de correlação&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-92">Tabela 2.14: </span>Análise de correlação</caption>
+<caption><span id="tab:unnamed-chunk-90">Tabela 2.14: </span>Análise de correlação</caption>
 <thead>
 <tr class="header">
 <th></th>

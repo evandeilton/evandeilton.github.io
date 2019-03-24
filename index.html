@@ -6,26 +6,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>R NA PRÁTICA: Estatística Descomplicada com R</title>
-  <meta name="description" content="A book example for a Chapman &amp; Hall book.">
+  <meta name="description" content="R NA PRÁTICA: Estatística Descomplicada com R">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="R NA PRÁTICA: Estatística Descomplicada com R" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="A book example for a Chapman &amp; Hall book." />
-  <meta name="github-repo" content="evandeilton/rnpbook" />
+  <meta property="og:description" content="R NA PRÁTICA: Estatística Descomplicada com R" />
+  
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="R NA PRÁTICA: Estatística Descomplicada com R" />
   
-  <meta name="twitter:description" content="A book example for a Chapman &amp; Hall book." />
+  <meta name="twitter:description" content="R NA PRÁTICA: Estatística Descomplicada com R" />
   
 
 <meta name="author" content="José Evandeilton lopes">
 
 
-<meta name="date" content="2019-03-02">
+<meta name="date" content="2019-03-23">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 
-<link rel="next" href="a-estatistica.html">
+<link rel="next" href="estatistica.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -51,69 +51,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; position: absolute; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource a.sourceLine:empty
-  { position: absolute; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="style/style.css" type="text/css" />
@@ -131,25 +103,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introdução</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#motivacao"><i class="fa fa-check"></i>Motivação</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#prerequisitos"><i class="fa fa-check"></i>Prerequisitos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisitos"><i class="fa fa-check"></i>Pré-requisitos</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#ambiente-de-trabalho"><i class="fa fa-check"></i>Ambiente de trabalho</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#pacotes"><i class="fa fa-check"></i>Pacotes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#conjuntos-de-dados"><i class="fa fa-check"></i>Conjuntos de dados</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="a-estatistica.html"><a href="a-estatistica.html"><i class="fa fa-check"></i><b>1</b> A Estatística</a><ul>
-<li class="chapter" data-level="1.1" data-path="a-estatistica.html"><a href="a-estatistica.html#o-que-e-estatistica"><i class="fa fa-check"></i><b>1.1</b> O que é estatística?</a></li>
-<li class="chapter" data-level="1.2" data-path="a-estatistica.html"><a href="a-estatistica.html#fases-do-trabalho-estatistico"><i class="fa fa-check"></i><b>1.2</b> Fases do trabalho estatístico</a></li>
-<li class="chapter" data-level="1.3" data-path="a-estatistica.html"><a href="a-estatistica.html#como-utilizar-estatistica"><i class="fa fa-check"></i><b>1.3</b> Como utilizar estatística?</a></li>
-<li class="chapter" data-level="1.4" data-path="a-estatistica.html"><a href="a-estatistica.html#como-nao-utilizar-estatistica"><i class="fa fa-check"></i><b>1.4</b> Como não utilizar estatística?</a></li>
-<li class="chapter" data-level="1.5" data-path="a-estatistica.html"><a href="a-estatistica.html#estatistica-data-science-e-big-data."><i class="fa fa-check"></i><b>1.5</b> Estatística, <em>Data Science</em> e <em>Big Data</em>.</a></li>
-<li class="chapter" data-level="1.6" data-path="a-estatistica.html"><a href="a-estatistica.html#conceitos-e-definicoes"><i class="fa fa-check"></i><b>1.6</b> Conceitos e definições</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="a-estatistica.html"><a href="a-estatistica.html#populacao-amostra-censo"><i class="fa fa-check"></i><b>1.6.1</b> População, amostra, censo</a></li>
-<li class="chapter" data-level="1.6.2" data-path="a-estatistica.html"><a href="a-estatistica.html#dados-informacao-e-conhecimento"><i class="fa fa-check"></i><b>1.6.2</b> Dados, informação e conhecimento</a></li>
-<li class="chapter" data-level="1.6.3" data-path="a-estatistica.html"><a href="a-estatistica.html#variaveis"><i class="fa fa-check"></i><b>1.6.3</b> Variáveis</a></li>
-<li class="chapter" data-level="1.6.4" data-path="a-estatistica.html"><a href="a-estatistica.html#analise-univariada-bivariada-e-multivariada"><i class="fa fa-check"></i><b>1.6.4</b> Análise univariada, bivariada e multivariada</a></li>
-<li class="chapter" data-level="1.6.5" data-path="a-estatistica.html"><a href="a-estatistica.html#tidydata"><i class="fa fa-check"></i><b>1.6.5</b> <em>tidydata</em></a></li>
-<li class="chapter" data-level="1.6.6" data-path="a-estatistica.html"><a href="a-estatistica.html#exercicios-resolvidos"><i class="fa fa-check"></i><b>1.6.6</b> Exercícios resolvidos</a></li>
+<li class="chapter" data-level="1" data-path="estatistica.html"><a href="estatistica.html"><i class="fa fa-check"></i><b>1</b> Estatística</a><ul>
+<li class="chapter" data-level="1.1" data-path="estatistica.html"><a href="estatistica.html#o-que-e-estatistica"><i class="fa fa-check"></i><b>1.1</b> O que é estatística?</a></li>
+<li class="chapter" data-level="1.2" data-path="estatistica.html"><a href="estatistica.html#fases-do-trabalho-estatistico"><i class="fa fa-check"></i><b>1.2</b> Fases do trabalho estatístico</a></li>
+<li class="chapter" data-level="1.3" data-path="estatistica.html"><a href="estatistica.html#como-utilizar-estatistica"><i class="fa fa-check"></i><b>1.3</b> Como utilizar estatística?</a></li>
+<li class="chapter" data-level="1.4" data-path="estatistica.html"><a href="estatistica.html#como-nao-utilizar-estatistica"><i class="fa fa-check"></i><b>1.4</b> Como não utilizar estatística?</a></li>
+<li class="chapter" data-level="1.5" data-path="estatistica.html"><a href="estatistica.html#estatistica-data-science-e-big-data."><i class="fa fa-check"></i><b>1.5</b> Estatística, <em>Data Science</em> e <em>Big Data</em>.</a></li>
+<li class="chapter" data-level="1.6" data-path="estatistica.html"><a href="estatistica.html#conceitos-e-definicoes"><i class="fa fa-check"></i><b>1.6</b> Conceitos e definições</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="estatistica.html"><a href="estatistica.html#populacao-amostra-censo"><i class="fa fa-check"></i><b>1.6.1</b> População, amostra, censo</a></li>
+<li class="chapter" data-level="1.6.2" data-path="estatistica.html"><a href="estatistica.html#dados-informacao-conhecimento-e-sabedoria"><i class="fa fa-check"></i><b>1.6.2</b> Dados, informação, conhecimento e sabedoria</a></li>
+<li class="chapter" data-level="1.6.3" data-path="estatistica.html"><a href="estatistica.html#variaveis"><i class="fa fa-check"></i><b>1.6.3</b> Variáveis</a></li>
+<li class="chapter" data-level="1.6.4" data-path="estatistica.html"><a href="estatistica.html#analise-univariada-bivariada-e-multivariada"><i class="fa fa-check"></i><b>1.6.4</b> Análise univariada, bivariada e multivariada</a></li>
+<li class="chapter" data-level="1.6.5" data-path="estatistica.html"><a href="estatistica.html#tidydata"><i class="fa fa-check"></i><b>1.6.5</b> <em>tidydata</em></a></li>
+<li class="chapter" data-level="1.6.6" data-path="estatistica.html"><a href="estatistica.html#exercicios-resolvidos"><i class="fa fa-check"></i><b>1.6.6</b> Exercícios resolvidos</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html"><i class="fa fa-check"></i><b>2</b> Estatística descritiva</a><ul>
@@ -198,23 +170,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">R NA PRÁTICA: Estatística Descomplicada com R</h1>
 <p class="author"><em>José Evandeilton lopes</em></p>
-<p class="date"><em>2019-03-02</em></p>
+<p class="date"><em>2019-03-23</em></p>
 </div>
 <div id="introducao" class="section level1 unnumbered">
 <h1>Introdução</h1>
-<p>Bem vindo ao módulo I de Estatística descomplicada com o R NA PRÁTICA. Este é o primeiro módulo desta série de quatro módulos e contem pará os principais conceitos estatísticos até análise descritiva. O objetivo maior desta parte é revisar os conceitos mais importantes do inicio dos estudos estatísticos. Abordaremos a parte conceitual com algumas definições e termos estatísticos, tabelas de frequências, bem como as principais medidas descritivas (média, mediana e outras). Veremos por fim, os principais gráficos estatísticos mais utilizados. Para reforçar os conhecimentos, faremos muitos exercícios práticos com apoio do R com foco em bases de dados reais do <a href="http://portal.inep.gov.br/web/guest/dados">INEP</a> - Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira do ano de 2017.</p>
+<p>Bem vindo ao primeiro módulo de Estatística descomplicada com o R que é uma produção exclusiva para do projeto R NA PRÁTICA. Esta série será composta por quatro módulos e neste primeiro, abordaremos os principais conceitos estatísticos e análise descritiva. O objetivo maior desta parte é revisar os conceitos mais importantes do inicio dos estudos estatísticos. Abordaremos a parte conceitual com algumas definições e termos estatísticos, tabelas de frequências, bem como as principais medidas descritivas (média, mediana e outras). Veremos por fim, os principais gráficos estatísticos mais utilizados. Para reforçar os conhecimentos, faremos exercícios práticos com apoio do R com foco em bases de dados reais do <a href="http://portal.inep.gov.br/web/guest/dados">INEP</a> - Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira do ano de 2017.</p>
 <p>No final deste módulo você será capaz de:</p>
 <ul>
 <li>Definir estatística;</li>
-<li>Compreender os principais tipos de variáveis;</li>
+<li>Compreender os principais tipos de variáveis e entender as melhores técnicas paracada tipo de variável;</li>
 <li>Entender o que é e como utilizar tabelas de frequências;</li>
 <li>Trabalhar com as principais medidas estatísticas (media, mediana, desvio padrão, etc.);</li>
 <li>Entender correlação e covariância;</li>
-<li>Construir gráficos estatísticos para os tipos corretas de dados.</li>
+<li>Construir gráficos estatísticos para os tipos corretos de dados com o pacote <code>ggplot2</code>.</li>
 </ul>
 <div id="motivacao" class="section level2 unnumbered">
 <h2>Motivação</h2>
-<p>A Estatística está em tudo! É atribuída a <a href="https://www.sciencedirect.com/science/article/pii/0315086079901010">H.G. Wells</a> a seguinte frase:</p>
+<p>A estatística é matemática aplicada e está em tudo! É atribuída a <a href="https://www.sciencedirect.com/science/article/pii/0315086079901010">H.G. Wells</a> a seguinte frase:</p>
 <blockquote>
 <p>“Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write. — H.G. Wells”</p>
 </blockquote>
@@ -222,65 +194,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote>
 <p>“O conhecimento estatístico um dia será tão necessário para uma cidadania eficiente quanto a habilidade de ler e escrever.”</p>
 </blockquote>
-<p>Veja alguns exemplos de onde a estatística pode ser aplicada:</p>
+<p>Nesta frase podemos trocar termo <em>“um dia será …”</em> para <em>“hoje é…”</em>, pois nos dias atuais nossas vidas são afetadas significaivamente pelo conhecimento estatístico de tal forma que não podemos ignorar este fato. Veja alguns exemplos de onde a estatística pode ser aplicada:</p>
 <ul>
 <li><p><strong>Na sua lista de compras:</strong> Sim, é importante medir as diferenças de preços dos produtos e o percentual de seu salário gasto com alimentos pra não ficar sem grana por aluguel;</p></li>
-<li><p><strong>Na previsão do tempo:</strong> Sair sem guarda-chuva ou de bicicleta num dia de chuva, nem pensar. Mas você não saberia o que fazer pela manhã se observasse o dia claro e sem sinais de chuva. Somente uma previsão estatística confiável seria capaz de te ajudar a decidir antecipadamente;</p></li>
-<li><p><strong>Na pesquisa científica:</strong> Toda pesquisa científica usa estatística. Se não utilizar é porque não é científica mas sim, especulativa;</p></li>
+<li><p><strong>Na previsão do tempo:</strong> Sair sem guarda-chuva ou de bicicleta em um dia de chuva, nem pensar. Mas você não saberia o que fazer pela manhã se observasse o dia claro e sem sinais de chuva. Somente uma previsão estatística confiável seria capaz de te ajudar a decidir antecipadamente;</p></li>
+<li><p><strong>Na pesquisa científica:</strong> Toda pesquisa científica usa estatística. Se não utilizar é porque não é científica mas sim especulativa;</p></li>
 <li><p><strong>Em seguros:</strong> Seguros de vida, de veículos, de saúde, dental, daquele <a href="https://www.moneytips.com/how-much-is-my-butt-worth">bumbum siliconado</a>. Tudo envolve estatística. É através dela que os estatísticos constroem os melhores modelos com base em variáveis históricas e nas segmentações de perfis de cada grupo de indivíduos;</p></li>
 <li><p><strong>Em pesquisas médicas:</strong> Controle de epidemias, vacinas, taxas de sobrevida, taxas de recuperação de tecidos e ossos, regressão de doenças infecciosas, testes de grupos de risco e uma infinidade de situações utilizam estatística para prever, aumentar e melhorar processos que trazem ganho para a saúde e vida das pessoas;</p></li>
 <li><p><strong>Em testes de qualidade:</strong> A estatística bate forte na hora de uma empresa obter uma certificação ISO. Seja no controle estatístico de processos, gráficos de controle e/ou gestão da qualidade, sem esta ciência estes nichos não teriam os mesmos resultados;</p></li>
 <li><p><strong>No monitoramento de ataques de vírus:</strong> A empresa Kaspesrki por exemplo, coleta dados globais de vírus e sintetiza em um mapa do globo virtual denominado <a href="https://cybermap.kaspersky.com/pt">cybermap</a>. Através dele o usuário pode navegar e obter estatísticas relevantes sobre atividades de vírus nos países pelo mundo.</p></li>
-<li><p><strong>No IDH e expectativa de vida:</strong> O IDH (Índice de Desenvolvimento Humano) de um país é um bom indicador de desenvolvimento do mesmo. Não tem como calcular IDH sem modelos estatísticos.</p></li>
+<li><p><strong>No IDH e expectativa de vida:</strong> O IDH (Índice de Desenvolvimento Humano) de um país é um bom indicador de desenvolvimento do mesmo. Não tem como calcular IDH sem modelos estatísticos e matemáticos.</p></li>
 </ul>
 </div>
-<div id="prerequisitos" class="section level2 unnumbered">
-<h2>Prerequisitos</h2>
+<div id="pre-requisitos" class="section level2 unnumbered">
+<h2>Pré-requisitos</h2>
 <p>Para fazer o melhor proveito deste material, temos as seguintes recomendações:</p>
 <ul>
-<li>Tenha um computador com acesso á internet para poder assistir aos vídeos, fazer pesquisa e download dos materiais do curso;</li>
-<li>Dedique pelo menos 2 horas da sua semana para ler o material e resolver os exercícios propostos;</li>
-<li>Sempre que alguma dúvida surgir e não conseguir resolver com ajuda do material, contatar o professor via plataforma para obter suporte adicional;</li>
-<li>Algum conhecimento prévio da linguagem R ou lógica de programação.</li>
+<li><p>Tenha um computador com acesso á internet, R e Rstudio instalados para poder fazer pesquisa, download e resolver/replicar os exercícios propostos e resolvidos;</p></li>
+<li><p>Dedique pelo menos 2 horas da sua semana para ler o material e resolver os exercícios propostos praticando sempre com o R;</p></li>
+<li><p>Sempre que alguma dúvida surgir e não conseguir resolver com ajuda do material, contatar o professor via plataforma para obter suporte adicional ou buscar na Internet;</p></li>
+<li><p>Algum conhecimento prévio da linguagem R ou lógica de programação. Este item não é brigtório, mas quem tiver pdoerá melho usufruir deste material.</p></li>
 </ul>
 </div>
 <div id="ambiente-de-trabalho" class="section level2 unnumbered">
 <h2>Ambiente de trabalho</h2>
-<p>Este curso não tem a intenção de ensinar detalhadamente programação em R, pois o foco é em estatística. Contudo, sempre que necessário explicaremos algumas funções e comandos utilizados nos scripts. Além disso, para todos os exemplos e exercícios, deixaremos os códigos gerados como forma de estudo e revisão para que tudo possa ser replicado pelo aluno.</p>
-<p>Se você sentir dificuldade em compreender algum conceito em linguagem R, recomendamos fazer o nosso curso <a href="https://www.udemy.com/r-na-pratica-ciencia-de-dados/learn/v4/overview">R NA PRÁTICA: Data Wrangling com R para Ciência de Dados</a> ou qualquer outro do seu interesse para obter mais conhecimentos dobre a linguagem R.</p>
+<p>Este curso não tem a intenção de ensinar detalhadamente programação em R, pois o foco é em estatística. Contudo, sempre que necessário explicaremos algumas funções e comandos utilizados nos scripts. Além disso, para todos os exemplos e exercícios, deixaremos os códigos gerados como forma de estudo e revisão para que tudo possa ser replicado e reaproveitado pelo aluno.</p>
+<p>Se sentir dificuldade em compreender algum conceito em linguagem R, recomendamos fazer o nosso curso <a href="https://www.udemy.com/r-na-pratica-ciencia-de-dados/learn/v4/overview">R NA PRÁTICA: Data Wrangling com R para Ciência de Dados</a> ou qualquer outro do seu interesse para obter mais conhecimentos dobre a linguagem R.</p>
 <div id="pacotes" class="section level3 unnumbered">
 <h3>Pacotes</h3>
-<p>Trabalharemos sempre que possível com o operador <code>%&gt;% (pipe)</code> e com funções dos pacotes do <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> e outros relacionados.</p>
-<p>Trabalharemos com o <a href="https://cloud.r-project.org/">software R</a> e com a IDE (Ambiente de Desenvolvimento Integrado, traduzindo do inglês) de desenvolvimento em R <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio Desktop</a>. Nos links você poderá baixar os dois programas e configurar de acordo com o seu sistema operacional.</p>
-<p>Especialmente para o R NA PRÁTICA, desenvolvemos o pacote <code>rnp</code> que poderá ser baixado direto to <code>github</code>. Este pacote possui recursos deste livro e também de outros materiais do R NA PRÁTICA.
-Rode o comando abaixo para instalar, caso ainda não tenha o pacote.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(devtools, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)
+<p>Trabalharemos com o <a href="https://cloud.r-project.org/">software R</a> e com a IDE (Ambiente de Desenvolvimento Integrado, traduzindo do inglês) <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio Desktop</a>. Nos links você poderá baixar os dois programas e configurar de acordo com o seu sistema operacional.</p>
+<p>Trabalharemos sempre que possível com o operador <code>%&gt;% (pipe)</code> e com funções dos pacotes do <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> e outros relacionados. Especialmente para o R NA PRÁTICA, desenvolvemos o pacote <a href="https://github.com/evandeilton/rnp"><code>rnp</code></a> que poderá ser baixado direto to <code>github</code>. Este pacote está em constante atualização e possui recursos extras para deste livro e também de outros materiais do R NA PRÁTICA em desenvolvimento.</p>
+<p>Rode o comando abaixo para instalar, caso ainda não tenha o pacote.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Istalar devtools, caso não exista na máquina.</span>
+<span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;devtools&quot;</span>)) {
+ <span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)
+}
+
+<span class="co"># Istalar o rnp</span>
+<span class="kw">require</span>(devtools, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)
 <span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;rnp&quot;</span>)) {
  devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;evandeilton/rnp&quot;</span>) 
-}</code></pre>
-<p>Não nos restringimos apenas a este, remendamos caso ainda não tenha, instalar os pacotes listados a seguir:</p>
-<pre class="sourceCode r"><code class="sourceCode r">pacotes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;tidyverse&quot;</span>,<span class="st">&quot;lubridate&quot;</span>, <span class="st">&quot;magrittr&quot;</span>,<span class="st">&quot;broom&quot;</span>,
-             <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;plotly&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>,<span class="st">&quot;data.table&quot;</span>)
-<span class="cf">for</span>(i <span class="cf">in</span> pacotes){
-  <span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="dt">package =</span> i, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)){
-    <span class="kw">install.packages</span>(i, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)
-  }
-}</code></pre>
+}</code></pre></div>
+<blockquote>
+<p>Caso sua instalação do R seja nova, ao instalar o <code>rnp</code>, automaticamente todas as dependências serão baixadas e seu R estará equipado com todos os recursos necessários para trabalar com este livro. A cada novo módulo adicionaremos novas dependências caso surjam.</p>
+</blockquote>
 </div>
 <div id="conjuntos-de-dados" class="section level3 unnumbered">
 <h3>Conjuntos de dados</h3>
 <p>Trabalharemos com conjuntos de dados do Censo do Ensino Superior no Brasil feito anualmente pelo <a href="www.inep.gov.br/">INEP (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira)</a>, especificamente para o ano de 2017. Os dados podem ser baixados diretamente na seção de microdados do site neste link <a href="http://portal.inep.gov.br/microdados">Censo da Educação Superior de 2017</a>, ou se preferir, baixar diretamente com o comando abaixo. Em seguinda descompactar os dados utilizando seu descompactador favorito.</p>
-<blockquote>
-<p>Note que o argumento <code>salvar</code> na função <code>rnp_get_inep_censo()</code> dever conter o caminho para a pasta onde os dados baixados serão salvos.
-Se não for passada uma pasta ou seja, <code>salvar = NULL</code> o R baixará os dados na pasta da seção onde o R foi carregagado. Para saber qual é este local digite <code>getwd()</code> no console do R.</p>
-</blockquote>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Informa o ano dos dados e o local completo de onde deseja salvar os dados</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Informe o ano dos dados e o local completo de onde deseja salvar os dados</span>
 <span class="co"># conforme exemplos abaixo. Recomendamos criar uma pasta para salvar os</span>
-<span class="co"># dados e tornar mais acessíveis nas aulas.</span>
-rnp<span class="op">::</span><span class="kw">rnp_get_inep_censo</span>(<span class="dt">ano =</span> <span class="dv">2017</span>, <span class="dt">salvar =</span> <span class="st">&quot;Dados/INEP/&quot;</span>)</code></pre>
+<span class="co"># dados e torná-los mais acessíveis nas aulas.</span>
+rnp<span class="op">::</span><span class="kw">rnp_get_inep_censo</span>(<span class="dt">ano =</span> <span class="dv">2017</span>, <span class="dt">salvar =</span> <span class="st">&quot;Dados/INEP/&quot;</span>)</code></pre></div>
+<blockquote>
+<p>Note que o argumento <code>salvar</code> na função <code>rnp_get_inep_censo()</code> dever conter o caminho para a pasta onde os dados baixados serão salvos. Se não for passada uma pasta ou seja, <code>salvar = NULL</code> o R baixará os dados na pasta da seção onde o R foi carregagado. Para saber qual é este local digite <code>getwd()</code> no console do R.</p>
+</blockquote>
 <p>Você poderá também ler os dados sem decompactar com o pacote <code>readr</code>, mas recomendamos descompartar para leitura mais rápida com a função <code>rnp_read()</code>.</p>
-<pre class="sourceCode r"><code class="sourceCode r">base_curso &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_delim</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_CURSO.zip&quot;</span>, 
-                        <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>, <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;Latin1&quot;</span>))</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_curso &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_delim</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_CURSO.zip&quot;</span>, 
+                        <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>, <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;Latin1&quot;</span>))</code></pre></div>
 <hr />
 
 
@@ -293,7 +264,7 @@ rnp<span class="op">::</span><span class="kw">rnp_get_inep_censo</span>(<span cl
         </div>
       </div>
 
-<a href="a-estatistica.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="estatistica.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -330,7 +301,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["ebookrnp.pdf"],
 "toc": {
 "collapse": "subsection"
 }
@@ -343,7 +314,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

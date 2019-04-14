@@ -50,41 +50,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style/style.css" type="text/css" />
@@ -142,9 +170,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-estatisticas-por-agrupamento"><i class="fa fa-check"></i><b>2.3.2</b> Medidas estatísticas por agrupamento</a></li>
 <li class="chapter" data-level="2.3.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#graficos-para-categoricas-vs-numericas"><i class="fa fa-check"></i><b>2.3.3</b> Gráficos para categóricas vs numéricas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia-e-correlacao"><i class="fa fa-check"></i><b>2.4</b> Covariância e correlação</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia"><i class="fa fa-check"></i><b>2.4.1</b> Covariância</a></li>
-<li class="chapter" data-level="2.4.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#correlacao"><i class="fa fa-check"></i><b>2.4.2</b> Correlação</a></li>
+<li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-associacao"><i class="fa fa-check"></i><b>2.4</b> Medidas de associação</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#associacao-entre-duas-variaveis-discretas"><i class="fa fa-check"></i><b>2.4.1</b> Associação entre duas variáveis discretas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia-e-correlacao"><i class="fa fa-check"></i><b>2.5</b> Covariância e correlação</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia"><i class="fa fa-check"></i><b>2.5.1</b> Covariância</a></li>
+<li class="chapter" data-level="2.5.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#correlacao"><i class="fa fa-check"></i><b>2.5.2</b> Correlação</a></li>
 </ul></li>
 </ul></li>
 <li class="appendix"><span><b>Apendice</b></span></li>
@@ -270,7 +301,8 @@ Figura 1.5: Use a média
 <li><p><strong>Tenha certeza do que está falando:</strong> Não subestime seu público. É verdade que algumas pessoas não falam ou entendem bem o <em>estatiquês</em>, mas fique alerta, pois muitos são conhecedores desta ciência, então por vias das dúvidas é melhor saber o que você vai comunicar para evitar constrangimentos.</p></li>
 <li><p><strong>Não seja complexo demais nas suas análises e comunicações:</strong> Neste ponto seja ponderado, pois nem tudo que é simples é fácil e nem tudo que é difícil é complexo. Do planejamento à entrega é sempre bom ter seu trabalho revisado / acompanhado por outra pessoa de forma a identificar pontos de melhoria. A linguagem, sempre que possível deve ser de simples compreensão.</p></li>
 <li><p><strong>Maria vai com as outras:</strong> Muito cuidado. Não é porque todo mundo faz algo de um jeito que você pode assumir que é certo. Censo crítico faz toda a diferença na identificação deste tipo de fenômeno.</p></li>
-<li><p><strong>Cuidado como modelos automáticos:</strong> Modelos automatizados ou semi-automatizados podem às vezes gerar saídas inesperadas. <em>“.. todos os modelos são errados, mas alguns são úteis. — George E. P. Box”</em>. Com a popularização do <em>machine learning</em> muitas pessoas tendem a pensar que se colocar os dados no computador e passar o algoritmo tudo ficará pronto. Temos casos recentes de que isso é possível. Não vamos entrar no mérito, mas como já comentamos antes, a inteligência é do analista e saídas imprevistas podem ocorrer.</p></li>
+<li><p><strong>Cuidado como modelos automáticos:</strong> Modelos automatizados ou semi-automatizados podem às vezes gerar saídas inesperadas. <em>“.. todos os modelos são errados, mas alguns são úteis. — George E. P. Box”</em>. Com a popularização do <em>machine learning</em>
+muitas pessoas tendem a pensar que se colocar os dados no computador e passar o algoritmo tudo ficará pronto. Temos casos recentes de que isso é possível. Não vamos entrar no mérito, mas como já comentamos antes, a inteligência é do analista e saídas imprevistas podem ocorrer.</p></li>
 <li><p><strong>Não acredite apenas na estatística:</strong> A estatística é fundamental e sem ela nada podemos fazer com os dados, mas esteja sempre atento ao negócio ou qualquer evento externo que possa influenciar e alterar seus resultados.</p></li>
 </ul>
 </div>
@@ -279,7 +311,7 @@ Figura 1.5: Use a média
 <p>Desde que o conceito de dado passou a existir, a estatística se faz presente. A seguir um pequeno texto que relaciona a estatística com <em>Data Science</em> e <em>Big Data</em>.</p>
 <p>Estatística e <em>Data Science</em> (Ciência de Dados) são partes inseparáveis. De certa forma, a estatística é um subconjunto da ciência de dados. Mas o que é <em>Data Science</em>? É difícil definir um conceito tão amplo porém, a <em>Wikipedia</em> Norte Americana coloca da seguinte forma:</p>
 <blockquote>
-<p><em>Data science, also known as data-driven science, is an interdisciplinary field about scientific methods, processes and systems to extract knowledge or insights from data in various forms, either structured or unstructured, similar to Knowledge Discovery in Databases (KDD)</em>. Fonte: <a href="https://www.wikiwand.com/en/Data_science" class="uri">https://www.wikiwand.com/en/Data_science</a>, acesso em “24/03/2019”</p>
+<p><em>Data science, also known as data-driven science, is an interdisciplinary field about scientific methods, processes and systems to extract knowledge or insights from data in various forms, either structured or unstructured, similar to Knowledge Discovery in Databases (KDD)</em>. Fonte: <a href="https://www.wikiwand.com/en/Data_science" class="uri">https://www.wikiwand.com/en/Data_science</a>, acesso em “13/04/2019”</p>
 </blockquote>
 <p>No texto acima podemos isolar o termo <em>interdisciplinary</em> que remete a um conjunto de muitas áreas do conhecimento. Podemos marcar desta definição aos conceitos:</p>
 <ul>
@@ -307,38 +339,24 @@ Figura 1.5: Use a média
 <div id="conceitos-e-definicoes" class="section level2">
 <h2><span class="header-section-number">1.6</span> Conceitos e definições</h2>
 <p>A partir de agora iniciamos os estudos de estatística e para melhor compreender alguns conceitos, vamos trabalhar com o conjunto de dados da IES do Censo da Educação Superior no Brasil de 2017.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Carregando pacote rnp</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Carregando pacote rnp</span>
 <span class="kw">require</span>(rnp, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)
 
-<span class="co"># Classes para base de dados das IES</span>
-dicionario &lt;-<span class="st"> &quot;Dados/INEP/ANEXOS/ANEXO I - Dicionario de Dados e Tabelas Auxiliares/Dicionario_de_Dados.xlsx&quot;</span>
-classes &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_get_classes_inep</span>(<span class="dt">caminho =</span> dicionario, 
-                                     <span class="dt">aba =</span> <span class="st">&quot;DM_IES&quot;</span>, 
-                                     <span class="dt">retorna_lista =</span> <span class="ot">FALSE</span>)
+<span class="co"># Dados IES</span>
+base_ies &lt;-<span class="st"> </span>rnp<span class="op">::</span>dm_ies 
 
-<span class="co"># Leitura da base de dados  </span>
-base &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_read</span>(<span class="dt">base =</span> <span class="kw">paste0</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_IES.CSV&quot;</span>),
-                      <span class="dt">sep =</span> <span class="st">&quot;|&quot;</span>, 
-                      <span class="dt">dec =</span> <span class="st">&quot;.&quot;</span>, 
-                      <span class="dt">header =</span> <span class="ot">TRUE</span>, 
-                      <span class="dt">encoding =</span> <span class="st">&quot;Latin-1&quot;</span>,
-                      <span class="dt">verbose =</span> <span class="ot">FALSE</span>, 
-                      <span class="dt">showProgress =</span> <span class="ot">FALSE</span>)
-
-<span class="co"># Aplicando classes aos dados</span>
-base_ies &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_aplica_classes</span>(<span class="dt">base =</span> base, <span class="dt">classes =</span> classes) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">    </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">Sigla =</span> SG_IES,
-                  <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, 
-                  <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,
-                  <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA)
-
+<span class="co"># Tabela</span>
 base_ies <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">Sigla =</span> SG_IES,
+                <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, 
+                <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,
+                <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(Sigla, TotalTecnicos, ReceitaPropria,DespesaPesquisa) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">align =</span> <span class="st">&quot;llrrr&quot;</span>, 
              <span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata,
              <span class="dt">caption =</span> <span class="st">&quot;Dez primeiras observações da base de IES censo 2017&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre></div>
+<span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
 <table>
 <caption><span id="tab:tab01">Tabela 1.1: </span>Dez primeiras observações da base de IES censo 2017</caption>
 <thead>
@@ -466,7 +484,8 @@ Figura 1.7: Tipos de variáveis
 </div>
 <div id="tidydata" class="section level3">
 <h3><span class="header-section-number">1.6.5</span> <em>tidydata</em></h3>
-<p>Em seu artigo, <span class="citation">(Wickham and others <a href="#ref-wickham2014tidy">2014</a>)</span> discutem e mostram uma forma repensada de organizar tabelas estruturadas para análise de dados. De forma simples, um significado para <em><code>tidy data</code></em> é: dados arrumados, organizados. Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:</p>
+<p>Em seu artigo, <span class="citation">(Wickham and others <a href="#ref-wickham2014tidy">2014</a>)</span> discutem e mostram uma forma repensada de organizar tabelas estruturadas para análise de dados. De forma simples, um significado para <em><code>tidy data</code></em> é: dados arrumados, organizados.
+Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:</p>
 <ul>
 <li>Cada observação é uma linha;</li>
 <li>Cada variável é uma coluna;<br />
@@ -475,12 +494,12 @@ Figura 1.7: Tipos de variáveis
 </ul>
 <p>Dados neste formato ajudam a tornar a análise mais rápida, principalmente com as ferramentas do <code>tidyverso</code> <span class="citation">(Wickham <a href="#ref-wickham2017tidyverse">2017</a>)</span>. A Tabela <a href="estatistica.html#tab:tab01">1.1</a> mostra uma configuração de dados <code>tidy</code>, onde cada linha representa uma observação ou indivíduo que no caso é uma IES; cada coluna representa uma variável ou característica, por exemplo <code>Sigla</code> ou <code>ReceitaPropria</code> da IES e o cruzamento entre linhas e colunas são os valores correspondentes.</p>
 <p><strong>Observação:</strong> Nas empresas o conceito de <code>tidy data</code> geralmente é atribuído ao que chamam de <code>ABT (Analytics Base Table)</code>. Este é o estado da arte que nem sempre é fácil de se chagar, mas uma vez lá, os dados estarão prontos para todo tipo de análise estatística e modelagem.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Exemplos de tidydasets</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Exemplos de tidydasets</span>
 knitr<span class="op">::</span><span class="kw">kable</span>(
   <span class="kw">list</span>(<span class="kw">head</span>(mtcars[,<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dv">10</span>), <span class="kw">head</span>(dplyr<span class="op">::</span>starwars[,<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dv">10</span>)),
   <span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata, 
   <span class="dt">caption =</span> <span class="st">&quot;Amostra de outras tabelas de dados organizados&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre></div>
+<span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
 <table class="kable_wrapper">
 <caption>
 <span id="tab:tab02">Tabela 1.2: </span>Amostra de outras tabelas de dados organizados
@@ -651,7 +670,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(
 </table>
 
 <hr />
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">.</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">.</code></pre>
 </div>
 <div id="exercicios-resolvidos" class="section level3">
 <h3><span class="header-section-number">1.6.6</span> Exercícios resolvidos</h3>
@@ -661,7 +680,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(
 </ul>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-5" class="exercise"><strong>Exercício 1.1  </strong></span>Quem é a população de IES?
+<span id="exr:unnamed-chunk-6" class="exercise"><strong>Exercício 1.1  </strong></span>Quem é a população de IES?
 </div>
 
 
@@ -669,11 +688,11 @@ knitr<span class="op">::</span><span class="kw">kable</span>(
  <span class="solution"><em>Solução. </em></span> Neste caso, a população se confunde com um censo, pois a base das IES faz parte do levantamento censitário de 2017 e contempla, a princípio todas as IES do Brasil
 </div>
 
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">paste</span>(<span class="kw">nrow</span>(base_ies), <span class="st">&quot;Universidades.&quot;</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">paste</span>(<span class="kw">nrow</span>(base_ies), <span class="st">&quot;Universidades.&quot;</span>)</code></pre>
 <pre><code>## [1] &quot;2448 Universidades.&quot;</code></pre>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-8" class="exercise"><strong>Exercício 1.2  </strong></span>O que poderia ser uma amostra da base de IES?
+<span id="exr:unnamed-chunk-9" class="exercise"><strong>Exercício 1.2  </strong></span>O que poderia ser uma amostra da base de IES?
 </div>
 
 
@@ -681,13 +700,14 @@ knitr<span class="op">::</span><span class="kw">kable</span>(
  <span class="solution"><em>Solução. </em></span> Uma amostra poderia ser todas as IES grandes com mais de 2000 técnicos.
 </div>
 
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">paste</span>(<span class="st">&quot;A base tem&quot;</span>, base_ies <span class="op">%&gt;%</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">paste</span>(<span class="st">&quot;A base tem&quot;</span>, 
+      base_ies <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">transmute</span>(<span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">        </span><span class="kw">filter</span>(TotalTecnicos <span class="op">&gt;</span><span class="st"> </span><span class="dv">2000</span>) <span class="op">%&gt;%</span>
-<span class="st">        </span><span class="kw">nrow</span>(), <span class="st">&quot;IES com mais de 2000 técnicos&quot;</span>)</code></pre></div>
+<span class="st">        </span><span class="kw">nrow</span>(), <span class="st">&quot;IES com mais de 2000 técnicos&quot;</span>)</code></pre>
 <pre><code>## [1] &quot;A base tem 29 IES com mais de 2000 técnicos&quot;</code></pre>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-11" class="exercise"><strong>Exercício 1.3  </strong></span>Defina um parâmetro desta base.
+<span id="exr:unnamed-chunk-12" class="exercise"><strong>Exercício 1.3  </strong></span>Defina um parâmetro desta base.
 </div>
 
 
@@ -697,7 +717,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-13" class="exercise"><strong>Exercício 1.4  </strong></span>Qual seria uma estatística?
+<span id="exr:unnamed-chunk-14" class="exercise"><strong>Exercício 1.4  </strong></span>Qual seria uma estatística?
 </div>
 
 
@@ -710,7 +730,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(
 </ul>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-15" class="exercise"><strong>Exercício 1.5  </strong></span>A tabela de IES possui muitos registros numéricos e também textuais. Ela representa melhor, dados, informações ou conhecimento?
+<span id="exr:unnamed-chunk-16" class="exercise"><strong>Exercício 1.5  </strong></span>A tabela de IES possui muitos registros numéricos e também textuais. Ela representa melhor, dados, informações ou conhecimento?
 </div>
 
 
@@ -720,7 +740,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-17" class="exercise"><strong>Exercício 1.6  </strong></span>A frase, ‘O estado de São Paulo possui o maior número de IES do Brasil’ é um exemplo de dado, informação ou conhecimento?
+<span id="exr:unnamed-chunk-18" class="exercise"><strong>Exercício 1.6  </strong></span>A frase, ‘O estado de São Paulo possui o maior número de IES do Brasil’ é um exemplo de dado, informação ou conhecimento?
 </div>
 
 
@@ -730,7 +750,7 @@ knitr<span class="op">::</span><span class="kw">kable</span>(
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-19" class="exercise"><strong>Exercício 1.7  </strong></span>“Um estado que possui muitas universidades terá indicadores de educação superiores.” Esta frase é um exemplos de…
+<span id="exr:unnamed-chunk-20" class="exercise"><strong>Exercício 1.7  </strong></span>“Um estado que possui muitas universidades terá indicadores de educação superiores.” Esta frase é um exemplos de…
 </div>
 
 
@@ -743,19 +763,19 @@ knitr<span class="op">::</span><span class="kw">kable</span>(
 </ul>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-21" class="exercise"><strong>Exercício 1.8  </strong></span>No conjunto de IES temos quantas variáveis e quantas observações?
+<span id="exr:unnamed-chunk-22" class="exercise"><strong>Exercício 1.8  </strong></span>No conjunto de IES temos quantas variáveis e quantas observações?
 </div>
 
 
 <div class="solution">
- <span class="solution"><em>Solução. </em></span> A base IES possui 2448 linhas (observações) e 62 colunas (variáveis). Esta informação poderá ser obtida através da função <code>rnp_atributos()</code>.
+ <span class="solution"><em>Solução. </em></span> A base IES possui 2448 linhas (observações) e 47 colunas (variáveis). Esta informação poderá ser obtida através da função <code>rnp_atributos()</code>.
 </div>
 
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Listando os atributos da base de ies para as 10 primeiras colunas</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Listando os atributos da base de ies para as 10 primeiras colunas</span>
 rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_ies) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre></div>
+<span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -767,62 +787,62 @@ rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_ies) <sp
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">NU_ANO_CENSO</td>
 <td align="left">integer</td>
 </tr>
 <tr class="even">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">CO_IES</td>
 <td align="left">integer</td>
 </tr>
 <tr class="odd">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">NO_IES</td>
 <td align="left">character</td>
 </tr>
 <tr class="even">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">SG_IES</td>
 <td align="left">character</td>
 </tr>
 <tr class="odd">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">CO_MANTENEDORA</td>
 <td align="left">integer</td>
 </tr>
 <tr class="even">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">NO_MANTENEDORA</td>
 <td align="left">character</td>
 </tr>
 <tr class="odd">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">CO_REGIAO</td>
 <td align="left">integer</td>
 </tr>
 <tr class="even">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">CO_UF</td>
 <td align="left">integer</td>
 </tr>
 <tr class="odd">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">CO_MUNICIPIO</td>
 <td align="left">integer</td>
 </tr>
 <tr class="even">
-<td align="left">data.frame</td>
-<td align="left">2448 linhas e 62 colunas</td>
+<td align="left">data.table</td>
+<td align="left">2448 linhas e 47 colunas</td>
 <td align="left">QT_TEC_TOTAL</td>
 <td align="left">integer</td>
 </tr>
@@ -830,7 +850,7 @@ rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_ies) <sp
 </table>
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-24" class="exercise"><strong>Exercício 1.9  </strong></span>A mediana da receita própria anual das IES brasileiras é R$ 7.429.221,00. Que tipo de análise é esta?
+<span id="exr:unnamed-chunk-25" class="exercise"><strong>Exercício 1.9  </strong></span>A mediana da receita própria anual das IES brasileiras é R$ 7.429.221,00. Que tipo de análise é esta?
 </div>
 
 
@@ -840,7 +860,7 @@ rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_ies) <sp
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-26" class="exercise"><strong>Exercício 1.10  </strong></span>A correlação entre o total de técnicos e a receita própria é muito baixa (0.0577). Que tipo de análise é esta?
+<span id="exr:unnamed-chunk-27" class="exercise"><strong>Exercício 1.10  </strong></span>A correlação entre o total de técnicos e a receita própria é muito baixa (0.0577). Que tipo de análise é esta?
 </div>
 
 
@@ -850,7 +870,7 @@ rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_ies) <sp
 
 
 <div class="exercise">
-<span id="exr:unnamed-chunk-28" class="exercise"><strong>Exercício 1.11  </strong></span>Conjuntamente, as variáveis Receita propria e Depesa com pesquisa não explicam o Total de tecnicos. Que tipo de análise é esta?
+<span id="exr:unnamed-chunk-29" class="exercise"><strong>Exercício 1.11  </strong></span>Conjuntamente, as variáveis Receita propria e Depesa com pesquisa não explicam o Total de tecnicos. Que tipo de análise é esta?
 </div>
 
 
@@ -858,7 +878,7 @@ rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_ies) <sp
  <span class="solution"><em>Solução. </em></span> Como temos o relacionamento de três variáveis, neste caso temos uma análise multivariada.
 </div>
 
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">.</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">.</code></pre>
 <hr />
 
 </div>
@@ -941,7 +961,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

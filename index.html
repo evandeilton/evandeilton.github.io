@@ -50,41 +50,69 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style/style.css" type="text/css" />
@@ -142,9 +170,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-estatisticas-por-agrupamento"><i class="fa fa-check"></i><b>2.3.2</b> Medidas estatísticas por agrupamento</a></li>
 <li class="chapter" data-level="2.3.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#graficos-para-categoricas-vs-numericas"><i class="fa fa-check"></i><b>2.3.3</b> Gráficos para categóricas vs numéricas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia-e-correlacao"><i class="fa fa-check"></i><b>2.4</b> Covariância e correlação</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia"><i class="fa fa-check"></i><b>2.4.1</b> Covariância</a></li>
-<li class="chapter" data-level="2.4.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#correlacao"><i class="fa fa-check"></i><b>2.4.2</b> Correlação</a></li>
+<li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-associacao"><i class="fa fa-check"></i><b>2.4</b> Medidas de associação</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#associacao-entre-duas-variaveis-discretas"><i class="fa fa-check"></i><b>2.4.1</b> Associação entre duas variáveis discretas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia-e-correlacao"><i class="fa fa-check"></i><b>2.5</b> Covariância e correlação</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia"><i class="fa fa-check"></i><b>2.5.1</b> Covariância</a></li>
+<li class="chapter" data-level="2.5.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#correlacao"><i class="fa fa-check"></i><b>2.5.2</b> Correlação</a></li>
 </ul></li>
 </ul></li>
 <li class="appendix"><span><b>Apendice</b></span></li>
@@ -169,7 +200,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">R NA PRÁTICA: Estatística Descomplicada com R</h1>
 <p class="author"><em>José Evandeilton Lopes</em></p>
-<p class="date"><em>24/03/2019</em></p>
+<p class="date"><em>13/04/2019</em></p>
 </div>
 <div id="introducao" class="section level1 unnumbered">
 <h1>Introdução</h1>
@@ -224,7 +255,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Trabalharemos com o <a href="https://cloud.r-project.org/">software R</a> e com a IDE (Ambiente de Desenvolvimento Integrado, traduzindo do inglês) <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio Desktop</a>. Nos links você poderá baixar os dois programas e configurar de acordo com o seu sistema operacional.</p>
 <p>Trabalharemos sempre que possível com o operador <code>%&gt;% (pipe)</code> e com funções dos pacotes do <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> e outros relacionados. Especialmente para o R NA PRÁTICA, desenvolvemos o pacote <a href="https://github.com/evandeilton/rnp"><code>rnp</code></a> que poderá ser baixado direto to <code>github</code>. Este pacote está em constante atualização e possui recursos extras para deste livro e também de outros materiais do R NA PRÁTICA em desenvolvimento.</p>
 <p>Rode o comando abaixo para instalar, caso ainda não tenha o pacote.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Istalar devtools, caso não exista na máquina.</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Istalar devtools, caso não exista na máquina.</span>
 <span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;devtools&quot;</span>)) {
  <span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)
 }
@@ -233,7 +264,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">require</span>(devtools, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)
 <span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;rnp&quot;</span>)) {
  devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;evandeilton/rnp&quot;</span>) 
-}</code></pre></div>
+}</code></pre>
 <blockquote>
 <p>Caso sua instalação do R seja nova, ao instalar o <code>rnp</code>, automaticamente todas as dependências serão baixadas e seu R estará equipado com todos os recursos necessários para trabalar com este livro. A cada novo módulo adicionaremos novas dependências caso surjam.</p>
 </blockquote>
@@ -241,16 +272,45 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="conjuntos-de-dados" class="section level3 unnumbered">
 <h3>Conjuntos de dados</h3>
 <p>Trabalharemos com conjuntos de dados do Censo do Ensino Superior no Brasil feito anualmente pelo <a href="www.inep.gov.br/">INEP (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira)</a>, especificamente para o ano de 2017. Os dados podem ser baixados diretamente na seção de microdados do site neste link <a href="http://portal.inep.gov.br/microdados">Censo da Educação Superior de 2017</a>, ou se preferir, baixar diretamente com o comando abaixo. Em seguinda descompactar os dados utilizando seu descompactador favorito.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Informe o ano dos dados e o local completo de onde deseja salvar os dados</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Informe o ano dos dados e o local completo de onde deseja salvar os dados</span>
 <span class="co"># conforme exemplos abaixo. Recomendamos criar uma pasta para salvar os</span>
 <span class="co"># dados e torná-los mais acessíveis nas aulas.</span>
-rnp<span class="op">::</span><span class="kw">rnp_get_inep_censo</span>(<span class="dt">ano =</span> <span class="dv">2017</span>, <span class="dt">salvar =</span> <span class="st">&quot;Dados/INEP/&quot;</span>)</code></pre></div>
+rnp<span class="op">::</span><span class="kw">rnp_get_inep_censo</span>(<span class="dt">ano =</span> <span class="dv">2017</span>, <span class="dt">salvar =</span> <span class="st">&quot;Dados/INEP/&quot;</span>)
+<span class="co"># Classes para base de dados das IES</span>
+dicionario &lt;-<span class="st"> &quot;Dados/INEP/ANEXOS/ANEXO I - Dicionario de Dados e Tabelas Auxiliares/Dicionario_de_Dados.xlsx&quot;</span>
+classes &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_get_classes_inep</span>(<span class="dt">caminho =</span> dicionario, 
+                                     <span class="dt">aba =</span> <span class="st">&quot;DM_IES&quot;</span>, 
+                                     <span class="dt">retorna_lista =</span> <span class="ot">FALSE</span>)
+<span class="co"># Leitura da base de dados  </span>
+base &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_read</span>(<span class="dt">base =</span> <span class="kw">paste0</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_IES.CSV&quot;</span>),
+                      <span class="dt">sep =</span> <span class="st">&quot;|&quot;</span>, 
+                      <span class="dt">dec =</span> <span class="st">&quot;.&quot;</span>, 
+                      <span class="dt">header =</span> <span class="ot">TRUE</span>, 
+                      <span class="dt">encoding =</span> <span class="st">&quot;Latin-1&quot;</span>,
+                      <span class="dt">verbose =</span> <span class="ot">FALSE</span>, 
+                      <span class="dt">showProgress =</span> <span class="ot">FALSE</span>)
+<span class="co"># Aplicando classes aos dados</span>
+base_ies &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_aplica_classes</span>(<span class="dt">base =</span> base, <span class="dt">classes =</span> classes) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">    </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">Sigla =</span> SG_IES,
+                  <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, 
+                  <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,
+                  <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA)</code></pre>
 <blockquote>
-<p>Note que o argumento <code>salvar</code> na função <code>rnp_get_inep_censo()</code> dever conter o caminho para a pasta onde os dados baixados serão salvos. Se não for passada uma pasta ou seja, <code>salvar = NULL</code> o R baixará os dados na pasta da seção onde o R foi carregagado. Para saber qual é este local digite <code>getwd()</code> no console do R.</p>
+<p>Note que o argumento <code>salvar</code> na função <code>rnp_get_inep_censo()</code> dever conter o caminho para a pasta onde os dados baixados serão salvos.
+Se não for passada uma pasta ou seja, <code>salvar = NULL</code> o R baixará os dados na pasta da seção onde o R foi carregagado. Para saber qual é este local digite <code>getwd()</code> no console do R.</p>
 </blockquote>
 <p>Você poderá também ler os dados sem decompactar com o pacote <code>readr</code>, mas recomendamos descompartar para leitura mais rápida com a função <code>rnp_read()</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_curso &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_delim</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_CURSO.zip&quot;</span>, 
-                        <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>, <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;Latin1&quot;</span>))</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">base_curso &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_delim</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_CURSO.zip&quot;</span>, 
+                        <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>, <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;Latin1&quot;</span>))</code></pre>
+<p>Também disponibiliamos no pacote <code>rnp</code> os dados <code>dm_curso, dm_docente, dm_ies e dm_local</code>. Para acessar, basta carregar o pacote e utilizar os dados conforme exemplo abaixo.</p>
+<blockquote>
+<p>Especificamete para os exemplo deste livro, os dados foram tratados com as descrições das devidas classes e também removemos algumas variáveis com muitos valores nulos. Mantemos apenas as mais importates. Acreditamos que para fins de apŕendizado, estes dados são suficientes. Prém, para ter os ados originais, sugerimos seguir as dicas anteriores.</p>
+</blockquote>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Carega pacote</span>
+<span class="kw">require</span>(rnp, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)
+<span class="co"># Ajuda do conjunto de dados</span>
+?rnp<span class="op">::</span>dm_curso
+base_curso &lt;-<span class="st"> </span>rnp<span class="op">::</span>dm_curso</code></pre>
 <hr />
 
 
@@ -313,7 +373,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

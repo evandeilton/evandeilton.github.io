@@ -10,7 +10,7 @@ global extremamente ativa.
 # Estatística Descomplicada com R
 
 Bem vindo ao primeiro módulo de **Estatística descomplicada com o R** que é uma produção exclusiva para do 
-projeto R NA PRÁTICA. Esta série será composta por quatro módulos e neste primeiro, abordaremos os principais 
+projeto R NA PRÁTICA. [Acesse a versão online aqui](https://evandeilton.github.io). Esta série será composta por quatro módulos e neste primeiro, abordaremos os principais 
 conceitos estatísticos e análise descritiva. O objetivo maior desta parte é revisar os conceitos mais 
 importantes do inicio dos estudos estatísticos. Abordaremos a parte conceitual com algumas definições 
 e termos estatísticos, tabelas de frequências, bem como as principais medidas descritivas (média, mediana e outras).
@@ -47,8 +47,7 @@ O R NA PRATICA engloba cinco módulos. O primeiro já está completo e disponív
 
 Neste módulo exploramos o conceito Data Wrangling que é um tanto genérico em nosso português brasileiro, mas poderia ser traduzido como disputa/briga/luta de dados. Esta disputa está intimamente ligada ao processo de transformação de dados para obter conhecimento e isso inclui: obtenção, transformação, limpeza, agregação, visualização e criação de bases limpas para fins de Analytics na Ciência de Dados.
 
-Neste módulo o aluno aprenderá:
-<https://www.udemy.com/r-na-pratica-ciencia-de-dados/>
+[Neste módulo](https://www.udemy.com/r-na-pratica-ciencia-de-dados/) o aluno aprenderá:
 
   * Operadores, sequências, funções, loops, família apply e gráficos dos sistemas base, lattice e ggplot2;   
   * Agregação, transformação, estatística descritiva de dados e tabelas de frequências;   

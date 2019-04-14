@@ -43,7 +43,7 @@ O R NA PRATICA engloba cinco módulos. O primeiro já está completo e disponív
   * Módulo - VI  (Testes de hipóteses com R)
   * Módulo - V   (Modelagem estatística com R)
 
-### Módulo - I (Data Wrangling com R para Ciência de Dados)
+### [Módulo - I (Data Wrangling com R para Ciência de Dados)](https://www.udemy.com/r-na-pratica-ciencia-de-dados/)
 
 Neste módulo exploramos o conceito Data Wrangling que é um tanto genérico em nosso português brasileiro, mas poderia ser traduzido como disputa/briga/luta de dados. Esta disputa está intimamente ligada ao processo de transformação de dados para obter conhecimento e isso inclui: obtenção, transformação, limpeza, agregação, visualização e criação de bases limpas para fins de Analytics na Ciência de Dados.
 

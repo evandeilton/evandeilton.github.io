@@ -25,6 +25,7 @@
 <meta name="author" content="José Evandeilton Lopes">
 
 
+<meta name="date" content="2019-04-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,7 +53,7 @@
 <style type="text/css">
 a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; position: absolute; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -65,13 +66,11 @@ code.sourceCode { white-space: pre-wrap; }
 a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
 pre.numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource a.sourceLine:empty
-  { position: absolute; }
+  { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
   { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -172,10 +171,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-associacao"><i class="fa fa-check"></i><b>2.4</b> Medidas de associação</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#associacao-entre-duas-variaveis-discretas"><i class="fa fa-check"></i><b>2.4.1</b> Associação entre duas variáveis discretas</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia-e-correlacao"><i class="fa fa-check"></i><b>2.5</b> Covariância e correlação</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia"><i class="fa fa-check"></i><b>2.5.1</b> Covariância</a></li>
-<li class="chapter" data-level="2.5.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#correlacao"><i class="fa fa-check"></i><b>2.5.2</b> Correlação</a></li>
+<li class="chapter" data-level="2.4.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#duas-ou-mais-variaveis-numericas"><i class="fa fa-check"></i><b>2.4.2</b> Duas ou mais variáveis numéricas</a></li>
 </ul></li>
 </ul></li>
 <li class="appendix"><span><b>Apendice</b></span></li>
@@ -515,10 +511,10 @@ rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_docentes
 <pre class="sourceCode r"><code class="sourceCode r">rnp<span class="op">::</span><span class="kw">rnp_freq</span>(<span class="dt">x =</span> base_docentes<span class="op">$</span>escolaridade,
               <span class="dt">sortd =</span> <span class="ot">FALSE</span>, <span class="dt">digits =</span> <span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata,
-             <span class="dt">caption =</span> <span class="st">&quot;Frequências simples para escolaridade do docente&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+             <span class="dt">caption =</span> <span class="st">&quot;Frequências simples escolaridade do docente&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
 <table>
-<caption><span id="tab:tab04">Tabela 2.2: </span>Frequências simples para escolaridade do docente</caption>
+<caption><span id="tab:tab04">Tabela 2.2: </span>Frequências simples escolaridade do docente</caption>
 <thead>
 <tr class="header">
 <th align="left">classe</th>
@@ -607,10 +603,10 @@ Figura 2.1: Tabela de dupla entrada ou contingência
                <span class="dt">y =</span> base_docentes<span class="op">$</span>sexo, 
                <span class="dt">digits =</span> <span class="dv">3</span>, <span class="dt">percents =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata,
-             <span class="dt">caption =</span> <span class="st">&quot;Frequências cruzadas da escolaridade por sexo do docente&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+             <span class="dt">caption =</span> <span class="st">&quot;Frequências cruzadas da escolaridade por sexo&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
 <table>
-<caption><span id="tab:tab05">Tabela 2.3: </span>Frequências cruzadas da escolaridade por sexo do docente</caption>
+<caption><span id="tab:tab05">Tabela 2.3: </span>Frequências cruzadas da escolaridade por sexo</caption>
 <thead>
 <tr class="header">
 <th align="left">Tipo</th>
@@ -714,7 +710,8 @@ Temos que escolaridade é representado pela variável <span class="math inline">
 <h4><span class="header-section-number">2.1.2.1</span> Setores</h4>
 <pre class="sourceCode r"><code class="sourceCode r">tb &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_freq</span>(base_docentes<span class="op">$</span>faixaIdade, <span class="dt">sortd =</span> <span class="ot">FALSE</span>)
 p &lt;-<span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">ggplot</span>(tb, <span class="kw">aes</span>(<span class="st">&quot;&quot;</span>, fr, <span class="dt">fill =</span> classe))
-p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="dv">1</span>, <span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span>
+p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="dv">1</span>, <span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, 
+                      <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span>
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">coord_polar</span>(<span class="st">&quot;y&quot;</span>) <span class="op">+</span>
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">label =</span> <span class="kw">paste0</span>(<span class="kw">round</span>(<span class="dv">100</span><span class="op">*</span>fr, <span class="dv">1</span>), <span class="st">&quot;%&quot;</span>)),
                      <span class="dt">position =</span> <span class="kw">position_stack</span>(<span class="dt">vjust =</span> <span class="fl">0.5</span>), <span class="dt">size=</span><span class="dv">3</span>) <span class="op">+</span>
@@ -724,7 +721,8 @@ p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme</span>(<span class="dt">axis.line =</span> <span class="kw">element_blank</span>(),
                  <span class="dt">axis.text =</span> <span class="kw">element_blank</span>(),
                  <span class="dt">axis.ticks =</span> <span class="kw">element_blank</span>(),
-                 <span class="dt">legend.position=</span><span class="st">&quot;right&quot;</span>, <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="st">&quot;Classe&quot;</span>))</code></pre>
+                 <span class="dt">legend.position=</span><span class="st">&quot;right&quot;</span>, 
+                 <span class="dt">legend.text =</span> <span class="kw">element_text</span>(<span class="st">&quot;Classe&quot;</span>))</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:graf01"></span>
 <img src="ebookrnp_files/figure-html/graf01-1.png" alt="Gráfico de setores para faixa de idade dos docentes" width="480" />
 <p class="caption">
@@ -804,10 +802,10 @@ dplyr<span class="op">::</span><span class="kw">glimpse</span>(base_curso[,<span
 
 <pre class="sourceCode r"><code class="sourceCode r">rnp<span class="op">::</span><span class="kw">rnp_freq</span>(base_curso<span class="op">$</span>DESC_TP_CATEGORIA_ADMINISTRATIVA, <span class="dt">digits =</span> <span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata,
-               <span class="dt">caption =</span> <span class="st">&quot;ex: Frequências para categoria administrativa (cursos)&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+               <span class="dt">caption =</span> <span class="st">&quot;Frequências categoria administrativa&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
 <table>
-<caption><span id="tab:unnamed-chunk-37">Tabela 2.4: </span>ex: Frequências para categoria administrativa (cursos)</caption>
+<caption><span id="tab:unnamed-chunk-37">Tabela 2.4: </span>Frequências categoria administrativa</caption>
 <thead>
 <tr class="header">
 <th align="left">classe</th>
@@ -895,21 +893,26 @@ As categorias privada com e privada sem fins lucrativos representam 70,1% dos da
  <span class="solution"><em>Solução. </em></span> Vamos gerar uma tabela de frequências simples para avaliar as categorias e depois eliminar os dados da categoria missing.
 </div>
 
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># As categorias diferentes de missing são: 1. Bacharelado, 2. Licenciatura e 3. Tecnológico</span>
-<span class="co"># missing representa 0.09% dos dados.</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># As categorias diferentes de missing são: </span>
+<span class="co"># 1. Bacharelado, 2. Licenciatura e 3. Tecnológico</span>
+<span class="co"># missing representam 0.09% dos dados.</span>
+
 grau &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;1. Bacharelado&quot;</span>, <span class="st">&quot;2. Licenciatura&quot;</span>, <span class="st">&quot;3. Tecnológico&quot;)</span>
 <span class="st">GrauAcad &lt;- base_curso %&gt;% </span>
 <span class="st">  dplyr::transmute(GrauAcad = DESC_TP_GRAU_ACADEMICO) %&gt;% </span>
-<span class="st">  dplyr::filter(GrauAcad %in% grau)</span>
-<span class="st">tb &lt;- rnp::rnp_freq(GrauAcad$GrauAcad, digits = 3)</span>
-<span class="st">p &lt;- ggplot2::ggplot(tb, aes(classe, fr, fill = classe))</span>
-<span class="st">p + ggplot2::geom_bar(width = 1, size = 0.6, color = &quot;</span>white<span class="st">&quot;, </span>
-<span class="st">                      stat = &quot;</span>identity<span class="st">&quot;, show.legend = FALSE) +</span>
-<span class="st">  ggplot2::geom_text(aes(label = paste0(round(100*fr, 1), &quot;</span>%<span class="st">&quot;)),</span>
-<span class="st">                     position = position_stack(vjust = 1), size=3) +</span>
-<span class="st">  ggplot2::labs(x = NULL, y = NULL, fill = NULL, title = &quot;&quot;) +</span>
-<span class="st">  ggplot2::theme_gray() + coord_flip() +</span>
-<span class="st">  ggplot2::theme(axis.line = element_blank())</span></code></pre>
+<span class="st">  dplyr::filter(GrauAcad %in% c(&quot;</span><span class="fl">1.</span> Bacharelado<span class="st">&quot;, </span>
+<span class="st">                                &quot;</span><span class="fl">2.</span> Licenciatura<span class="st">&quot;, </span>
+<span class="st">                                &quot;</span><span class="fl">3.</span> Tecnológico&quot;)<span class="er">)</span>
+
+tb &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_freq</span>(GrauAcad<span class="op">$</span>GrauAcad, <span class="dt">digits =</span> <span class="dv">3</span>)
+p &lt;-<span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">ggplot</span>(tb, <span class="kw">aes</span>(classe, fr, <span class="dt">fill =</span> classe))
+p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">geom_bar</span>(<span class="dt">width =</span> <span class="dv">1</span>, <span class="dt">size =</span> <span class="fl">0.6</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, 
+                      <span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">show.legend =</span> <span class="ot">FALSE</span>) <span class="op">+</span>
+<span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">label =</span> <span class="kw">paste0</span>(<span class="kw">round</span>(<span class="dv">100</span><span class="op">*</span>fr, <span class="dv">1</span>), <span class="st">&quot;%&quot;</span>)),
+                     <span class="dt">position =</span> <span class="kw">position_stack</span>(<span class="dt">vjust =</span> <span class="dv">1</span>), <span class="dt">size=</span><span class="dv">3</span>) <span class="op">+</span>
+<span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="ot">NULL</span>, <span class="dt">y =</span> <span class="ot">NULL</span>, <span class="dt">fill =</span> <span class="ot">NULL</span>, <span class="dt">title =</span> <span class="st">&quot;&quot;</span>) <span class="op">+</span>
+<span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme_gray</span>() <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>() <span class="op">+</span>
+<span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme</span>(<span class="dt">axis.line =</span> <span class="kw">element_blank</span>())</code></pre>
 <p><img src="ebookrnp_files/figure-html/unnamed-chunk-43-1.png" width="480" style="display: block; margin: auto;" /></p>
 <p>Como o gráfico mostra, 59,6% dos cursos são de bacharelado frente a 20,6% de licenciatura. Estamos formando poucos professores?</p>
 
@@ -969,7 +972,8 @@ Figura 2.5: Na média, tudo bem
 <span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(<span class="st">&quot;Total técnicos&quot;</span>  =<span class="st"> </span><span class="kw">mean</span>(TotalTecnicos),
                    <span class="st">&quot;Receita própria&quot; = mean(ReceitaPropria),</span>
 <span class="st">                   &quot;</span>Depesa pesquisa<span class="st">&quot; = mean(DespesaPesquisa)) %&gt;% </span>
-<span class="st">  knitr::kable(caption = &quot;</span>Média anual para dados de IES<span class="st">&quot;, format = tb_formata) %&gt;% </span>
+<span class="st">  knitr::kable(caption = &quot;</span>Média anual para dados de IES<span class="st">&quot;, </span>
+<span class="st">               format = tb_formata) %&gt;% </span>
 <span class="st">  kableExtra::kable_styling(latex_options = &quot;</span>hold_position<span class="st">&quot;)</span></code></pre>
 <table>
 <caption><span id="tab:tab06">Tabela 2.5: </span>Média anual para dados de IES</caption>
@@ -1003,18 +1007,21 @@ Figura 2.5: Na média, tudo bem
 <pre class="sourceCode r"><code class="sourceCode r">base_ies <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, 
                 <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(<span class="st">&quot;Receita própria&quot;  = mean(ReceitaPropria),</span>
-<span class="st">                   &quot;</span>Receita própria ponderada<span class="st">&quot; = weighted.mean(x = ReceitaPropria,</span>
-<span class="st">                                                               w = TotalTecnicos)) %&gt;%</span>
-<span class="st">  knitr::kable(format = tb_formata,</span>
-<span class="st">               caption = &quot;</span>Média receita própria ponderada pelo total de técnicos<span class="st">&quot;) %&gt;% </span>
-<span class="st">  kableExtra::kable_styling(latex_options = &quot;</span>hold_position<span class="st">&quot;)</span></code></pre>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(<span class="st">&quot;Receita&quot;</span>  =<span class="st"> </span><span class="kw">mean</span>(ReceitaPropria),
+                   <span class="st">&quot;Receita ponderada&quot;</span> =<span class="st"> </span>
+<span class="st">                     </span><span class="kw">weighted.mean</span>(<span class="dt">x =</span> ReceitaPropria,
+                                   <span class="dt">w =</span> TotalTecnicos)) <span class="op">%&gt;%</span>
+<span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">format =</span> tb_formata,
+               <span class="dt">caption =</span> <span class="st">&quot;Média receita própria </span>
+<span class="st">               ponderada pelo total de técnicos&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
 <table>
-<caption><span id="tab:tab07">Tabela 2.6: </span>Média receita própria ponderada pelo total de técnicos</caption>
+<caption><span id="tab:tab07">Tabela 2.6: </span>Média receita própria
+ponderada pelo total de técnicos</caption>
 <thead>
 <tr class="header">
-<th align="right">Receita própria</th>
-<th align="right">Receita própria ponderada</th>
+<th align="right">Receita</th>
+<th align="right">Receita ponderada</th>
 </tr>
 </thead>
 <tbody>
@@ -1129,7 +1136,8 @@ Figura 2.5: Na média, tudo bem
  <span class="solution"><em>Solução. </em></span> Uma forma de verificar se um conjunto de dados possui moda é verificar se tem algum valor que se repete ao longo da amostra. Isso pode ser feito através das funções <code>table()</code> e <code>duplicated()</code>. Enquanto a primeira faz uma tabulação dos valores ou das classes, a segunda varre a variável buscando quem são os valores que ocorrem mais de uma vez e retornando <code>TRUE</code>, caso algum se repita. Vejamos a solução.
 </div>
 
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Preparando os dados como vetores através da função c() e ordenando com sort()</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Preparando os dados como vetores através da função c() e </span>
+<span class="co"># ordenando com sort()</span>
 x &lt;-<span class="st"> </span><span class="kw">sort</span>(<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>))
 <span class="kw">paste</span>(<span class="st">&quot;x possui&quot;</span>, x[<span class="kw">duplicated</span>(x)], <span class="st">&quot;como moda&quot;</span>)</code></pre>
 <pre><code>## [1] &quot;x possui 4 como moda&quot;</code></pre>
@@ -1313,7 +1321,8 @@ R2 &lt;-<span class="st"> </span><span class="kw">max</span>(idade) <span class=
 <pre class="sourceCode r"><code class="sourceCode r">base_ies <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(<span class="st">`</span><span class="dt">Média receita</span><span class="st">`</span> =<span class="st"> </span><span class="kw">mean</span>(VL_RECEITA_PROPRIA),
                    <span class="st">`</span><span class="dt">Média técnicos</span><span class="st">`</span> =<span class="st"> </span><span class="kw">mean</span>(QT_TEC_TOTAL),
-                   <span class="st">`</span><span class="dt">CV receita</span><span class="st">`</span> =<span class="st"> </span><span class="kw">sd</span>(VL_RECEITA_PROPRIA) <span class="op">/</span><span class="st"> </span><span class="kw">mean</span>(VL_RECEITA_PROPRIA),
+                   <span class="st">`</span><span class="dt">CV receita</span><span class="st">`</span> =<span class="st"> </span><span class="kw">c</span>(<span class="kw">sd</span>(VL_RECEITA_PROPRIA) <span class="op">/</span>
+<span class="st">                     </span><span class="kw">mean</span>(VL_RECEITA_PROPRIA)),
                    <span class="st">`</span><span class="dt">CV técnicos</span><span class="st">`</span> =<span class="st"> </span><span class="kw">sd</span>(QT_TEC_TOTAL) <span class="op">/</span><span class="st"> </span><span class="kw">mean</span>(QT_TEC_TOTAL)) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">round</span>(., <span class="dt">digits =</span> <span class="dv">3</span>)</code></pre>
 <pre><code>##   Média receita Média técnicos CV receita CV técnicos
@@ -1491,7 +1500,8 @@ Dica: Para resolver este problema, isolamos as variáveis <code>NO_IES</code> e 
 <pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">ggplot</span>(base_docentes, <span class="kw">aes</span>(<span class="dt">x =</span> idade))
 p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">theme_gray</span>() <span class="op">+</span>
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">geom_histogram</span>(<span class="dt">colour=</span><span class="st">&#39;white&#39;</span>, <span class="dt">bins =</span> <span class="dv">10</span>) <span class="op">+</span>
-<span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Frequência&quot;, x = &quot;</span>Faixa de idade<span class="st">&quot;, fill = NULL, title = &quot;&quot;) +</span>
+<span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">&quot;Frequência&quot;, x = &quot;</span>Faixa de idade<span class="st">&quot;, </span>
+<span class="st">                fill = NULL, title = &quot;&quot;) +</span>
 <span class="st">    ggplot2::scale_x_continuous(</span>
 <span class="st">      breaks=seq(10, 90, 10),</span>
 <span class="st">      labels = seq(10, 90, 10)</span>
@@ -1580,7 +1590,8 @@ Obs.: como temos muitos autliers na variável de receita própria, vamos limitar
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> TotalTecnicos, <span class="dt">y =</span> ReceitaPropria))
 p <span class="op">+</span><span class="st"> </span>ggplot2<span class="op">::</span><span class="kw">theme_gray</span>() <span class="op">+</span>
 <span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">geom_point</span>() <span class="op">+</span>
-<span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Total técnicos&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Receita própria&quot;, fill = NULL, title = &quot;&quot;) +</span>
+<span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Total técnicos&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Receita própria&quot;, </span>
+<span class="st">                fill = NULL, title = &quot;&quot;) +</span>
 <span class="st">  ggplot2::theme(axis.line.x = element_line(), </span>
 <span class="st">                 axis.text.x = NULL, </span>
 <span class="st">                 axis.line.y = element_blank())</span></code></pre>
@@ -1626,7 +1637,7 @@ Figura 2.13: Gráfico de pontos total de técnicos (&lt;50) versus receita próp
 <span id="exm:unnamed-chunk-80" class="example"><strong>Exemplo 2.15  </strong></span>Vamos categorizar a variável receita próprias das IES de duas formas distintas: por quartis e por operadores relacionais com quatro faixas.
 </div>
 
-<pre class="sourceCode r"><code class="sourceCode r">## Categorizando por quartis
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">## Categorizando por quartis</span>
 base_ies &lt;-<span class="st"> </span>base_ies <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,
                 <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL) 
@@ -1681,10 +1692,13 @@ kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span 
 </tr>
 </tbody>
 </table>
-<pre class="sourceCode r"><code class="sourceCode r">## Categorização por ifelse com operadores relacionais
-fx_receita_r &lt;-<span class="st"> </span><span class="kw">ifelse</span>(base_ies<span class="op">$</span>ReceitaPropria <span class="op">&lt;=</span><span class="st"> </span><span class="dv">1200000</span>, <span class="st">&quot;A.-1200000&quot;</span>,
-                <span class="kw">ifelse</span>(base_ies<span class="op">$</span>ReceitaPropria <span class="op">&lt;=</span><span class="st"> </span><span class="dv">5000000</span>, <span class="st">&quot;B.1200000 a 5000000&quot;</span>,
-                <span class="kw">ifelse</span>(base_ies<span class="op">$</span>ReceitaPropria <span class="op">&lt;=</span><span class="dv">35000000</span>, <span class="st">&quot;C.5000000 a 35000000&quot;</span>,<span class="st">&quot;D.35000000+&quot;</span>)))
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">## Categorização por ifelse com operadores relacionais</span>
+fx_receita_r &lt;-<span class="st"> </span><span class="kw">ifelse</span>(base_ies<span class="op">$</span>ReceitaPropria <span class="op">&lt;=</span><span class="st"> </span><span class="dv">1200000</span>, 
+                       <span class="st">&quot;A.-1200000&quot;</span>,
+                <span class="kw">ifelse</span>(base_ies<span class="op">$</span>ReceitaPropria <span class="op">&lt;=</span><span class="st"> </span><span class="dv">5000000</span>, 
+                       <span class="st">&quot;B.1200000 a 5000000&quot;</span>,
+                <span class="kw">ifelse</span>(base_ies<span class="op">$</span>ReceitaPropria <span class="op">&lt;=</span><span class="dv">35000000</span>, 
+                       <span class="st">&quot;C.5000000 a 35000000&quot;</span>,<span class="st">&quot;D.35000000+&quot;</span>)))
 
 rnp<span class="op">::</span><span class="kw">rnp_freq</span>(fx_receita_r, <span class="dt">sortd =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">digits =</span> <span class="dv">3</span>,
@@ -1955,7 +1969,7 @@ Figura 2.19: Histograma de idade vs escolaridade
 <div id="medidas-de-associacao" class="section level2">
 <h2><span class="header-section-number">2.4</span> Medidas de associação</h2>
 <p>Análises univariadas são muito úteis para determinarmos particularidades de dados porém, em muitas situações, desejamos medir relações de interdendência entre duas ou mais variáveis. Como vimos em gráficos para duas variáveis numérias; gráficos para duas variáveis categóricas e também em tabelas de contingência, é possivel extrair carcaterísticas importantes dos valores e/ou das classes de cada variáveil. Contudo, queremos quantificar a relação global de duas ou mais variáveis e neste sentido, as medidas de associação tem papel fundamental. Suponha que desejamos determinar de a variável idade dos docentes está associada à escolaridade ou se o total de técnicos está correlacionado com a receita total da IE.
-Trataremos nesta sessão algumas medidas de associação entre duas variáveis categóricas onde trabalharemos com as estatísticas <span class="math inline">\(\chi^2\)</span> (Qui-quadrado), <span class="math inline">\(V\)</span> de Cramer, <span class="math inline">\(C\)</span> coeficiente de contingência. Para as variáveis numéricas trabalharemos com as estatísticas de correlação <span class="math inline">\(\rho\)</span> de Peason, Coeficiente de correlação rank de Spreaman e Medidas de concordância e discordância de pares.</p>
+Trataremos nesta sessão algumas medidas de associação entre duas variáveis categóricas onde trabalharemos com as estatísticas <span class="math inline">\(\chi^2\)</span> (Qui-quadrado), <span class="math inline">\(V\)</span> de Cramer, <span class="math inline">\(C\)</span> coeficiente de contingência. Para as variáveis numéricas trabalharemos com as estatísticas de correlação <span class="math inline">\(\rho\)</span> de Peason, Coeficiente de correlação rank de Spearman e Medidas de concordância e discordância de pares.</p>
 <div id="associacao-entre-duas-variaveis-discretas" class="section level3">
 <h3><span class="header-section-number">2.4.1</span> Associação entre duas variáveis discretas</h3>
 <p>Duas variáveis discretas são ditas <strong>independentes</strong> ou <strong>não associadas</strong> quando as observações de uma não influenciam as observações da outra. Por exemplo, quando duas pessoas jogam uma moeda separadamente dez vezes, o resultados da primeira pessoa não são afetados pelos resultados da segunda pessoa.</p>
@@ -1963,17 +1977,17 @@ Trataremos nesta sessão algumas medidas de associação entre duas variáveis c
 <h4><span class="header-section-number">2.4.1.1</span> Estatística <span class="math inline">\(\chi^2\)</span></h4>
 <p>A estatística <span class="math inline">\(\chi^2\)</span> é muito utilizada para quantificar a associação global de duas variáveis categóricas dispostas em uma tabela de contingência com <span class="math inline">\(k \times l\)</span> linhas vs colunas. Esta estaísticas é dada por:</p>
 <p><span class="math display">\[\chi^2 = \sum_{i=1}^{k} \sum_{j=1}^{l} \frac{(n_{ij} - \widetilde{n}_{ij})^2}{\widetilde{n}_{ij}}\]</span></p>
-<p>onde <span class="math inline">\(\widetilde{n}_{ij}\)</span> é a frequência esperada de <span class="math inline">\((x_i;y_j)\)</span> dada pelo produto das frequências absolutas marginais e calculado por
-<span class="math display">\[\widetilde{n}_{ij} = \frac{n_{i+}\times n_{+j}}{n}\]</span>
-Para que a estatística seja confiável, os seguintes pressupostos devem ser respeitados:</p>
+<p>onde <span class="math inline">\(\widetilde{n}_{ij}\)</span> é a frequência esperada de <span class="math inline">\((x_i;y_j)\)</span> dada pelo produto das frequências absolutas marginais e calculado por</p>
+<p><span class="math display">\[\widetilde{n}_{ij} = \frac{n_{i+}\times n_{+j}}{n}\]</span></p>
+<p>Para que a estatística seja confiável, os seguintes pressupostos devem ser respeitados:</p>
 <ul>
 <li>A amostra deve ser aleatória;</li>
-<li>Todas as frequências esperadas são maiores ou iguais a 1 (isto é, <span class="math inline">\(\widetilde{n}_{ij} \gt 1\)</span>);</li>
+<li>Todas as frequências esperadas são maiores ou iguais a 1;</li>
 <li>Não mais de 20% das frequências esperadas são inferiores a 5;</li>
 </ul>
 <p>Caso os desvios entre as frequências observadas e esperadas seja alto temos evidência de associação forte porque as frequências relativas esperadas são calculadas assumindo independência entre as duas variáveis. Desta forma, se o posto ocorrer, ou seja, se as frequências relativas observadas e esparadas são idênticas ou similares a associação é fraca e as variáveis são independentes. O range da estatística está limitado a</p>
-<p><span class="math display">\[0 \le \chi^2 \le n\times(min(k,l)-1)\]</span>
-Assim, uma forma de verificar a força da associação é comparar o valor de <span class="math inline">\(\chi^2\)</span> calculado com o valor máximo que <span class="math inline">\(\chi^2\)</span> pode assumir, ou seja <span class="math inline">\(n\times(min(k,l)-1)\)</span> onde <span class="math inline">\(n\)</span> é o total geral. Esta métrica depende unicamente do tamanho da amostra e total de classes de cada variável da tabela de contingência.</p>
+<p><span class="math display">\[0 \le \chi^2 \le n\times(min(k,l)-1)\]</span></p>
+<p>Assim, uma forma de verificar a força da associação é comparar o valor de <span class="math inline">\(\chi^2\)</span> calculado com o valor máximo que <span class="math inline">\(\chi^2\)</span> pode assumir, ou seja <span class="math inline">\(n\times(min(k,l)-1)\)</span> onde <span class="math inline">\(n\)</span> é o total geral. Esta métrica depende unicamente do tamanho da amostra e total de classes de cada variável da tabela de contingência.</p>
 <blockquote>
 <p>É provado que a estatística <span class="math inline">\(\chi^2\)</span> segue uma distribuição qui-quadrado com <span class="math inline">\(\nu\)</span> graus de liberdade calculados com base no total de classes das variáveis da tabela de contingência <span class="math inline">\(\nu = (k-1)\times (l-1)\)</span>. Veremos em testes de hipóteses como quantificar a incerteza do teste de <span class="math inline">\(\chi^2\)</span> através do p-valor do teste. Por hora, apresentamos apenas a estatística geral.</p>
 </blockquote>
@@ -2051,8 +2065,8 @@ t1<span class="op">$</span>expected</code></pre>
 <div id="estatistica-v-de-cramer" class="section level4">
 <h4><span class="header-section-number">2.4.1.2</span> Estatística <span class="math inline">\(V\)</span> de Cramér</h4>
 <p>Aestatística <span class="math inline">\(\chi^2\)</span> possui uma fragilidade que pode dificultar a interpretação, pois ela depende do range e este por sua vez depende do tamanho da amostra e da quantidade de classes em cada variável. A estatítica <span class="math inline">\(V\)</span> surge como uma forma de padronização da estatística <span class="math inline">\(\chi^2\)</span> e é calculada por:</p>
-<p><span class="math display">\[V = \sqrt{\frac{\chi^2}{n \times (min(k,l)-1)}}\]</span>
-Esta estatística torna a interpretação de <span class="math inline">\(\chi^2\)</span> mais simples, pois seu retorno é um número menor ou igual a uma unidade e quanto mais próximo de um, mais forte será a associação entre as duas variáveis.</p>
+<p><span class="math display">\[V = \sqrt{\frac{\chi^2}{n \times (min(k,l)-1)}}\]</span></p>
+<p>Esta estatística torna a interpretação de <span class="math inline">\(\chi^2\)</span> mais simples, pois seu retorno é um número menor ou igual a uma unidade e quanto mais próximo de um, mais forte será a associação entre as duas variáveis.</p>
 <p>Tabelas de interpretação de estatísticas de associação como <span class="math inline">\(V\)</span> são questionáveis uma vez que o nível de associação pode variar de acordo com tipo de estudo, área de pesquisa ou até preferência do pesquisador. Porém, algunas autores se guiam pelas faixas da tabela <a href="estatistica-descritiva.html#tab:tab12">2.12</a> para interpretar o nível da associação entre duas variáveis numa tabela de contingência. Estes valores são adapatados de <span class="citation">(Gravetter and Wallnau <a href="#ref-gravetter2016statistics">2016</a>)</span>.</p>
 <table>
 <caption><span id="tab:tab12">Tabela 2.12: </span>Interpretação da associação por V e C</caption>
@@ -2091,8 +2105,8 @@ Esta estatística torna a interpretação de <span class="math inline">\(\chi^2\
  <span class="solution"><em>Solução. </em></span> Temos que <span class="math inline">\(\chi^2 = 647.2\)</span>, logo <span class="math inline">\(V = \sqrt{\frac{\chi^2}{392036 \times (min(5,2)-1)}}\)</span>
 </div>
 
-<p><span class="math display">\[V = \sqrt{\frac{647.2}{392036 \times (min(5,2)-1)}} = \sqrt{\frac{647.2}{392036 \times (2-1)}} = 0.0406\]</span>
-Como <span class="math inline">\(V = 0.0406 &lt; 0.10\)</span> concluimos que não existe associação estatísticamente significativa entre <code>escolaridade</code> e <code>sexo</code>.</p>
+<p><span class="math display">\[V = \sqrt{\frac{647.2}{392036 \times (min(5,2)-1)}} = \sqrt{\frac{647.2}{392036 \times (2-1)}} = 0.0406\]</span></p>
+<p>Como <span class="math inline">\(V = 0.0406 &lt; 0.10\)</span> concluimos que não existe associação estatísticamente significativa entre <code>escolaridade</code> e <code>sexo</code>.</p>
 
 <div class="exercise">
 <span id="exr:unnamed-chunk-96" class="exercise"><strong>Exercício 2.11  </strong></span>A base de dados <code>dm_curso</code> possui as variáveis <code>DESC_IN_MATERIAL_BRAILLE</code> e <code>DESC_IN_MATERIAL_TATIL</code> que se referem a recursos extras disponibilizados para os cursos. Verifique se estas variáveis estão associadas através das estatísticas <span class="math inline">\(\chi^2\)</span> e <span class="math inline">\(V\)</span>
@@ -2118,9 +2132,9 @@ t1<span class="op">$</span>statistic</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(observado)<span class="op">*</span>(<span class="kw">min</span>(<span class="kw">dim</span>(observado))<span class="op">-</span><span class="dv">1</span>)</code></pre>
 <pre><code>## [1] 71386</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># O valor da estatística está próximo do Range. Temos indicios fortes de associação.</span></code></pre>
-<p>Vamos calcular a estatística <span class="math inline">\(V\)</span>
-<span class="math display">\[V = \sqrt{\frac{52186}{ 35693 \times (min(3,3)-1)}} = \sqrt{\frac{52186}{35693 \times (3-1)}} = 0.8550\]</span>
-Como <span class="math inline">\(V\)</span> está muito acima de 0.50 logo, temos evidẽncias de que estas duas variáveis são fortemente associadas.</p>
+<p>Vamos calcular a estatística <span class="math inline">\(V\)</span></p>
+<p><span class="math display">\[V = \sqrt{\frac{52186}{ 35693 \times (min(3,3)-1)}} = \sqrt{\frac{52186}{35693 \times (3-1)}} = 0.8550\]</span></p>
+<p>Como <span class="math inline">\(V\)</span> está muito acima de 0.50 logo, temos evidẽncias de que estas duas variáveis são fortemente associadas.</p>
 <blockquote>
 <p>Perceba que o próprio nome de cada variável contém um indicativo de associação uma vez que espera-se que materiais para aulas em braile devam conter itens de táteis. Aqui o analista entra com o senso de negócio para confirmar se as estatísticas fazem sentido prático na validação das hipóteses de pesquisa.</p>
 </blockquote>
@@ -2147,12 +2161,11 @@ rnp<span class="op">::</span><span class="kw">rnp_associacao</span>(<span class=
 ##     52185.5662         0.8550         0.9438</code></pre>
 </div>
 </div>
-</div>
-<div id="covariancia-e-correlacao" class="section level2">
-<h2><span class="header-section-number">2.5</span> Covariância e correlação</h2>
-<p>Na análise bivariada de variáveis numéricas a covariância e a correlação tem papel fundamental. Ambas se assemelham pelo fato de que medem a direção da relação entre duas variáveis ao longo de seus pontos. As relações mais comuns são <em>ambas as variáveiscrescem, ambas decrescem, uma decresce e a outra cresce</em>. A diferença mais significativa entre a covariância e a correlação é que a primeira oferece um valor absoluto variando de acordo com os dados, graças a isso não tem como estimar a força de uma relação linear. É aí que entra a correlação. Em R a covariância pode ser calculada por <code>var()</code> e <code>cov()</code> e a correção por <code>cor()</code> e se aplica a bases com mais de 2 variáveis numéricas.</p>
-<div id="covariancia" class="section level3">
-<h3><span class="header-section-number">2.5.1</span> Covariância</h3>
+<div id="duas-ou-mais-variaveis-numericas" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Duas ou mais variáveis numéricas</h3>
+<p>Na análise bivariada ou multivariada de variáveis numéricas, a covariância e a correlação tem papel fundamental. Ambas se assemelham pelo fato de que medem a direção da relação entre duas variáveis ao longo de seus pontos. As relações mais comuns são <em>ambas as variáveis crescem, ambas decrescem, uma decresce e a outra cresce</em>. A diferença mais significativa entre a covariância e a correlação é que a primeira oferece um valor absoluto variando de acordo com os dados, graças a isso não tem como estimar a força de uma relação linear. É aí que entra a correlação. Em R a covariância pode ser calculada por <code>var()</code> e <code>cov()</code> e a correção por <code>cor()</code> e se aplica a bases com mais de 2 variáveis numéricas.</p>
+<div id="covariancia" class="section level4">
+<h4><span class="header-section-number">2.4.2.1</span> Covariância</h4>
 <p>O conceito de covariância pode ser aplicado tanto a conjunto de dados como a variáveis aleatórias. Quando aplicada a duas variáveis <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> é expressa por:</p>
 <p><span class="math display">\[Cov(X,Y) = \frac {\sum_{i=1}^N(X_i-\bar X)(Y_i - \bar Y)}{N-1}, i=1,..,N\]</span></p>
 <p>Sendo que <span class="math inline">\(\bar X\)</span> e <span class="math inline">\(\bar Y\)</span> são as médias das variáveis X e Y.</p>
@@ -2195,8 +2208,8 @@ rnp<span class="op">::</span><span class="kw">rnp_associacao</span>(<span class=
 A matriz é espelhada e para interpretá-la basta ler acima ou abaixo da diagonal principal.</p>
 </blockquote>
 </div>
-<div id="correlacao" class="section level3">
-<h3><span class="header-section-number">2.5.2</span> Correlação</h3>
+<div id="correlacao-de-pearson" class="section level4">
+<h4><span class="header-section-number">2.4.2.2</span> Correlação de Pearson</h4>
 <p>A correlação linear ou de Pearson é uma estatística padronizada que varia de <span class="math inline">\(-1\)</span> a <span class="math inline">\(1\)</span> e expressa a relação linear entre duas variáveis numéricas. A correlação é expressa pela letra grega <span class="math inline">\(\rho\)</span> e é dada pela seguinte expressão matemática:</p>
 <p><span class="math display">\[\rho = \frac {\sum_{i=1}^N(X_i-\bar X)(Y_i - \bar Y)}{\sqrt{\sum_{i=1}^N(X_i-\bar X)^2} \times \sqrt{\sum_{i=1}^N(Y_i-\bar Y)^2}}=\frac{Cov(X,Y)}{\sqrt{S^2(X) \times S^2(Y)}}, \\ i=1,..,N\]</span></p>
 <p>Em resumo, esta formula aparentemente complicada diz que a correlação é resultado da covariância dividida pela raiz quadrada do produto das variâncias de cada variável.</p>
@@ -2285,8 +2298,177 @@ Figura 2.20: Tendência da correlação
 </tbody>
 </table>
 <p>Note agora que faz mais sentido estimar a força da relação linear entre as variáveis utilizando a correlação. No nosso exemplo, uma correlação linear de <code>0.047</code> entre <code>TotalTecnicos</code> e <code>ReceitaPropria</code> nos diz que a relação linear entre estas duas variáveis é muito fraca. O mesmo se aplica à variável <code>DespesaPesquisa</code> em relação à variável <code>TotalTecnicos</code> com <code>0.190</code>. Estas três variáveis não possuem correlação forte entre si.</p>
+</div>
+<div id="correlacao-rank-de-spearman" class="section level4">
+<h4><span class="header-section-number">2.4.2.3</span> Correlação rank de Spearman</h4>
+<p>Para ilustrar esta correlação, vamos imaginar que dois jurados avaliem a qualidade do ensino em cada uma das IES mapeadas no censo, por algum método de forma independente e atribuam uma nota numérica de 0 a 100 onde notas baixas sejam ruins e altas sejam boas. Vamos chamar esta nota de escore e definir por <span class="math inline">\(x_i\)</span>. Ao ordenarmos todas as IES pelas notas das maiores para as menores teremos um rank que vai de 1 para o peimeiro lugar até o total de IES (assumindo que não há empates). Ao selecionarmos uma IES qualqer do conjunto de dados, teremos dois ranks, <span class="math inline">\(R(x_i)\)</span> e <span class="math inline">\(R(y_i)\)</span> para ela e consequentemente uma diferença entre os ranks dada por <span class="math inline">\(d_i = R(x_i) - R(y_i)\)</span>. Por exemplo, se a UFPR teve os ranks 20 e 25, temos que <span class="math inline">\(d_i = 20-25 = 5\)</span>. O coeficiente de correlação rank de Spearman busca medir a força da associação entre os dois julgamentos dos dois jurados. Calculamos o coeficiente de correlação rank de Spearman por</p>
+<p><span class="math display">\[ R = 1 - \frac{6 \times \sum_{i = 1}^{n} d^2_i}{n \times (n^2 - 1)}\]</span>
+Este tipo de correlação se aplica para variáveis contínuas e também ordinais e conforme já exposto, busca medir a correlação através dos ranks de cada variável e varia de <span class="math inline">\(-1\)</span> a <span class="math inline">\(+1\)</span>. Quando <span class="math inline">\(R=+1\)</span> temos que as duas variáveis foram rankeadas exatamente iguais (concordãncia ou associação perfeita) e <span class="math inline">\(R=-1\)</span> quando ocorreu o oposto (inconcordância).</p>
+
+<div class="example">
+<span id="exm:unnamed-chunk-106" class="example"><strong>Exemplo 2.24  </strong></span>Determinar e interpretar a correlação entre as duas variáveis <code>TotalTecnicos</code> e <code>ReceitaPropria</code> para as 10 primeiaras observações da base de dados <code>dm_ies</code>.
+</div>
+
+<pre class="sourceCode r"><code class="sourceCode r">temp &lt;-<span class="st"> </span>base_ies <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">transmute</span>(<span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL,
+                   <span class="st">`</span><span class="dt">R(xi)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">rank</span>(<span class="op">-</span>TotalTecnicos),
+                   <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,
+                   <span class="st">`</span><span class="dt">R(yi)</span><span class="st">`</span> =<span class="st"> </span><span class="kw">rank</span>(<span class="op">-</span>ReceitaPropria),
+                   <span class="dt">di =</span> <span class="st">`</span><span class="dt">R(xi)</span><span class="st">`</span><span class="op">-</span><span class="st">`</span><span class="dt">R(yi)</span><span class="st">`</span>,
+                   <span class="dt">di2 =</span> di<span class="op">^</span><span class="dv">2</span>)
+<span class="co"># Tabela de exemplo</span>
+knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">x =</span> temp, <span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata,
+             <span class="dt">caption =</span> <span class="st">&quot;Análise de correlação de Spearman&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-107">Tabela 2.16: </span>Análise de correlação de Spearman</caption>
+<thead>
+<tr class="header">
+<th align="right">TotalTecnicos</th>
+<th align="right">R(xi)</th>
+<th align="right">ReceitaPropria</th>
+<th align="right">R(yi)</th>
+<th align="right">di</th>
+<th align="right">di2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1574</td>
+<td align="right">3</td>
+<td align="right">6913132</td>
+<td align="right">7</td>
+<td align="right">-4</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="right">3206</td>
+<td align="right">1</td>
+<td align="right">63239902</td>
+<td align="right">6</td>
+<td align="right">-5</td>
+<td align="right">25</td>
+</tr>
+<tr class="odd">
+<td align="right">1429</td>
+<td align="right">4</td>
+<td align="right">3161937</td>
+<td align="right">10</td>
+<td align="right">-6</td>
+<td align="right">36</td>
+</tr>
+<tr class="even">
+<td align="right">1721</td>
+<td align="right">2</td>
+<td align="right">4136205</td>
+<td align="right">8</td>
+<td align="right">-6</td>
+<td align="right">36</td>
+</tr>
+<tr class="odd">
+<td align="right">786</td>
+<td align="right">8</td>
+<td align="right">3458763</td>
+<td align="right">9</td>
+<td align="right">-1</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">1275</td>
+<td align="right">5</td>
+<td align="right">616991005</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right">16</td>
+</tr>
+<tr class="odd">
+<td align="right">441</td>
+<td align="right">9</td>
+<td align="right">142785305</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="right">25</td>
+</tr>
+<tr class="even">
+<td align="right">986</td>
+<td align="right">7</td>
+<td align="right">338035351</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">16</td>
+</tr>
+<tr class="odd">
+<td align="right">1062</td>
+<td align="right">6</td>
+<td align="right">487902230</td>
+<td align="right">2</td>
+<td align="right">4</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="right">246</td>
+<td align="right">10</td>
+<td align="right">100089191</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">25</td>
+</tr>
+</tbody>
+</table>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Calculando manualmente</span>
+<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>(<span class="dv">6</span><span class="op">*</span><span class="kw">sum</span>(temp<span class="op">$</span>di2))<span class="op">/</span>(<span class="kw">nrow</span>(temp)<span class="op">*</span>(<span class="kw">nrow</span>(temp)<span class="op">^</span><span class="dv">2-1</span>))</code></pre>
+<pre><code>## [1] -0.2848</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Calculando via R</span>
+<span class="kw">cor</span>(temp<span class="op">$</span>TotalTecnicos, temp<span class="op">$</span>ReceitaPropria, <span class="dt">method =</span> <span class="st">&quot;spearman&quot;</span>)</code></pre>
+<pre><code>## [1] -0.2848</code></pre>
+<p>Concluimos que, via correlação de Spearman, temos associação negativa baixa entre total de técnicos e total de receita própria. Como vimos, o coeficiente de corralação é determinado pela função <code>cor()</code> padrão do <code>R</code> e ela cobre três tipos de coeficientes. Especialmente para o R NA PRÁTICA, criamos a função <code>rnp_correlacao()</code> que determina a correlação de Pearson, Spearman e Kendal. Esta última não abordaremos aqui, mas ela também é indicada para variáveis ordinais porém focada em pares concordantes versus discordantes. para os leitores interessados sugerimos <span class="citation">(Kendall <a href="#ref-kendall1938new">1938</a>)</span></p>
+<pre class="sourceCode r"><code class="sourceCode r">temp &lt;-<span class="st"> </span>base_ies <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">transmute</span>(<span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL,
+                   <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,
+                   <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA)
+rnp<span class="op">::</span><span class="kw">rnp_correlacao</span>(temp) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata, <span class="dt">row.names =</span> <span class="ot">FALSE</span>,
+             <span class="dt">caption =</span> <span class="st">&quot;Correlação com rnp_correlacao()&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-108">Tabela 2.17: </span>Correlação com rnp_correlacao()</caption>
+<thead>
+<tr class="header">
+<th align="left">x</th>
+<th align="left">y</th>
+<th align="right">pearson</th>
+<th align="right">spearman</th>
+<th align="right">kendall</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">TotalTecnicos</td>
+<td align="left">DespesaPesquisa</td>
+<td align="right">0.2918</td>
+<td align="right">0.3724</td>
+<td align="right">0.2827</td>
+</tr>
+<tr class="even">
+<td align="left">TotalTecnicos</td>
+<td align="left">ReceitaPropria</td>
+<td align="right">0.0578</td>
+<td align="right">0.5253</td>
+<td align="right">0.3963</td>
+</tr>
+<tr class="odd">
+<td align="left">ReceitaPropria</td>
+<td align="left">DespesaPesquisa</td>
+<td align="right">0.0642</td>
+<td align="right">0.1957</td>
+<td align="right">0.1583</td>
+</tr>
+</tbody>
+</table>
 <hr />
 
+</div>
 </div>
 </div>
 </div>
@@ -2305,10 +2487,13 @@ Figura 2.20: Tendência da correlação
 <p>Barnett, Vic, and Toby Lewis. 1974. <em>Outliers in Statistical Data</em>. Wiley.</p>
 </div>
 <div id="ref-outliers">
-<p>Komsta, Lukasz. 2011. <em>Outliers: Tests for Outliers</em>. <a href="https://CRAN.R-project.org/package=outliers" class="uri">https://CRAN.R-project.org/package=outliers</a>.</p>
+<p>Komsta, Lukasz. 2011. <em>Outliers: Tests for Outliers</em>. <a href="https://CRAN.R-project.org/package=outliers">https://CRAN.R-project.org/package=outliers</a>.</p>
 </div>
 <div id="ref-gravetter2016statistics">
 <p>Gravetter, Frederick J, and Larry B Wallnau. 2016. <em>Statistics for the Behavioral Sciences</em>. Cengage Learning.</p>
+</div>
+<div id="ref-kendall1938new">
+<p>Kendall, Maurice G. 1938. “A New Measure of Rank Correlation.” <em>Biometrika</em> 30 (1/2). JSTOR: 81–93.</p>
 </div>
 </div>
             </section>

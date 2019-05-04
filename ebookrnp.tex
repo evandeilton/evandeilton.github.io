@@ -1,5 +1,6 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 %
 \documentclass[11pt,]{style/krantz}
 \usepackage{lmodern}
@@ -28,11 +29,16 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
 }
+\usepackage{xcolor}
 \usepackage{hyperref}
 \hypersetup{
             pdftitle={R NA PRÁTICA: Estatística Descomplicada com R},
             pdfauthor={José Evandeilton Lopes},
-            pdfborder={0 0 0},
+            colorlinks=true,
+            linkcolor=Maroon,
+            filecolor=Maroon,
+            citecolor=Blue,
+            urlcolor=Blue,
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{color}
@@ -102,8 +108,9 @@
 \usepackage[bf,singlelinecheck=off]{caption}
 
 %Edit JEL
-\usepackage{float}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{float}
 %\usepackage[default]{sourcesanspro}
 %\usepackage[T1]{fontenc}
 %\graphicspath{ {../Imagens} }
@@ -176,7 +183,7 @@
 
 \title{R NA PRÁTICA: Estatística Descomplicada com R}
 \author{José Evandeilton Lopes}
-\date{16/04/2019}
+\date{04/05/2019}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -215,6 +222,7 @@ without whom I should have finished this book two years earlier
 \setlength{\abovedisplayshortskip}{-5pt}
 
 {
+\hypersetup{linkcolor=}
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
@@ -352,7 +360,8 @@ Trabalharemos com conjuntos de dados do Censo do Ensino Superior no Brasil feito
 \CommentTok{# dados e torná-los mais acessíveis nas aulas.}
 \NormalTok{rnp}\OperatorTok{::}\KeywordTok{rnp_get_inep_censo}\NormalTok{(}\DataTypeTok{ano =} \DecValTok{2017}\NormalTok{, }\DataTypeTok{salvar =} \StringTok{"Dados/INEP/"}\NormalTok{)}
 \CommentTok{# Classes para base de dados das IES}
-\NormalTok{dicionario <-}\StringTok{ "Dados/INEP/ANEXOS/ANEXO I - Dicionario de Dados e Tabelas Auxiliares/Dicionario_de_Dados.xlsx"}
+\NormalTok{dicionario <-}\StringTok{ "Dados/INEP/ANEXOS/ANEXO I - Dicionario de Dados e Tabelas}
+\StringTok{Auxiliares/Dicionario_de_Dados.xlsx"}
 \NormalTok{classes <-}\StringTok{ }\NormalTok{rnp}\OperatorTok{::}\KeywordTok{rnp_get_classes_inep}\NormalTok{(}\DataTypeTok{caminho =}\NormalTok{ dicionario, }
                                      \DataTypeTok{aba =} \StringTok{"DM_IES"}\NormalTok{, }
                                      \DataTypeTok{retorna_lista =} \OtherTok{FALSE}\NormalTok{)}
@@ -399,6 +408,9 @@ Especificamete para os exemplo deste livro, os dados foram tratados com as descr
 \KeywordTok{require}\NormalTok{(rnp, }\DataTypeTok{quietly =} \OtherTok{TRUE}\NormalTok{)}
 \CommentTok{# Ajuda do conjunto de dados}
 \NormalTok{?rnp}\OperatorTok{::}\NormalTok{dm_curso}
+\NormalTok{?rnp}\OperatorTok{::}\NormalTok{dm_docente}
+\NormalTok{?rnp}\OperatorTok{::}\NormalTok{dm_ies}
+\NormalTok{?rnp}\OperatorTok{::}\NormalTok{dm_local}
 \NormalTok{base_curso <-}\StringTok{ }\NormalTok{rnp}\OperatorTok{::}\NormalTok{dm_curso}
 \end{Highlighting}
 \end{Shaded}
@@ -423,7 +435,7 @@ Segundo o dicionário Aurélio, a estatística é:
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.5\linewidth]{../Imagens/ebook_duvida_01}
+{\centering \includegraphics[width=0.5\linewidth]{../Imagens/ebook_duvida_01} 
 
 }
 
@@ -456,7 +468,7 @@ Esta brincadeira aparentemente inocente guarda um fato interessante: se explorar
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.5\linewidth]{../Imagens/ebook_duvida_02}
+{\centering \includegraphics[width=0.5\linewidth]{../Imagens/ebook_duvida_02} 
 
 }
 
@@ -484,7 +496,7 @@ A figura \ref{fig:fig00} exibe um \emph{roadmap} das principais etapas do proces
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_processo_estats}
+{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_processo_estats} 
 
 }
 
@@ -522,7 +534,7 @@ Esta é uma pergunta vasta, mas com base em nossa experiência e na comunidade e
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.5\linewidth]{../Imagens/ebook_anima_03}
+{\centering \includegraphics[width=0.5\linewidth]{../Imagens/ebook_anima_03} 
 
 }
 
@@ -556,7 +568,7 @@ Aqui listamos também nove pontos de atenção para evitar mal uso da estatísti
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.5\linewidth]{../Imagens/ebook_anima_04}
+{\centering \includegraphics[width=0.5\linewidth]{../Imagens/ebook_anima_04} 
 
 }
 
@@ -589,7 +601,7 @@ Desde que o conceito de dado passou a existir, a estatística se faz presente. A
 Estatística e \emph{Data Science} (Ciência de Dados) são partes inseparáveis. De certa forma, a estatística é um subconjunto da ciência de dados. Mas o que é \emph{Data Science}? É difícil definir um conceito tão amplo porém, a \emph{Wikipedia} Norte Americana coloca da seguinte forma:
 
 \begin{quote}
-\emph{Data science, also known as data-driven science, is an interdisciplinary field about scientific methods, processes and systems to extract knowledge or insights from data in various forms, either structured or unstructured, similar to Knowledge Discovery in Databases (KDD)}. Fonte: \url{https://www.wikiwand.com/en/Data_science}, acesso em ``16/04/2019''
+\emph{Data science, also known as data-driven science, is an interdisciplinary field about scientific methods, processes and systems to extract knowledge or insights from data in various forms, either structured or unstructured, similar to Knowledge Discovery in Databases (KDD)}. Fonte: \url{https://www.wikiwand.com/en/Data_science}, acesso em ``04/05/2019''
 \end{quote}
 
 No texto acima podemos isolar o termo \emph{interdisciplinary} que remete a um conjunto de muitas áreas do conhecimento. Podemos marcar desta definição aos conceitos:
@@ -655,14 +667,14 @@ A partir de agora iniciamos os estudos de estatística e para melhor compreender
 \StringTok{  }\KeywordTok{head}\NormalTok{(}\DataTypeTok{n =} \DecValTok{10}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
 \StringTok{  }\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\DataTypeTok{digits =} \DecValTok{2}\NormalTok{, }\DataTypeTok{align =} \StringTok{"llrrr"}\NormalTok{, }
              \DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{format =}\NormalTok{ tb_formata,}
-             \DataTypeTok{caption =} \StringTok{"Dez primeiras observações da base de IES censo 2017"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+             \DataTypeTok{caption =} \StringTok{"Dez primeiras observações base de IES"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
 \StringTok{  }\NormalTok{kableExtra}\OperatorTok{::}\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options =} \StringTok{"hold_position"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{table}[!h]
 
-\caption{\label{tab:tab01}Dez primeiras observações da base de IES censo 2017}
+\caption{\label{tab:tab01}Dez primeiras observações base de IES}
 \centering
 \begin{tabular}{llrrrllrrrllrrrllrrr}
 \toprule
@@ -697,7 +709,7 @@ Iniciamos aqui a revisão de alguns dos conceitos utilizados na linguagem estat�
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_anima_05}
+{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_anima_05} 
 
 }
 
@@ -734,7 +746,7 @@ Variáveis são características medidas em cada elemento da amostra ou populaç
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_variaveis2}
+{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_variaveis2} 
 
 }
 
@@ -1160,14 +1172,14 @@ São tabelas simples para apenas uma variável. No pacote \texttt{rnp} inserimos
 \NormalTok{rnp}\OperatorTok{::}\KeywordTok{rnp_freq}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ base_docentes}\OperatorTok{$}\NormalTok{escolaridade,}
               \DataTypeTok{sortd =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{digits =} \DecValTok{3}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{format =}\NormalTok{ tb_formata,}
-             \DataTypeTok{caption =} \StringTok{"Frequências simples para escolaridade do docente"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+             \DataTypeTok{caption =} \StringTok{"Frequências simples escolaridade do docente"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
 \NormalTok{kableExtra}\OperatorTok{::}\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options =} \StringTok{"hold_position"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{table}[!h]
 
-\caption{\label{tab:tab04}Frequências simples para escolaridade do docente}
+\caption{\label{tab:tab04}Frequências simples escolaridade do docente}
 \centering
 \begin{tabular}{lrrrr}
 \toprule
@@ -1193,7 +1205,7 @@ Mais adiante falaremos de medidas de associação entre duas variáveis categór
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_tabela_contingencia}
+{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_tabela_contingencia} 
 
 }
 
@@ -1244,14 +1256,14 @@ Desta notação e disposição dos dados derivamos as seguintes fórmulas estat�
                \DataTypeTok{y =}\NormalTok{ base_docentes}\OperatorTok{$}\NormalTok{sexo, }
                \DataTypeTok{digits =} \DecValTok{3}\NormalTok{, }\DataTypeTok{percents =} \OtherTok{FALSE}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
 \StringTok{  }\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{format =}\NormalTok{ tb_formata,}
-             \DataTypeTok{caption =} \StringTok{"Frequências cruzadas da escolaridade por sexo do docente"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+             \DataTypeTok{caption =} \StringTok{"Frequências cruzadas da escolaridade por sexo"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
 \NormalTok{kableExtra}\OperatorTok{::}\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options =} \StringTok{"hold_position"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{table}[!h]
 
-\caption{\label{tab:tab05}Frequências cruzadas da escolaridade por sexo do docente}
+\caption{\label{tab:tab05}Frequências cruzadas da escolaridade por sexo}
 \centering
 \begin{tabular}{llrrr}
 \toprule
@@ -1350,7 +1362,8 @@ Além das tabelas de frequência simples também é possível complementar a an�
 \begin{Highlighting}[]
 \NormalTok{tb <-}\StringTok{ }\NormalTok{rnp}\OperatorTok{::}\KeywordTok{rnp_freq}\NormalTok{(base_docentes}\OperatorTok{$}\NormalTok{faixaIdade, }\DataTypeTok{sortd =} \OtherTok{FALSE}\NormalTok{)}
 \NormalTok{p <-}\StringTok{ }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{ggplot}\NormalTok{(tb, }\KeywordTok{aes}\NormalTok{(}\StringTok{""}\NormalTok{, fr, }\DataTypeTok{fill =}\NormalTok{ classe))}
-\NormalTok{p }\OperatorTok{+}\StringTok{ }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{width =} \DecValTok{1}\NormalTok{, }\DataTypeTok{size =} \DecValTok{1}\NormalTok{, }\DataTypeTok{color =} \StringTok{"white"}\NormalTok{, }\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{) }\OperatorTok{+}
+\NormalTok{p }\OperatorTok{+}\StringTok{ }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{width =} \DecValTok{1}\NormalTok{, }\DataTypeTok{size =} \DecValTok{1}\NormalTok{, }\DataTypeTok{color =} \StringTok{"white"}\NormalTok{, }
+                      \DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{) }\OperatorTok{+}
 \StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{coord_polar}\NormalTok{(}\StringTok{"y"}\NormalTok{) }\OperatorTok{+}
 \StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{geom_text}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{label =} \KeywordTok{paste0}\NormalTok{(}\KeywordTok{round}\NormalTok{(}\DecValTok{100}\OperatorTok{*}\NormalTok{fr, }\DecValTok{1}\NormalTok{), }\StringTok{"%"}\NormalTok{)),}
                      \DataTypeTok{position =} \KeywordTok{position_stack}\NormalTok{(}\DataTypeTok{vjust =} \FloatTok{0.5}\NormalTok{), }\DataTypeTok{size=}\DecValTok{3}\NormalTok{) }\OperatorTok{+}
@@ -1360,13 +1373,14 @@ Além das tabelas de frequência simples também é possível complementar a an�
 \StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.line =} \KeywordTok{element_blank}\NormalTok{(),}
                  \DataTypeTok{axis.text =} \KeywordTok{element_blank}\NormalTok{(),}
                  \DataTypeTok{axis.ticks =} \KeywordTok{element_blank}\NormalTok{(),}
-                 \DataTypeTok{legend.position=}\StringTok{"right"}\NormalTok{, }\DataTypeTok{legend.text =} \KeywordTok{element_text}\NormalTok{(}\StringTok{"Classe"}\NormalTok{))}
+                 \DataTypeTok{legend.position=}\StringTok{"right"}\NormalTok{, }
+                 \DataTypeTok{legend.text =} \KeywordTok{element_text}\NormalTok{(}\StringTok{"Classe"}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf01-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf01-1} 
 
 }
 
@@ -1395,7 +1409,7 @@ Gráficos de barras também são intuitivos e geralmente são preferíveis em re
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf02-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf02-1} 
 
 }
 
@@ -1427,7 +1441,7 @@ Podemos visualizar a relação entre duas variáveis categóricas ou numéricas 
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf03-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf03-1} 
 
 }
 
@@ -1476,14 +1490,14 @@ Para resolver os exercícios desta seção, utilize o conjunto de dados \texttt{
 \begin{Highlighting}[]
 \NormalTok{rnp}\OperatorTok{::}\KeywordTok{rnp_freq}\NormalTok{(base_curso}\OperatorTok{$}\NormalTok{DESC_TP_CATEGORIA_ADMINISTRATIVA, }\DataTypeTok{digits =} \DecValTok{3}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
 \StringTok{  }\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{format =}\NormalTok{ tb_formata,}
-               \DataTypeTok{caption =} \StringTok{"ex: Frequências para categoria administrativa (cursos)"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+               \DataTypeTok{caption =} \StringTok{"Frequências categoria administrativa"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
 \StringTok{  }\NormalTok{kableExtra}\OperatorTok{::}\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options =} \StringTok{"hold_position"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{table}[!h]
 
-\caption{\label{tab:unnamed-chunk-37}ex: Frequências para categoria administrativa (cursos)}
+\caption{\label{tab:unnamed-chunk-37}Frequências categoria administrativa}
 \centering
 \begin{tabular}{lrrrr}
 \toprule
@@ -1526,7 +1540,7 @@ classe & fa & fr & Faa & Fra\\
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-40-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-40-1} 
 
 }
 
@@ -1544,27 +1558,32 @@ As categorias privada com e privada sem fins lucrativos representam 70,1\% dos d
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{# As categorias diferentes de missing são: 1. Bacharelado, 2. Licenciatura e 3. Tecnológico}
-\CommentTok{# missing representa 0.09% dos dados.}
+\CommentTok{# As categorias diferentes de missing são: }
+\CommentTok{# 1. Bacharelado, 2. Licenciatura e 3. Tecnológico}
+\CommentTok{# missing representam 0.09% dos dados.}
+
 \NormalTok{grau <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"1. Bacharelado"}\NormalTok{, }\StringTok{"2. Licenciatura"}\NormalTok{, }\StringTok{"3. Tecnológico")}
 \StringTok{GrauAcad <- base_curso %>% }
 \StringTok{  dplyr::transmute(GrauAcad = DESC_TP_GRAU_ACADEMICO) %>% }
-\StringTok{  dplyr::filter(GrauAcad %in% grau)}
-\StringTok{tb <- rnp::rnp_freq(GrauAcad$GrauAcad, digits = 3)}
-\StringTok{p <- ggplot2::ggplot(tb, aes(classe, fr, fill = classe))}
-\StringTok{p + ggplot2::geom_bar(width = 1, size = 0.6, color = "}\NormalTok{white}\StringTok{", }
-\StringTok{                      stat = "}\NormalTok{identity}\StringTok{", show.legend = FALSE) +}
-\StringTok{  ggplot2::geom_text(aes(label = paste0(round(100*fr, 1), "}\NormalTok{%}\StringTok{")),}
-\StringTok{                     position = position_stack(vjust = 1), size=3) +}
-\StringTok{  ggplot2::labs(x = NULL, y = NULL, fill = NULL, title = "") +}
-\StringTok{  ggplot2::theme_gray() + coord_flip() +}
-\StringTok{  ggplot2::theme(axis.line = element_blank())}
+\StringTok{  dplyr::filter(GrauAcad %in% c("}\FloatTok{1.}\NormalTok{ Bacharelado}\StringTok{", }
+\StringTok{                                "}\FloatTok{2.}\NormalTok{ Licenciatura}\StringTok{", }
+\StringTok{                                "}\FloatTok{3.}\NormalTok{ Tecnológico")}\ErrorTok{)}
+
+\NormalTok{tb <-}\StringTok{ }\NormalTok{rnp}\OperatorTok{::}\KeywordTok{rnp_freq}\NormalTok{(GrauAcad}\OperatorTok{$}\NormalTok{GrauAcad, }\DataTypeTok{digits =} \DecValTok{3}\NormalTok{)}
+\NormalTok{p <-}\StringTok{ }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{ggplot}\NormalTok{(tb, }\KeywordTok{aes}\NormalTok{(classe, fr, }\DataTypeTok{fill =}\NormalTok{ classe))}
+\NormalTok{p }\OperatorTok{+}\StringTok{ }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{width =} \DecValTok{1}\NormalTok{, }\DataTypeTok{size =} \FloatTok{0.6}\NormalTok{, }\DataTypeTok{color =} \StringTok{"white"}\NormalTok{, }
+                      \DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{show.legend =} \OtherTok{FALSE}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{geom_text}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{label =} \KeywordTok{paste0}\NormalTok{(}\KeywordTok{round}\NormalTok{(}\DecValTok{100}\OperatorTok{*}\NormalTok{fr, }\DecValTok{1}\NormalTok{), }\StringTok{"%"}\NormalTok{)),}
+                     \DataTypeTok{position =} \KeywordTok{position_stack}\NormalTok{(}\DataTypeTok{vjust =} \DecValTok{1}\NormalTok{), }\DataTypeTok{size=}\DecValTok{3}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{y =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{fill =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{title =} \StringTok{""}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{theme_gray}\NormalTok{() }\OperatorTok{+}\StringTok{ }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{theme}\NormalTok{(}\DataTypeTok{axis.line =} \KeywordTok{element_blank}\NormalTok{())}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-43-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-43-1} 
 
 }
 
@@ -1596,7 +1615,7 @@ Quando olhamos um conjunto de dados de uma variável numérica logo pensamos em 
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_anima_06}
+{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_anima_06} 
 
 }
 
@@ -1640,7 +1659,8 @@ Este tipo de média é aplicado preferecialmente quando cada elemento tem peso i
 \StringTok{  }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{summarise}\NormalTok{(}\StringTok{"Total técnicos"}\NormalTok{  =}\StringTok{ }\KeywordTok{mean}\NormalTok{(TotalTecnicos),}
                    \StringTok{"Receita própria" = mean(ReceitaPropria),}
 \StringTok{                   "}\NormalTok{Depesa pesquisa}\StringTok{" = mean(DespesaPesquisa)) %>% }
-\StringTok{  knitr::kable(caption = "}\NormalTok{Média anual para dados de IES}\StringTok{", format = tb_formata) %>% }
+\StringTok{  knitr::kable(caption = "}\NormalTok{Média anual para dados de IES}\StringTok{", }
+\StringTok{               format = tb_formata) %>% }
 \StringTok{  kableExtra::kable_styling(latex_options = "}\NormalTok{hold_position}\StringTok{")}
 \end{Highlighting}
 \end{Shaded}
@@ -1679,22 +1699,25 @@ Quando a amostra possuir muitas repetições ou precisar ser balizada por algum 
 \NormalTok{base_ies }\OperatorTok{%>%}\StringTok{ }
 \StringTok{  }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{TotalTecnicos =}\NormalTok{ QT_TEC_TOTAL, }
                 \DataTypeTok{ReceitaPropria =}\NormalTok{ VL_RECEITA_PROPRIA) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{summarise}\NormalTok{(}\StringTok{"Receita própria"  = mean(ReceitaPropria),}
-\StringTok{                   "}\NormalTok{Receita própria ponderada}\StringTok{" = weighted.mean(x = ReceitaPropria,}
-\StringTok{                                                               w = TotalTecnicos)) %>%}
-\StringTok{  knitr::kable(format = tb_formata,}
-\StringTok{               caption = "}\NormalTok{Média receita própria ponderada pelo total de técnicos}\StringTok{") %>% }
-\StringTok{  kableExtra::kable_styling(latex_options = "}\NormalTok{hold_position}\StringTok{")}
+\StringTok{  }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{summarise}\NormalTok{(}\StringTok{"Receita"}\NormalTok{  =}\StringTok{ }\KeywordTok{mean}\NormalTok{(ReceitaPropria),}
+                   \StringTok{"Receita ponderada"}\NormalTok{ =}\StringTok{ }
+\StringTok{                     }\KeywordTok{weighted.mean}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ ReceitaPropria,}
+                                   \DataTypeTok{w =}\NormalTok{ TotalTecnicos)) }\OperatorTok{%>%}
+\StringTok{  }\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\DataTypeTok{format =}\NormalTok{ tb_formata,}
+               \DataTypeTok{caption =} \StringTok{"Média receita própria }
+\StringTok{               ponderada pelo total de técnicos"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\NormalTok{kableExtra}\OperatorTok{::}\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options =} \StringTok{"hold_position"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{table}[!h]
 
-\caption{\label{tab:tab07}Média receita própria ponderada pelo total de técnicos}
+\caption{\label{tab:tab07}Média receita própria 
+               ponderada pelo total de técnicos}
 \centering
 \begin{tabular}{r|r}
 \hline
-Receita própria & Receita própria ponderada\\
+Receita & Receita ponderada\\
 \hline
 145378180 & 229043797\\
 \hline
@@ -1812,7 +1835,8 @@ Na tabela \ref{tab:tab08} vemos que a classe modal é a que contém idades entre
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{# Preparando os dados como vetores através da função c() e ordenando com sort()}
+\CommentTok{# Preparando os dados como vetores através da função c() e }
+\CommentTok{# ordenando com sort()}
 \NormalTok{x <-}\StringTok{ }\KeywordTok{sort}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{))}
 \KeywordTok{paste}\NormalTok{(}\StringTok{"x possui"}\NormalTok{, x[}\KeywordTok{duplicated}\NormalTok{(x)], }\StringTok{"como moda"}\NormalTok{)}
 \end{Highlighting}
@@ -1860,7 +1884,7 @@ A figura \ref{fig:fig08} exemplifica um conjunto de medidas em uma linha onde a 
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_anima_07}
+{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_anima_07} 
 
 }
 
@@ -2016,7 +2040,7 @@ ou diretamente com.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_normal}
+{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_normal} 
 
 }
 
@@ -2099,7 +2123,8 @@ Vale salientar que o cv e o desvio padrão se aplicam a dados estritamente posit
 \NormalTok{base_ies }\OperatorTok{%>%}\StringTok{ }
 \StringTok{  }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{summarise}\NormalTok{(}\StringTok{`}\DataTypeTok{Média receita}\StringTok{`}\NormalTok{ =}\StringTok{ }\KeywordTok{mean}\NormalTok{(VL_RECEITA_PROPRIA),}
                    \StringTok{`}\DataTypeTok{Média técnicos}\StringTok{`}\NormalTok{ =}\StringTok{ }\KeywordTok{mean}\NormalTok{(QT_TEC_TOTAL),}
-                   \StringTok{`}\DataTypeTok{CV receita}\StringTok{`}\NormalTok{ =}\StringTok{ }\KeywordTok{sd}\NormalTok{(VL_RECEITA_PROPRIA) }\OperatorTok{/}\StringTok{ }\KeywordTok{mean}\NormalTok{(VL_RECEITA_PROPRIA),}
+                   \StringTok{`}\DataTypeTok{CV receita}\StringTok{`}\NormalTok{ =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\KeywordTok{sd}\NormalTok{(VL_RECEITA_PROPRIA) }\OperatorTok{/}
+\StringTok{                     }\KeywordTok{mean}\NormalTok{(VL_RECEITA_PROPRIA)),}
                    \StringTok{`}\DataTypeTok{CV técnicos}\StringTok{`}\NormalTok{ =}\StringTok{ }\KeywordTok{sd}\NormalTok{(QT_TEC_TOTAL) }\OperatorTok{/}\StringTok{ }\KeywordTok{mean}\NormalTok{(QT_TEC_TOTAL)) }\OperatorTok{%>%}\StringTok{ }
 \StringTok{  }\KeywordTok{round}\NormalTok{(., }\DataTypeTok{digits =} \DecValTok{3}\NormalTok{)}
 \end{Highlighting}
@@ -2279,7 +2304,8 @@ Os histogramas são um tipo de gráfico de barras para variáveis numéricas e s
 \NormalTok{p <-}\StringTok{ }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{ggplot}\NormalTok{(base_docentes, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ idade))}
 \NormalTok{p }\OperatorTok{+}\StringTok{ }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{theme_gray}\NormalTok{() }\OperatorTok{+}
 \StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{geom_histogram}\NormalTok{(}\DataTypeTok{colour=}\StringTok{'white'}\NormalTok{, }\DataTypeTok{bins =} \DecValTok{10}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{labs}\NormalTok{(}\DataTypeTok{y =} \StringTok{"Frequência", x = "}\NormalTok{Faixa de idade}\StringTok{", fill = NULL, title = "") +}
+\StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{labs}\NormalTok{(}\DataTypeTok{y =} \StringTok{"Frequência", x = "}\NormalTok{Faixa de idade}\StringTok{", }
+\StringTok{                fill = NULL, title = "") +}
 \StringTok{    ggplot2::scale_x_continuous(}
 \StringTok{      breaks=seq(10, 90, 10),}
 \StringTok{      labels = seq(10, 90, 10)}
@@ -2290,7 +2316,7 @@ Os histogramas são um tipo de gráfico de barras para variáveis numéricas e s
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf08-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf08-1} 
 
 }
 
@@ -2323,7 +2349,7 @@ Gráficos de densidade possuem aplicação semelhante aos histogramas, porém s�
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf09-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf09-1} 
 
 }
 
@@ -2339,7 +2365,7 @@ De longe o gráfico Box-plot ou para muitos, diagrama de caixa é o tipo mais co
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_boxplot}
+{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_boxplot} 
 
 }
 
@@ -2367,7 +2393,7 @@ A figura \ref{fig:fig10} ilustra os elementos que compõem um Box-plot. Perceba 
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf11-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf11-1} 
 
 }
 
@@ -2400,7 +2426,8 @@ Obs.: como temos muitos autliers na variável de receita própria, vamos limitar
 \StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ TotalTecnicos, }\DataTypeTok{y =}\NormalTok{ ReceitaPropria))}
 \NormalTok{p }\OperatorTok{+}\StringTok{ }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{theme_gray}\NormalTok{() }\OperatorTok{+}
 \StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Total técnicos"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Receita própria", fill = NULL, title = "") +}
+\StringTok{  }\NormalTok{ggplot2}\OperatorTok{::}\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x =} \StringTok{"Total técnicos"}\NormalTok{, }\DataTypeTok{y =} \StringTok{"Receita própria", }
+\StringTok{                fill = NULL, title = "") +}
 \StringTok{  ggplot2::theme(axis.line.x = element_line(), }
 \StringTok{                 axis.text.x = NULL, }
 \StringTok{                 axis.line.y = element_blank())}
@@ -2409,7 +2436,7 @@ Obs.: como temos muitos autliers na variável de receita própria, vamos limitar
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf12-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf12-1} 
 
 }
 
@@ -2440,7 +2467,7 @@ O gráfico de linhas possui aplicação para duas variáveis contínuas e també
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf13-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf13-1} 
 
 }
 
@@ -2463,7 +2490,7 @@ Em R podemos agrupar uma variável numérica de muitas formas, umas delas é atr
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{## Categorizando por quartis}
+\CommentTok{## Categorizando por quartis}
 \NormalTok{base_ies <-}\StringTok{ }\NormalTok{base_ies }\OperatorTok{%>%}\StringTok{ }
 \StringTok{  }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{ReceitaPropria =}\NormalTok{ VL_RECEITA_PROPRIA,}
                 \DataTypeTok{TotalTecnicos =}\NormalTok{ QT_TEC_TOTAL) }
@@ -2497,10 +2524,13 @@ classe & fa & fr & Faa & Fra\\
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{## Categorização por ifelse com operadores relacionais}
-\NormalTok{fx_receita_r <-}\StringTok{ }\KeywordTok{ifelse}\NormalTok{(base_ies}\OperatorTok{$}\NormalTok{ReceitaPropria }\OperatorTok{<=}\StringTok{ }\DecValTok{1200000}\NormalTok{, }\StringTok{"A.-1200000"}\NormalTok{,}
-                \KeywordTok{ifelse}\NormalTok{(base_ies}\OperatorTok{$}\NormalTok{ReceitaPropria }\OperatorTok{<=}\StringTok{ }\DecValTok{5000000}\NormalTok{, }\StringTok{"B.1200000 a 5000000"}\NormalTok{,}
-                \KeywordTok{ifelse}\NormalTok{(base_ies}\OperatorTok{$}\NormalTok{ReceitaPropria }\OperatorTok{<=}\DecValTok{35000000}\NormalTok{, }\StringTok{"C.5000000 a 35000000"}\NormalTok{,}\StringTok{"D.35000000+"}\NormalTok{)))}
+\CommentTok{## Categorização por ifelse com operadores relacionais}
+\NormalTok{fx_receita_r <-}\StringTok{ }\KeywordTok{ifelse}\NormalTok{(base_ies}\OperatorTok{$}\NormalTok{ReceitaPropria }\OperatorTok{<=}\StringTok{ }\DecValTok{1200000}\NormalTok{, }
+                       \StringTok{"A.-1200000"}\NormalTok{,}
+                \KeywordTok{ifelse}\NormalTok{(base_ies}\OperatorTok{$}\NormalTok{ReceitaPropria }\OperatorTok{<=}\StringTok{ }\DecValTok{5000000}\NormalTok{, }
+                       \StringTok{"B.1200000 a 5000000"}\NormalTok{,}
+                \KeywordTok{ifelse}\NormalTok{(base_ies}\OperatorTok{$}\NormalTok{ReceitaPropria }\OperatorTok{<=}\DecValTok{35000000}\NormalTok{, }
+                       \StringTok{"C.5000000 a 35000000"}\NormalTok{,}\StringTok{"D.35000000+"}\NormalTok{)))}
 
 \NormalTok{rnp}\OperatorTok{::}\KeywordTok{rnp_freq}\NormalTok{(fx_receita_r, }\DataTypeTok{sortd =} \OtherTok{FALSE}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\DataTypeTok{digits =} \DecValTok{3}\NormalTok{,}
@@ -2616,7 +2646,7 @@ Com apoio do pacote \texttt{ggplot} podemos combinar a maioria dos gráficos vis
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf14-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf14-1} 
 
 }
 
@@ -2645,7 +2675,7 @@ Para todos os graficos agrupados também é possível quebrar a visualização e
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-84-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-84-1} 
 
 }
 
@@ -2677,7 +2707,7 @@ Para todos os graficos agrupados também é possível quebrar a visualização e
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/graf15-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/graf15-1} 
 
 }
 
@@ -2704,7 +2734,7 @@ Agora quebrado por sexo.
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-86-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-86-1} 
 
 }
 
@@ -2733,7 +2763,7 @@ Agora quebrado por sexo.
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-87-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-87-1} 
 
 }
 
@@ -2761,7 +2791,7 @@ Agora quebrado por sexo.
 
 \begin{figure}[H]
 
-{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-88-1}
+{\centering \includegraphics{ebookrnp_files/figure-latex/unnamed-chunk-88-1} 
 
 }
 
@@ -2772,7 +2802,7 @@ Agora quebrado por sexo.
 \section{Medidas de associação}\label{medidas-de-associacao}}
 
 Análises univariadas são muito úteis para determinarmos particularidades de dados porém, em muitas situações, desejamos medir relações de interdendência entre duas ou mais variáveis. Como vimos em gráficos para duas variáveis numérias; gráficos para duas variáveis categóricas e também em tabelas de contingência, é possivel extrair carcaterísticas importantes dos valores e/ou das classes de cada variáveil. Contudo, queremos quantificar a relação global de duas ou mais variáveis e neste sentido, as medidas de associação tem papel fundamental. Suponha que desejamos determinar de a variável idade dos docentes está associada à escolaridade ou se o total de técnicos está correlacionado com a receita total da IE.
-Trataremos nesta sessão algumas medidas de associação entre duas variáveis categóricas onde trabalharemos com as estatísticas \(\chi^2\) (Qui-quadrado), \(V\) de Cramer, \(C\) coeficiente de contingência. Para as variáveis numéricas trabalharemos com as estatísticas de correlação \(\rho\) de Peason, Coeficiente de correlação rank de Spreaman e Medidas de concordância e discordância de pares.
+Trataremos nesta sessão algumas medidas de associação entre duas variáveis categóricas onde trabalharemos com as estatísticas \(\chi^2\) (Qui-quadrado), \(V\) de Cramer, \(C\) coeficiente de contingência. Para as variáveis numéricas trabalharemos com as estatísticas de correlação \(\rho\) de Peason, Coeficiente de correlação rank de Spearman e Medidas de concordância e discordância de pares.
 
 \hypertarget{associacao-entre-duas-variaveis-discretas}{%
 \subsection{Associação entre duas variáveis discretas}\label{associacao-entre-duas-variaveis-discretas}}
@@ -2787,7 +2817,9 @@ A estatística \(\chi^2\) é muito utilizada para quantificar a associação glo
 \[\chi^2 = \sum_{i=1}^{k} \sum_{j=1}^{l} \frac{(n_{ij} - \widetilde{n}_{ij})^2}{\widetilde{n}_{ij}}\]
 
 onde \(\widetilde{n}_{ij}\) é a frequência esperada de \((x_i;y_j)\) dada pelo produto das frequências absolutas marginais e calculado por
+
 \[\widetilde{n}_{ij} = \frac{n_{i+}\times n_{+j}}{n}\]
+
 Para que a estatística seja confiável, os seguintes pressupostos devem ser respeitados:
 
 \begin{itemize}
@@ -2803,6 +2835,7 @@ Para que a estatística seja confiável, os seguintes pressupostos devem ser res
 Caso os desvios entre as frequências observadas e esperadas seja alto temos evidência de associação forte porque as frequências relativas esperadas são calculadas assumindo independência entre as duas variáveis. Desta forma, se o posto ocorrer, ou seja, se as frequências relativas observadas e esparadas são idênticas ou similares a associação é fraca e as variáveis são independentes. O range da estatística está limitado a
 
 \[0 \le \chi^2 \le n\times(min(k,l)-1)\]
+
 Assim, uma forma de verificar a força da associação é comparar o valor de \(\chi^2\) calculado com o valor máximo que \(\chi^2\) pode assumir, ou seja \(n\times(min(k,l)-1)\) onde \(n\) é o total geral. Esta métrica depende unicamente do tamanho da amostra e total de classes de cada variável da tabela de contingência.
 
 \begin{quote}
@@ -2851,7 +2884,7 @@ Em R podemos calcular a estatística e as frequências esperadas através da fun
 \end{Shaded}
 
 \begin{verbatim}
-##
+##                    
 ##                     1. Feminino 2. Masculino
 ##   1. Sem graduação            3            7
 ##   2. Graduação             1848         2765
@@ -2895,7 +2928,7 @@ Em R podemos calcular a estatística e as frequências esperadas através da fun
 \end{Shaded}
 
 \begin{verbatim}
-##
+##                    
 ##                     1. Feminino 2. Masculino
 ##   1. Sem graduação        4.588        5.412
 ##   2. Graduação         2116.325     2496.675
@@ -2911,7 +2944,7 @@ Em R podemos calcular a estatística e as frequências esperadas através da fun
 \end{Shaded}
 
 \begin{verbatim}
-## X-squared
+## X-squared 
 ##     647.2
 \end{verbatim}
 
@@ -2932,6 +2965,7 @@ Em R podemos calcular a estatística e as frequências esperadas através da fun
 Aestatística \(\chi^2\) possui uma fragilidade que pode dificultar a interpretação, pois ela depende do range e este por sua vez depende do tamanho da amostra e da quantidade de classes em cada variável. A estatítica \(V\) surge como uma forma de padronização da estatística \(\chi^2\) e é calculada por:
 
 \[V = \sqrt{\frac{\chi^2}{n \times (min(k,l)-1)}}\]
+
 Esta estatística torna a interpretação de \(\chi^2\) mais simples, pois seu retorno é um número menor ou igual a uma unidade e quanto mais próximo de um, mais forte será a associação entre as duas variáveis.
 
 Tabelas de interpretação de estatísticas de associação como \(V\) são questionáveis uma vez que o nível de associação pode variar de acordo com tipo de estudo, área de pesquisa ou até preferência do pesquisador. Porém, algunas autores se guiam pelas faixas da tabela \ref{tab:tab12} para interpretar o nível da associação entre duas variáveis numa tabela de contingência. Estes valores são adapatados de \citep{gravetter2016statistics}.
@@ -2961,6 +2995,7 @@ Faixa & Interprecao\\
 \EndKnitrBlock{solution}
 
 \[V = \sqrt{\frac{647.2}{392036 \times (min(5,2)-1)}} = \sqrt{\frac{647.2}{392036 \times (2-1)}} = 0.0406\]
+
 Como \(V = 0.0406 < 0.10\) concluimos que não existe associação estatísticamente significativa entre \texttt{escolaridade} e \texttt{sexo}.
 
 \BeginKnitrBlock{exercise}
@@ -2987,7 +3022,7 @@ Como \(V = 0.0406 < 0.10\) concluimos que não existe associação estatísticam
 \end{Shaded}
 
 \begin{verbatim}
-## X-squared
+## X-squared 
 ##     52186
 \end{verbatim}
 
@@ -3008,7 +3043,9 @@ Como \(V = 0.0406 < 0.10\) concluimos que não existe associação estatísticam
 \end{Shaded}
 
 Vamos calcular a estatística \(V\)
+
 \[V = \sqrt{\frac{52186}{ 35693 \times (min(3,3)-1)}} = \sqrt{\frac{52186}{35693 \times (3-1)}} = 0.8550\]
+
 Como \(V\) está muito acima de 0.50 logo, temos evidẽncias de que estas duas variáveis são fortemente associadas.
 
 \begin{quote}
@@ -3041,17 +3078,17 @@ Estas três estatísticas de associação podem ser calculadas pela função \te
 \end{Shaded}
 
 \begin{verbatim}
-##   Qui-quadrado       V-Cramer C-Contingencia
+##   Qui-quadrado       V-Cramer C-Contingencia 
 ##     52185.5662         0.8550         0.9438
 \end{verbatim}
 
-\hypertarget{covariancia-e-correlacao}{%
-\section{Covariância e correlação}\label{covariancia-e-correlacao}}
+\hypertarget{duas-ou-mais-variaveis-numericas}{%
+\subsection{Duas ou mais variáveis numéricas}\label{duas-ou-mais-variaveis-numericas}}
 
-Na análise bivariada de variáveis numéricas a covariância e a correlação tem papel fundamental. Ambas se assemelham pelo fato de que medem a direção da relação entre duas variáveis ao longo de seus pontos. As relações mais comuns são \emph{ambas as variáveiscrescem, ambas decrescem, uma decresce e a outra cresce}. A diferença mais significativa entre a covariância e a correlação é que a primeira oferece um valor absoluto variando de acordo com os dados, graças a isso não tem como estimar a força de uma relação linear. É aí que entra a correlação. Em R a covariância pode ser calculada por \texttt{var()} e \texttt{cov()} e a correção por \texttt{cor()} e se aplica a bases com mais de 2 variáveis numéricas.
+Na análise bivariada ou multivariada de variáveis numéricas, a covariância e a correlação tem papel fundamental. Ambas se assemelham pelo fato de que medem a direção da relação entre duas variáveis ao longo de seus pontos. As relações mais comuns são \emph{ambas as variáveis crescem, ambas decrescem, uma decresce e a outra cresce}. A diferença mais significativa entre a covariância e a correlação é que a primeira oferece um valor absoluto variando de acordo com os dados, graças a isso não tem como estimar a força de uma relação linear. É aí que entra a correlação. Em R a covariância pode ser calculada por \texttt{var()} e \texttt{cov()} e a correção por \texttt{cor()} e se aplica a bases com mais de 2 variáveis numéricas.
 
 \hypertarget{covariancia}{%
-\subsection{Covariância}\label{covariancia}}
+\subsubsection{Covariância}\label{covariancia}}
 
 O conceito de covariância pode ser aplicado tanto a conjunto de dados como a variáveis aleatórias. Quando aplicada a duas variáveis \(X\) e \(Y\) é expressa por:
 
@@ -3095,8 +3132,8 @@ Os elementos da diagonal principal da matriz de covariâncias representam a vari
 A matriz é espelhada e para interpretá-la basta ler acima ou abaixo da diagonal principal.
 \end{quote}
 
-\hypertarget{correlacao}{%
-\subsection{Correlação}\label{correlacao}}
+\hypertarget{correlacao-de-pearson}{%
+\subsubsection{Correlação de Pearson}\label{correlacao-de-pearson}}
 
 A correlação linear ou de Pearson é uma estatística padronizada que varia de \(-1\) a \(1\) e expressa a relação linear entre duas variáveis numéricas. A correlação é expressa pela letra grega \(\rho\) e é dada pela seguinte expressão matemática:
 
@@ -3106,7 +3143,7 @@ Em resumo, esta formula aparentemente complicada diz que a correlação é resul
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_correlacao}
+{\centering \includegraphics[width=1\linewidth]{../Imagens/ebook_correlacao} 
 
 }
 
@@ -3168,6 +3205,112 @@ DespesaPesquisa & 0.292 & 0.064 & 1.000\\
 \end{table}
 
 Note agora que faz mais sentido estimar a força da relação linear entre as variáveis utilizando a correlação. No nosso exemplo, uma correlação linear de \texttt{0.047} entre \texttt{TotalTecnicos} e \texttt{ReceitaPropria} nos diz que a relação linear entre estas duas variáveis é muito fraca. O mesmo se aplica à variável \texttt{DespesaPesquisa} em relação à variável \texttt{TotalTecnicos} com \texttt{0.190}. Estas três variáveis não possuem correlação forte entre si.
+
+\hypertarget{correlacao-rank-de-spearman}{%
+\subsubsection{Correlação rank de Spearman}\label{correlacao-rank-de-spearman}}
+
+Para ilustrar esta correlação, vamos imaginar que dois jurados avaliem a qualidade do ensino em cada uma das IES mapeadas no censo, por algum método de forma independente e atribuam uma nota numérica de 0 a 100 onde notas baixas sejam ruins e altas sejam boas. Vamos chamar esta nota de escore e definir por \(x_i\). Ao ordenarmos todas as IES pelas notas das maiores para as menores teremos um rank que vai de 1 para o peimeiro lugar até o total de IES (assumindo que não há empates). Ao selecionarmos uma IES qualqer do conjunto de dados, teremos dois ranks, \(R(x_i)\) e \(R(y_i)\) para ela e consequentemente uma diferença entre os ranks dada por \(d_i = R(x_i) - R(y_i)\). Por exemplo, se a UFPR teve os ranks 20 e 25, temos que \(d_i = 20-25 = 5\). O coeficiente de correlação rank de Spearman busca medir a força da associação entre os dois julgamentos dos dois jurados. Calculamos o coeficiente de correlação rank de Spearman por
+
+\[ R = 1 - \frac{6 \times \sum_{i = 1}^{n} d^2_i}{n \times (n^2 - 1)}\]
+Este tipo de correlação se aplica para variáveis contínuas e também ordinais e conforme já exposto, busca medir a correlação através dos ranks de cada variável e varia de \(-1\) a \(+1\). Quando \(R=+1\) temos que as duas variáveis foram rankeadas exatamente iguais (concordãncia ou associação perfeita) e \(R=-1\) quando ocorreu o oposto (inconcordância).
+
+\BeginKnitrBlock{example}
+\protect\hypertarget{exm:unnamed-chunk-106}{}{\label{exm:unnamed-chunk-106} }Determinar e interpretar a correlação entre as duas variáveis \texttt{TotalTecnicos} e \texttt{ReceitaPropria} para as 10 primeiaras observações da base de dados \texttt{dm\_ies}.
+\EndKnitrBlock{example}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{temp <-}\StringTok{ }\NormalTok{base_ies }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{head}\NormalTok{(}\DataTypeTok{n =} \DecValTok{10}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{transmute}\NormalTok{(}\DataTypeTok{TotalTecnicos =}\NormalTok{ QT_TEC_TOTAL,}
+                   \StringTok{`}\DataTypeTok{R(xi)}\StringTok{`}\NormalTok{ =}\StringTok{ }\KeywordTok{rank}\NormalTok{(}\OperatorTok{-}\NormalTok{TotalTecnicos),}
+                   \DataTypeTok{ReceitaPropria =}\NormalTok{ VL_RECEITA_PROPRIA,}
+                   \StringTok{`}\DataTypeTok{R(yi)}\StringTok{`}\NormalTok{ =}\StringTok{ }\KeywordTok{rank}\NormalTok{(}\OperatorTok{-}\NormalTok{ReceitaPropria),}
+                   \DataTypeTok{di =} \StringTok{`}\DataTypeTok{R(xi)}\StringTok{`}\OperatorTok{-}\StringTok{`}\DataTypeTok{R(yi)}\StringTok{`}\NormalTok{,}
+                   \DataTypeTok{di2 =}\NormalTok{ di}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
+\CommentTok{# Tabela de exemplo}
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ temp, }\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{format =}\NormalTok{ tb_formata,}
+             \DataTypeTok{caption =} \StringTok{"Análise de correlação de Spearman"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\NormalTok{kableExtra}\OperatorTok{::}\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options =} \StringTok{"hold_position"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}[!h]
+
+\caption{\label{tab:unnamed-chunk-107}Análise de correlação de Spearman}
+\centering
+\begin{tabular}{rrrrrr}
+\toprule
+TotalTecnicos & R(xi) & ReceitaPropria & R(yi) & di & di2\\
+\midrule
+1574 & 3 & 6913132 & 7 & -4 & 16\\
+3206 & 1 & 63239902 & 6 & -5 & 25\\
+1429 & 4 & 3161937 & 10 & -6 & 36\\
+1721 & 2 & 4136205 & 8 & -6 & 36\\
+786 & 8 & 3458763 & 9 & -1 & 1\\
+\addlinespace
+1275 & 5 & 616991005 & 1 & 4 & 16\\
+441 & 9 & 142785305 & 4 & 5 & 25\\
+986 & 7 & 338035351 & 3 & 4 & 16\\
+1062 & 6 & 487902230 & 2 & 4 & 16\\
+246 & 10 & 100089191 & 5 & 5 & 25\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Calculando manualmente}
+\DecValTok{1} \OperatorTok{-}\StringTok{ }\NormalTok{(}\DecValTok{6}\OperatorTok{*}\KeywordTok{sum}\NormalTok{(temp}\OperatorTok{$}\NormalTok{di2))}\OperatorTok{/}\NormalTok{(}\KeywordTok{nrow}\NormalTok{(temp)}\OperatorTok{*}\NormalTok{(}\KeywordTok{nrow}\NormalTok{(temp)}\OperatorTok{^}\DecValTok{2-1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] -0.2848
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Calculando via R}
+\KeywordTok{cor}\NormalTok{(temp}\OperatorTok{$}\NormalTok{TotalTecnicos, temp}\OperatorTok{$}\NormalTok{ReceitaPropria, }\DataTypeTok{method =} \StringTok{"spearman"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] -0.2848
+\end{verbatim}
+
+Concluimos que, via correlação de Spearman, temos associação negativa baixa entre total de técnicos e total de receita própria. Como vimos, o coeficiente de corralação é determinado pela função \texttt{cor()} padrão do \texttt{R} e ela cobre três tipos de coeficientes. Especialmente para o R NA PRÁTICA, criamos a função \texttt{rnp\_correlacao()} que determina a correlação de Pearson, Spearman e Kendal. Esta última não abordaremos aqui, mas ela também é indicada para variáveis ordinais porém focada em pares concordantes versus discordantes. para os leitores interessados sugerimos \citep{kendall1938new}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{temp <-}\StringTok{ }\NormalTok{base_ies }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{transmute}\NormalTok{(}\DataTypeTok{TotalTecnicos =}\NormalTok{ QT_TEC_TOTAL,}
+                   \DataTypeTok{ReceitaPropria =}\NormalTok{ VL_RECEITA_PROPRIA,}
+                   \DataTypeTok{DespesaPesquisa =}\NormalTok{ VL_DESPESA_PESQUISA)}
+\NormalTok{rnp}\OperatorTok{::}\KeywordTok{rnp_correlacao}\NormalTok{(temp) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\DataTypeTok{booktabs =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{format =}\NormalTok{ tb_formata, }\DataTypeTok{row.names =} \OtherTok{FALSE}\NormalTok{,}
+             \DataTypeTok{caption =} \StringTok{"Correlação com rnp_correlacao()"}\NormalTok{) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\NormalTok{kableExtra}\OperatorTok{::}\KeywordTok{kable_styling}\NormalTok{(}\DataTypeTok{latex_options =} \StringTok{"hold_position"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbackslash{}begin\{table\}{[}!h{]}
+
+\textbackslash{}caption\{\label{tab:unnamed-chunk-108}Correlação com rnp\_correlacao()\}
+\centering
+
+\begin{tabular}{llrrr}
+\toprule
+x & y & pearson & spearman & kendall\\
+\midrule
+TotalTecnicos & DespesaPesquisa & 0.2918 & 0.3724 & 0.2827\\
+TotalTecnicos & ReceitaPropria & 0.0578 & 0.5253 & 0.3963\\
+ReceitaPropria & DespesaPesquisa & 0.0642 & 0.1957 & 0.1583\\
+\bottomrule
+\end{tabular}
+
+\textbackslash{}end\{table\}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 

@@ -25,6 +25,7 @@
 <meta name="author" content="José Evandeilton Lopes">
 
 
+<meta name="date" content="2019-04-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,7 +53,7 @@
 <style type="text/css">
 a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; position: absolute; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -65,13 +66,11 @@ code.sourceCode { white-space: pre-wrap; }
 a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
 pre.numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource a.sourceLine:empty
-  { position: absolute; }
+  { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
   { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -172,10 +171,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-associacao"><i class="fa fa-check"></i><b>2.4</b> Medidas de associação</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#associacao-entre-duas-variaveis-discretas"><i class="fa fa-check"></i><b>2.4.1</b> Associação entre duas variáveis discretas</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia-e-correlacao"><i class="fa fa-check"></i><b>2.5</b> Covariância e correlação</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia"><i class="fa fa-check"></i><b>2.5.1</b> Covariância</a></li>
-<li class="chapter" data-level="2.5.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#correlacao"><i class="fa fa-check"></i><b>2.5.2</b> Correlação</a></li>
+<li class="chapter" data-level="2.4.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#duas-ou-mais-variaveis-numericas"><i class="fa fa-check"></i><b>2.4.2</b> Duas ou mais variáveis numéricas</a></li>
 </ul></li>
 </ul></li>
 <li class="appendix"><span><b>Apendice</b></span></li>
@@ -214,10 +210,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Gravetter, Frederick J, and Larry B Wallnau. 2016. <em>Statistics for the Behavioral Sciences</em>. Cengage Learning.</p>
 </div>
 <div>
-<p>Köche, José Carlos. 2016. <em>Fundamentos de Metodologia Científica</em>. Editora Vozes.</p>
+<p>Kendall, Maurice G. 1938. “A New Measure of Rank Correlation.” <em>Biometrika</em> 30 (1/2). JSTOR: 81–93.</p>
 </div>
 <div>
-<p>Komsta, Lukasz. 2011. <em>Outliers: Tests for Outliers</em>. <a href="https://CRAN.R-project.org/package=outliers" class="uri">https://CRAN.R-project.org/package=outliers</a>.</p>
+<p>Komsta, Lukasz. 2011. <em>Outliers: Tests for Outliers</em>. <a href="https://CRAN.R-project.org/package=outliers">https://CRAN.R-project.org/package=outliers</a>.</p>
+</div>
+<div>
+<p>Köche, José Carlos. 2016. <em>Fundamentos de Metodologia Cientı'fica</em>. Editora Vozes.</p>
 </div>
 <div>
 <p>Montgomery, Douglas C. 2017. <em>Design and Analysis of Experiments</em>. John wiley &amp; sons.</p>

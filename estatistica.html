@@ -25,6 +25,7 @@
 <meta name="author" content="José Evandeilton Lopes">
 
 
+<meta name="date" content="2019-04-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,7 +53,7 @@
 <style type="text/css">
 a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; position: absolute; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -65,13 +66,11 @@ code.sourceCode { white-space: pre-wrap; }
 a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
 pre.numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource a.sourceLine:empty
-  { position: absolute; }
+  { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
   { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -172,10 +171,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-associacao"><i class="fa fa-check"></i><b>2.4</b> Medidas de associação</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#associacao-entre-duas-variaveis-discretas"><i class="fa fa-check"></i><b>2.4.1</b> Associação entre duas variáveis discretas</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia-e-correlacao"><i class="fa fa-check"></i><b>2.5</b> Covariância e correlação</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#covariancia"><i class="fa fa-check"></i><b>2.5.1</b> Covariância</a></li>
-<li class="chapter" data-level="2.5.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#correlacao"><i class="fa fa-check"></i><b>2.5.2</b> Correlação</a></li>
+<li class="chapter" data-level="2.4.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#duas-ou-mais-variaveis-numericas"><i class="fa fa-check"></i><b>2.4.2</b> Duas ou mais variáveis numéricas</a></li>
 </ul></li>
 </ul></li>
 <li class="appendix"><span><b>Apendice</b></span></li>
@@ -311,7 +307,7 @@ muitas pessoas tendem a pensar que se colocar os dados no computador e passar o 
 <p>Desde que o conceito de dado passou a existir, a estatística se faz presente. A seguir um pequeno texto que relaciona a estatística com <em>Data Science</em> e <em>Big Data</em>.</p>
 <p>Estatística e <em>Data Science</em> (Ciência de Dados) são partes inseparáveis. De certa forma, a estatística é um subconjunto da ciência de dados. Mas o que é <em>Data Science</em>? É difícil definir um conceito tão amplo porém, a <em>Wikipedia</em> Norte Americana coloca da seguinte forma:</p>
 <blockquote>
-<p><em>Data science, also known as data-driven science, is an interdisciplinary field about scientific methods, processes and systems to extract knowledge or insights from data in various forms, either structured or unstructured, similar to Knowledge Discovery in Databases (KDD)</em>. Fonte: <a href="https://www.wikiwand.com/en/Data_science" class="uri">https://www.wikiwand.com/en/Data_science</a>, acesso em “16/04/2019”</p>
+<p><em>Data science, also known as data-driven science, is an interdisciplinary field about scientific methods, processes and systems to extract knowledge or insights from data in various forms, either structured or unstructured, similar to Knowledge Discovery in Databases (KDD)</em>. Fonte: <a href="https://www.wikiwand.com/en/Data_science" class="uri">https://www.wikiwand.com/en/Data_science</a>, acesso em “04/05/2019”</p>
 </blockquote>
 <p>No texto acima podemos isolar o termo <em>interdisciplinary</em> que remete a um conjunto de muitas áreas do conhecimento. Podemos marcar desta definição aos conceitos:</p>
 <ul>
@@ -355,10 +351,10 @@ base_ies <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">align =</span> <span class="st">&quot;llrrr&quot;</span>, 
              <span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata,
-             <span class="dt">caption =</span> <span class="st">&quot;Dez primeiras observações da base de IES censo 2017&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+             <span class="dt">caption =</span> <span class="st">&quot;Dez primeiras observações base de IES&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</code></pre>
 <table>
-<caption><span id="tab:tab01">Tabela 1.1: </span>Dez primeiras observações da base de IES censo 2017</caption>
+<caption><span id="tab:tab01">Tabela 1.1: </span>Dez primeiras observações base de IES</caption>
 <thead>
 <tr class="header">
 <th align="left">Sigla</th>
@@ -890,7 +886,7 @@ rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_ies) <sp
 <p>Gil, Antonio Carlos. 2008. <em>Métodos E Técnicas de Pesquisa Social</em>. 6. ed. Ediitora Atlas SA.</p>
 </div>
 <div id="ref-koche2016fundamentos">
-<p>Köche, José Carlos. 2016. <em>Fundamentos de Metodologia Científica</em>. Editora Vozes.</p>
+<p>Köche, José Carlos. 2016. <em>Fundamentos de Metodologia Cientı'fica</em>. Editora Vozes.</p>
 </div>
 <div id="ref-montgomery2017design">
 <p>Montgomery, Douglas C. 2017. <em>Design and Analysis of Experiments</em>. John wiley &amp; sons.</p>

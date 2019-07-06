@@ -24,6 +24,7 @@
 <meta name="author" content="José Evandeilton Lopes" />
 
 
+<meta name="date" content="2019-06-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -167,7 +168,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-estatisticas-por-agrupamento"><i class="fa fa-check"></i><b>2.3.2</b> Medidas estatísticas por agrupamento</a></li>
 <li class="chapter" data-level="2.3.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#graficos-para-categoricas-vs-numericas"><i class="fa fa-check"></i><b>2.3.3</b> Gráficos para categóricas vs numéricas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-associacao"><i class="fa fa-check"></i><b>2.4</b> Medidas de associação</a><ul>
+<li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-associacao-e-correlacao"><i class="fa fa-check"></i><b>2.4</b> Medidas de associação e correlação</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#associacao-entre-duas-variaveis-discretas"><i class="fa fa-check"></i><b>2.4.1</b> Associação entre duas variáveis discretas</a></li>
 <li class="chapter" data-level="2.4.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#duas-ou-mais-variaveis-numericas"><i class="fa fa-check"></i><b>2.4.2</b> Duas ou mais variáveis numéricas</a></li>
 </ul></li>
@@ -209,7 +210,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">R NA PRÁTICA: Estatística Descomplicada com R</h1>
 <p class="author"><em>José Evandeilton Lopes</em></p>
-<p class="date"><em>22/06/2019</em></p>
+<p class="date"><em>06/07/2019</em></p>
 </div>
 <div id="introducao" class="section level1 unnumbered">
 <h1>Introdução</h1>
@@ -265,12 +266,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Trabalharemos com o <a href="https://cloud.r-project.org/">software R</a> e com a IDE (Ambiente de Desenvolvimento Integrado, traduzindo do inglês) <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio Desktop</a>. Nos links você poderá baixar os dois programas e configurar de acordo com o seu sistema operacional.</p>
 <p>Trabalharemos sempre que possível com o operador <code>%&gt;% (pipe)</code> e com funções dos pacotes do <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> e outros relacionados. Especialmente para o R NA PRÁTICA, desenvolvemos o pacote <a href="https://github.com/evandeilton/rnp"><code>rnp</code></a> que poderá ser baixado direto to <code>github</code>. Este pacote está em constante atualização e possui recursos extras para deste livro e também de outros materiais do R NA PRÁTICA em desenvolvimento.</p>
 <p>Rode o comando abaixo para instalar, caso ainda não tenha o pacote.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Istalar devtools, caso não exista na máquina.</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Instalar devtools, caso não exista na máquina.</span>
 <span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;devtools&quot;</span>)) {
  <span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)
 }
 
-<span class="co"># Istalar o rnp</span>
+<span class="co"># Instalar o rnp</span>
 <span class="kw">require</span>(devtools, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)
 <span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;rnp&quot;</span>)) {
  devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;evandeilton/rnp&quot;</span>) 
@@ -317,7 +318,7 @@ Se não for passada uma pasta ou seja, <code>salvar = NULL</code> o R baixará o
 <blockquote>
 <p>Especificamete para os exemplo deste livro, os dados foram tratados com as descrições das devidas classes e também removemos algumas variáveis com muitos valores nulos. Mantemos apenas as mais importates. Acreditamos que para fins de apŕendizado, estes dados são suficientes. Prém, para ter os ados originais, sugerimos seguir as dicas anteriores.</p>
 </blockquote>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Carega pacote</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Carrega pacote</span>
 <span class="kw">require</span>(rnp, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)
 <span class="co"># Ajuda do conjunto de dados</span>
 ?rnp<span class="op">::</span>dm_curso
@@ -374,7 +375,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["ebookrnp.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }

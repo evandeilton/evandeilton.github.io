@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>R NA PRÁTICA: Estatística Descomplicada com R</title>
-  <meta name="description" content="R NA PRÁTICA: Estatística Descomplicada com R" />
+  <title>R NA PRÁTICA: Introdução à Estatística para Data Science</title>
+  <meta name="description" content="R NA PRÁTICA: Introdução à Estatística para Data Science" />
   <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="R NA PRÁTICA: Estatística Descomplicada com R" />
+  <meta property="og:title" content="R NA PRÁTICA: Introdução à Estatística para Data Science" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="R NA PRÁTICA: Estatística Descomplicada com R" />
+  <meta property="og:description" content="R NA PRÁTICA: Introdução à Estatística para Data Science" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="R NA PRÁTICA: Estatística Descomplicada com R" />
+  <meta name="twitter:title" content="R NA PRÁTICA: Introdução à Estatística para Data Science" />
   
-  <meta name="twitter:description" content="R NA PRÁTICA: Estatística Descomplicada com R" />
+  <meta name="twitter:description" content="R NA PRÁTICA: Introdução à Estatística para Data Science" />
   
 
 <meta name="author" content="José Evandeilton Lopes" />
@@ -199,7 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R NA PRÁTICA: Estatística Descomplicada com R</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R NA PRÁTICA: Introdução à Estatística para Data Science</a>
           </h1>
         </div>
 
@@ -208,17 +208,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">R NA PRÁTICA: Estatística Descomplicada com R</h1>
+<h1 class="title">R NA PRÁTICA: Introdução à Estatística para Data Science</h1>
+<h2 class="subtitle"><em>Estatística Descritiva</em></h2>
 <p class="author"><em>José Evandeilton Lopes</em></p>
 <p class="date"><em>06/07/2019</em></p>
 </div>
 <div id="introducao" class="section level1 unnumbered">
 <h1>Introdução</h1>
-<p>Bem vindo ao primeiro módulo de Estatística descomplicada com o R que é uma produção exclusiva para do projeto R NA PRÁTICA. Esta série será composta por quatro módulos e neste primeiro, abordaremos os principais conceitos estatísticos e análise descritiva. O objetivo maior desta parte é revisar os conceitos mais importantes do inicio dos estudos estatísticos. Abordaremos a parte conceitual com algumas definições e termos estatísticos, veremos tabelas de frequências, bem como as principais medidas descritivas (média, mediana e outras). Veremos ainda algumas medidas de correlação e associação e os principais gráficos estatísticos mais utilizados. Para reforçar os conhecimentos, faremos exercícios práticos com apoio do R com foco em bases de dados reais do <a href="http://portal.inep.gov.br/web/guest/dados">INEP</a> - Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira do ano de 2017.</p>
+<p>Bem vindo ao primeiro módulo de <strong>Introdução à Estatística para Data Science</strong> que é uma produção exclusiva para do projeto R NA PRÁTICA. Esta série será composta por quatro módulos e neste primeiro, abordaremos os principais conceitos estatísticos e análise descritiva. O objetivo maior desta parte é revisar os conceitos mais importantes do inicio dos estudos estatísticos tão requisitados para quem trabalha com ciência de dados. Abordaremos a parte conceitual com algumas definições e termos estatísticos, veremos tabelas de frequências, as principais medidas descritivas (média, mediana e outras). Veremos ainda algumas medidas de correlação e associação e os principais gráficos estatísticos mais utilizados. Para reforçar os conhecimentos, faremos exercícios práticos com apoio do R com foco em bases de dados reais do <a href="http://portal.inep.gov.br/web/guest/dados">INEP</a> - Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira do ano de 2017.</p>
 <p>No final deste módulo você será capaz de:</p>
 <ul>
 <li>Definir estatística;</li>
-<li>Compreender os principais tipos de variáveis e entender as melhores técnicas paracada tipo de variável;</li>
+<li>Compreender os principais tipos de variáveis e entender as melhores técnicas para cada tipo de variável;</li>
 <li>Entender o que é e como utilizar tabelas de frequências simples e de dupla entrada;</li>
 <li>Trabalhar com as principais medidas estatísticas (media, mediana, desvio padrão, etc.);</li>
 <li>Entender correlação, covariância, estatística Qui-quadrado e V de Crámer;</li>
@@ -259,7 +260,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="ambiente-de-trabalho" class="section level2 unnumbered">
 <h2>Ambiente de trabalho</h2>
-<p>Este curso não tem a intenção de ensinar detalhadamente programação em R, pois o foco é em estatística. Contudo, sempre que necessário explicaremos algumas funções e comandos utilizados nos scripts. Além disso, para todos os exemplos e exercícios, deixaremos os códigos gerados como forma de estudo e revisão para que tudo possa ser replicado e reaproveitado pelo aluno.</p>
+<p>Este curso não tem a intenção de ensinar detalhadamente programação em R, pois o foco é em conceitos estatísticos. Contudo, sempre que necessário explicaremos algumas funções e comandos utilizados nos scripts. Além disso, para todos os exemplos e exercícios, deixaremos os códigos gerados como forma de estudo e revisão para que tudo possa ser replicado e reaproveitado pelo aluno.</p>
 <p>Se sentir dificuldade em compreender algum conceito em linguagem R, recomendamos fazer o nosso curso <a href="https://www.udemy.com/r-na-pratica-ciencia-de-dados/learn/v4/overview">R NA PRÁTICA: Data Wrangling com R para Ciência de Dados</a> ou qualquer outro do seu interesse para obter mais conhecimentos dobre a linguagem R.</p>
 <div id="pacotes" class="section level3 unnumbered">
 <h3>Pacotes</h3>

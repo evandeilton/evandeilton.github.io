@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>R NA PRÁTICA: Introdução à Estatística para Data Science</title>
   <meta name="description" content="R NA PRÁTICA: Introdução à Estatística para Data Science" />
-  <meta name="generator" content="bookdown 0.11 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
   <meta property="og:title" content="R NA PRÁTICA: Introdução à Estatística para Data Science" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,6 @@
 <meta name="author" content="José Evandeilton Lopes" />
 
 
-<meta name="date" content="2019-06-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +31,7 @@
   
   
 
-<link rel="next" href="estatistica.html">
+<link rel="next" href="estatística.html"/>
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
@@ -40,6 +39,9 @@
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -55,7 +57,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -127,69 +128,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introdução</a><ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#motivacao"><i class="fa fa-check"></i>Motivação</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pre-requisitos"><i class="fa fa-check"></i>Pré-requisitos</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#motivação"><i class="fa fa-check"></i>Motivação</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#pré-requisitos"><i class="fa fa-check"></i>Pré-requisitos</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#ambiente-de-trabalho"><i class="fa fa-check"></i>Ambiente de trabalho</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#pacotes"><i class="fa fa-check"></i>Pacotes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#conjuntos-de-dados"><i class="fa fa-check"></i>Conjuntos de dados</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="estatistica.html"><a href="estatistica.html"><i class="fa fa-check"></i><b>1</b> Estatística</a><ul>
-<li class="chapter" data-level="1.1" data-path="estatistica.html"><a href="estatistica.html#o-que-e-estatistica"><i class="fa fa-check"></i><b>1.1</b> O que é estatística?</a></li>
-<li class="chapter" data-level="1.2" data-path="estatistica.html"><a href="estatistica.html#fases-do-trabalho-estatistico"><i class="fa fa-check"></i><b>1.2</b> Fases do trabalho estatístico</a></li>
-<li class="chapter" data-level="1.3" data-path="estatistica.html"><a href="estatistica.html#como-utilizar-estatistica"><i class="fa fa-check"></i><b>1.3</b> Como utilizar estatística?</a></li>
-<li class="chapter" data-level="1.4" data-path="estatistica.html"><a href="estatistica.html#como-nao-utilizar-estatistica"><i class="fa fa-check"></i><b>1.4</b> Como não utilizar estatística?</a></li>
-<li class="chapter" data-level="1.5" data-path="estatistica.html"><a href="estatistica.html#estatistica-data-science-e-big-data."><i class="fa fa-check"></i><b>1.5</b> Estatística, <em>Data Science</em> e <em>Big Data</em>.</a></li>
-<li class="chapter" data-level="1.6" data-path="estatistica.html"><a href="estatistica.html#conceitos-e-definicoes"><i class="fa fa-check"></i><b>1.6</b> Conceitos e definições</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="estatistica.html"><a href="estatistica.html#populacao-amostra-censo"><i class="fa fa-check"></i><b>1.6.1</b> População, amostra, censo</a></li>
-<li class="chapter" data-level="1.6.2" data-path="estatistica.html"><a href="estatistica.html#dados-informacao-conhecimento-e-sabedoria"><i class="fa fa-check"></i><b>1.6.2</b> Dados, informação, conhecimento e sabedoria</a></li>
-<li class="chapter" data-level="1.6.3" data-path="estatistica.html"><a href="estatistica.html#variaveis"><i class="fa fa-check"></i><b>1.6.3</b> Variáveis</a></li>
-<li class="chapter" data-level="1.6.4" data-path="estatistica.html"><a href="estatistica.html#analise-univariada-bivariada-e-multivariada"><i class="fa fa-check"></i><b>1.6.4</b> Análise univariada, bivariada e multivariada</a></li>
-<li class="chapter" data-level="1.6.5" data-path="estatistica.html"><a href="estatistica.html#tidydata"><i class="fa fa-check"></i><b>1.6.5</b> <em>tidydata</em></a></li>
-<li class="chapter" data-level="1.6.6" data-path="estatistica.html"><a href="estatistica.html#exercicios-resolvidos"><i class="fa fa-check"></i><b>1.6.6</b> Exercícios resolvidos</a></li>
+<li class="chapter" data-level="1" data-path="estatística.html"><a href="estatística.html"><i class="fa fa-check"></i><b>1</b> Estatística</a><ul>
+<li class="chapter" data-level="1.1" data-path="estatística.html"><a href="estatística.html#o-que-é-estatística"><i class="fa fa-check"></i><b>1.1</b> O que é estatística?</a></li>
+<li class="chapter" data-level="1.2" data-path="estatística.html"><a href="estatística.html#fases-do-trabalho-estatístico"><i class="fa fa-check"></i><b>1.2</b> Fases do trabalho estatístico</a></li>
+<li class="chapter" data-level="1.3" data-path="estatística.html"><a href="estatística.html#como-utilizar-estatística"><i class="fa fa-check"></i><b>1.3</b> Como utilizar estatística?</a></li>
+<li class="chapter" data-level="1.4" data-path="estatística.html"><a href="estatística.html#como-não-utilizar-estatística"><i class="fa fa-check"></i><b>1.4</b> Como não utilizar estatística?</a></li>
+<li class="chapter" data-level="1.5" data-path="estatística.html"><a href="estatística.html#estatística-data-science-e-big-data."><i class="fa fa-check"></i><b>1.5</b> Estatística, <em>Data Science</em> e <em>Big Data</em>.</a></li>
+<li class="chapter" data-level="1.6" data-path="estatística.html"><a href="estatística.html#conceitos-e-definições"><i class="fa fa-check"></i><b>1.6</b> Conceitos e definições</a><ul>
+<li class="chapter" data-level="1.6.1" data-path="estatística.html"><a href="estatística.html#população-amostra-censo"><i class="fa fa-check"></i><b>1.6.1</b> População, amostra, censo</a></li>
+<li class="chapter" data-level="1.6.2" data-path="estatística.html"><a href="estatística.html#dados-informação-conhecimento-e-sabedoria"><i class="fa fa-check"></i><b>1.6.2</b> Dados, informação, conhecimento e sabedoria</a></li>
+<li class="chapter" data-level="1.6.3" data-path="estatística.html"><a href="estatística.html#variáveis"><i class="fa fa-check"></i><b>1.6.3</b> Variáveis</a></li>
+<li class="chapter" data-level="1.6.4" data-path="estatística.html"><a href="estatística.html#análise-univariada-bivariada-e-multivariada"><i class="fa fa-check"></i><b>1.6.4</b> Análise univariada, bivariada e multivariada</a></li>
+<li class="chapter" data-level="1.6.5" data-path="estatística.html"><a href="estatística.html#tidydata"><i class="fa fa-check"></i><b>1.6.5</b> <em>tidydata</em></a></li>
+<li class="chapter" data-level="1.6.6" data-path="estatística.html"><a href="estatística.html#exercícios-resolvidos"><i class="fa fa-check"></i><b>1.6.6</b> Exercícios resolvidos</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html"><i class="fa fa-check"></i><b>2</b> Estatística descritiva</a><ul>
-<li class="chapter" data-level="2.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#variaveis-categoricas"><i class="fa fa-check"></i><b>2.1</b> Variáveis categóricas</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#tabelas-de-frequencias"><i class="fa fa-check"></i><b>2.1.1</b> Tabelas de frequências</a></li>
-<li class="chapter" data-level="2.1.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#graficos-para-uma-variavel-categorica"><i class="fa fa-check"></i><b>2.1.2</b> Gráficos para uma variável categórica</a></li>
-<li class="chapter" data-level="2.1.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#grafico-para-duas-variaveis-categoricas"><i class="fa fa-check"></i><b>2.1.3</b> Gráfico para duas variáveis categóricas</a></li>
-<li class="chapter" data-level="2.1.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios"><i class="fa fa-check"></i><b>2.1.4</b> Exercícios</a></li>
+<li class="chapter" data-level="2" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html"><i class="fa fa-check"></i><b>2</b> Estatística descritiva</a><ul>
+<li class="chapter" data-level="2.1" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#variáveis-categóricas"><i class="fa fa-check"></i><b>2.1</b> Variáveis categóricas</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#tabelas-de-frequências"><i class="fa fa-check"></i><b>2.1.1</b> Tabelas de frequências</a></li>
+<li class="chapter" data-level="2.1.2" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#gráficos-para-uma-variável-categórica"><i class="fa fa-check"></i><b>2.1.2</b> Gráficos para uma variável categórica</a></li>
+<li class="chapter" data-level="2.1.3" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#gráfico-para-duas-variáveis-categóricas"><i class="fa fa-check"></i><b>2.1.3</b> Gráfico para duas variáveis categóricas</a></li>
+<li class="chapter" data-level="2.1.4" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#exercícios"><i class="fa fa-check"></i><b>2.1.4</b> Exercícios</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#variaveis-numericas"><i class="fa fa-check"></i><b>2.2</b> Variáveis numéricas</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-estatisticas-de-centraliade"><i class="fa fa-check"></i><b>2.2.1</b> Medidas estatísticas de centraliade</a></li>
-<li class="chapter" data-level="2.2.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-estatisticas-de-dispersao"><i class="fa fa-check"></i><b>2.2.2</b> Medidas estatísticas de dispersão</a></li>
-<li class="chapter" data-level="2.2.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#outras-medidas"><i class="fa fa-check"></i><b>2.2.3</b> Outras medidas</a></li>
-<li class="chapter" data-level="2.2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#graficos-para-uma-variavel-numerica"><i class="fa fa-check"></i><b>2.2.4</b> Gráficos para uma variável numérica</a></li>
-<li class="chapter" data-level="2.2.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#graficos-para-duas-variaveis-numericas"><i class="fa fa-check"></i><b>2.2.5</b> Gráficos para duas variáveis numéricas</a></li>
+<li class="chapter" data-level="2.2" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#variáveis-numéricas"><i class="fa fa-check"></i><b>2.2</b> Variáveis numéricas</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#medidas-estatísticas-de-centraliade"><i class="fa fa-check"></i><b>2.2.1</b> Medidas estatísticas de centraliade</a></li>
+<li class="chapter" data-level="2.2.2" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#medidas-estatísticas-de-dispersão"><i class="fa fa-check"></i><b>2.2.2</b> Medidas estatísticas de dispersão</a></li>
+<li class="chapter" data-level="2.2.3" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#outras-medidas"><i class="fa fa-check"></i><b>2.2.3</b> Outras medidas</a></li>
+<li class="chapter" data-level="2.2.4" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#gráficos-para-uma-variável-numérica"><i class="fa fa-check"></i><b>2.2.4</b> Gráficos para uma variável numérica</a></li>
+<li class="chapter" data-level="2.2.5" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#gráficos-para-duas-variáveis-numéricas"><i class="fa fa-check"></i><b>2.2.5</b> Gráficos para duas variáveis numéricas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#variaveis-categoricas-versus-numericas"><i class="fa fa-check"></i><b>2.3</b> Variáveis categóricas versus numéricas</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#categorizando-variaveis-numericas."><i class="fa fa-check"></i><b>2.3.1</b> Categorizando variáveis numéricas.</a></li>
-<li class="chapter" data-level="2.3.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-estatisticas-por-agrupamento"><i class="fa fa-check"></i><b>2.3.2</b> Medidas estatísticas por agrupamento</a></li>
-<li class="chapter" data-level="2.3.3" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#graficos-para-categoricas-vs-numericas"><i class="fa fa-check"></i><b>2.3.3</b> Gráficos para categóricas vs numéricas</a></li>
+<li class="chapter" data-level="2.3" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#variáveis-categóricas-versus-numéricas"><i class="fa fa-check"></i><b>2.3</b> Variáveis categóricas versus numéricas</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#categorizando-variáveis-numéricas."><i class="fa fa-check"></i><b>2.3.1</b> Categorizando variáveis numéricas.</a></li>
+<li class="chapter" data-level="2.3.2" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#medidas-estatísticas-por-agrupamento"><i class="fa fa-check"></i><b>2.3.2</b> Medidas estatísticas por agrupamento</a></li>
+<li class="chapter" data-level="2.3.3" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#gráficos-para-categóricas-vs-numéricas"><i class="fa fa-check"></i><b>2.3.3</b> Gráficos para categóricas vs numéricas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#medidas-de-associacao-e-correlacao"><i class="fa fa-check"></i><b>2.4</b> Medidas de associação e correlação</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#associacao-entre-duas-variaveis-discretas"><i class="fa fa-check"></i><b>2.4.1</b> Associação entre duas variáveis discretas</a></li>
-<li class="chapter" data-level="2.4.2" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#duas-ou-mais-variaveis-numericas"><i class="fa fa-check"></i><b>2.4.2</b> Duas ou mais variáveis numéricas</a></li>
+<li class="chapter" data-level="2.4" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#medidas-de-associação-e-correlação"><i class="fa fa-check"></i><b>2.4</b> Medidas de associação e correlação</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#associação-entre-duas-variáveis-discretas"><i class="fa fa-check"></i><b>2.4.1</b> Associação entre duas variáveis discretas</a></li>
+<li class="chapter" data-level="2.4.2" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#duas-ou-mais-variáveis-numéricas"><i class="fa fa-check"></i><b>2.4.2</b> Duas ou mais variáveis numéricas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="estatistica-descritiva.html"><a href="estatistica-descritiva.html#exercicios-de-estatistica-descritiva"><i class="fa fa-check"></i><b>2.5</b> Exercícios de estatística descritiva</a></li>
+<li class="chapter" data-level="2.5" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#exercícios-de-estatística-descritiva"><i class="fa fa-check"></i><b>2.5</b> Exercícios de estatística descritiva</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html"><i class="fa fa-check"></i><b>3</b> Introdução à probabilidade com R</a><ul>
-<li class="chapter" data-level="3.1" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#combinatoria"><i class="fa fa-check"></i><b>3.1</b> Combinatória</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#fatorial-e-principio-multiplicativo"><i class="fa fa-check"></i><b>3.1.1</b> Fatorial e princípio multiplicativo</a></li>
-<li class="chapter" data-level="3.1.2" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#arranjo-e-permutacao"><i class="fa fa-check"></i><b>3.1.2</b> Arranjo e permutação</a></li>
-<li class="chapter" data-level="3.1.3" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#combinacao"><i class="fa fa-check"></i><b>3.1.3</b> Combinação</a></li>
+<li class="chapter" data-level="3" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html"><i class="fa fa-check"></i><b>3</b> Introdução à probabilidade com R</a><ul>
+<li class="chapter" data-level="3.1" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#combinatória"><i class="fa fa-check"></i><b>3.1</b> Combinatória</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#fatorial-e-princípio-multiplicativo"><i class="fa fa-check"></i><b>3.1.1</b> Fatorial e princípio multiplicativo</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#arranjo-e-permutação"><i class="fa fa-check"></i><b>3.1.2</b> Arranjo e permutação</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#combinação"><i class="fa fa-check"></i><b>3.1.3</b> Combinação</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#probabilidade"><i class="fa fa-check"></i><b>3.2</b> Probabilidade</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#definicoes"><i class="fa fa-check"></i><b>3.2.1</b> Definições</a></li>
-<li class="chapter" data-level="3.2.2" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#probabilidade-condicional-e-teorema-de-bayes"><i class="fa fa-check"></i><b>3.2.2</b> Probabilidade condicional e teorema de Bayes</a></li>
-<li class="chapter" data-level="3.2.3" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#independencia"><i class="fa fa-check"></i><b>3.2.3</b> Independência</a></li>
+<li class="chapter" data-level="3.2" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#probabilidade"><i class="fa fa-check"></i><b>3.2</b> Probabilidade</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#definições"><i class="fa fa-check"></i><b>3.2.1</b> Definições</a></li>
+<li class="chapter" data-level="3.2.2" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#probabilidade-condicional-e-teorema-de-bayes"><i class="fa fa-check"></i><b>3.2.2</b> Probabilidade condicional e teorema de Bayes</a></li>
+<li class="chapter" data-level="3.2.3" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#independência"><i class="fa fa-check"></i><b>3.2.3</b> Independência</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#variaveis-aleatorias"><i class="fa fa-check"></i><b>3.3</b> Variáveis aleatórias</a></li>
-<li class="chapter" data-level="3.4" data-path="introducao-a-probabilidade-com-r.html"><a href="introducao-a-probabilidade-com-r.html#distribuicoes-de-probabilidade"><i class="fa fa-check"></i><b>3.4</b> Distribuições de probabilidade</a></li>
+<li class="chapter" data-level="3.3" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#variáveis-aleatórias"><i class="fa fa-check"></i><b>3.3</b> Variáveis aleatórias</a></li>
+<li class="chapter" data-level="3.4" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#distribuições-de-probabilidade"><i class="fa fa-check"></i><b>3.4</b> Distribuições de probabilidade</a></li>
 </ul></li>
 <li class="appendix"><span><b>Apendice</b></span></li>
-<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referências</a></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
 </ul>
 
       </nav>
@@ -211,9 +212,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 class="title">R NA PRÁTICA: Introdução à Estatística para Data Science</h1>
 <h2 class="subtitle"><em>Estatística Descritiva</em></h2>
 <p class="author"><em>José Evandeilton Lopes</em></p>
-<p class="date"><em>06/07/2019</em></p>
+<p class="date"><em>24/11/2019</em></p>
 </div>
-<div id="introducao" class="section level1 unnumbered">
+<div id="introdução" class="section level1 unnumbered">
 <h1>Introdução</h1>
 <p>Bem vindo ao primeiro módulo de <strong>Introdução à Estatística para Data Science</strong> que é uma produção exclusiva para do projeto R NA PRÁTICA. Esta série será composta por quatro módulos e neste primeiro, abordaremos os principais conceitos estatísticos e análise descritiva. O objetivo maior desta parte é revisar os conceitos mais importantes do inicio dos estudos estatísticos tão requisitados para quem trabalha com ciência de dados. Abordaremos a parte conceitual com algumas definições e termos estatísticos, veremos tabelas de frequências, as principais medidas descritivas (média, mediana e outras). Veremos ainda algumas medidas de correlação e associação e os principais gráficos estatísticos mais utilizados. Para reforçar os conhecimentos, faremos exercícios práticos com apoio do R com foco em bases de dados reais do <a href="http://portal.inep.gov.br/web/guest/dados">INEP</a> - Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira do ano de 2017.</p>
 <p>No final deste módulo você será capaz de:</p>
@@ -225,7 +226,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Entender correlação, covariância, estatística Qui-quadrado e V de Crámer;</li>
 <li>Construir gráficos estatísticos para os tipos corretos de dados com o pacote <code>ggplot2</code>.</li>
 </ul>
-<div id="motivacao" class="section level2 unnumbered">
+<div id="motivação" class="section level2 unnumbered">
 <h2>Motivação</h2>
 <p>A estatística é matemática aplicada e está em tudo! É atribuída a <a href="https://www.sciencedirect.com/science/article/pii/0315086079901010">H.G. Wells</a> a seguinte frase:</p>
 <blockquote>
@@ -247,7 +248,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><strong>No IDH e expectativa de vida:</strong> O IDH (Índice de Desenvolvimento Humano) de um país é um bom indicador de desenvolvimento do mesmo. Não tem como calcular IDH sem modelos estatísticos e matemáticos.</p></li>
 </ul>
 </div>
-<div id="pre-requisitos" class="section level2 unnumbered">
+<div id="pré-requisitos" class="section level2 unnumbered">
 <h2>Pré-requisitos</h2>
 <p>Para fazer o melhor proveito deste material, temos as seguintes recomendações:</p>
 <ul>
@@ -267,16 +268,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Trabalharemos com o <a href="https://cloud.r-project.org/">software R</a> e com a IDE (Ambiente de Desenvolvimento Integrado, traduzindo do inglês) <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio Desktop</a>. Nos links você poderá baixar os dois programas e configurar de acordo com o seu sistema operacional.</p>
 <p>Trabalharemos sempre que possível com o operador <code>%&gt;% (pipe)</code> e com funções dos pacotes do <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> e outros relacionados. Especialmente para o R NA PRÁTICA, desenvolvemos o pacote <a href="https://github.com/evandeilton/rnp"><code>rnp</code></a> que poderá ser baixado direto to <code>github</code>. Este pacote está em constante atualização e possui recursos extras para deste livro e também de outros materiais do R NA PRÁTICA em desenvolvimento.</p>
 <p>Rode o comando abaixo para instalar, caso ainda não tenha o pacote.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Instalar devtools, caso não exista na máquina.</span>
-<span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;devtools&quot;</span>)) {
- <span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)
-}
-
-<span class="co"># Instalar o rnp</span>
-<span class="kw">require</span>(devtools, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)
-<span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;rnp&quot;</span>)) {
- devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;evandeilton/rnp&quot;</span>) 
-}</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Instalar devtools, caso não exista na máquina.</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;devtools&quot;</span>)) {</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"> <span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">}</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co"># Instalar o rnp</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="kw">require</span>(devtools, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;rnp&quot;</span>)) {</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"> devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;evandeilton/rnp&quot;</span>) </a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">}</a></code></pre></div>
 <blockquote>
 <p>Caso sua instalação do R seja nova, ao instalar o <code>rnp</code>, automaticamente todas as dependências serão baixadas e seu R estará equipado com todos os recursos necessários para trabalar com este livro. A cada novo módulo adicionaremos novas dependências caso surjam.</p>
 </blockquote>
@@ -284,49 +285,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="conjuntos-de-dados" class="section level3 unnumbered">
 <h3>Conjuntos de dados</h3>
 <p>Trabalharemos com conjuntos de dados do Censo do Ensino Superior no Brasil feito anualmente pelo <a href="www.inep.gov.br/">INEP (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira)</a>, especificamente para o ano de 2017. Os dados podem ser baixados diretamente na seção de microdados do site neste link <a href="http://portal.inep.gov.br/microdados">Censo da Educação Superior de 2017</a>, ou se preferir, baixar diretamente com o comando abaixo. Em seguinda descompactar os dados utilizando seu descompactador favorito.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Informe o ano dos dados e o local completo de onde deseja salvar os dados</span>
-<span class="co"># conforme exemplos abaixo. Recomendamos criar uma pasta para salvar os</span>
-<span class="co"># dados e torná-los mais acessíveis nas aulas.</span>
-rnp<span class="op">::</span><span class="kw">rnp_get_inep_censo</span>(<span class="dt">ano =</span> <span class="dv">2017</span>, <span class="dt">salvar =</span> <span class="st">&quot;Dados/INEP/&quot;</span>)
-<span class="co"># Classes para base de dados das IES</span>
-dicionario &lt;-<span class="st"> &quot;Dados/INEP/ANEXOS/ANEXO I - Dicionario de Dados e Tabelas</span>
-<span class="st">Auxiliares/Dicionario_de_Dados.xlsx&quot;</span>
-classes &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_get_classes_inep</span>(<span class="dt">caminho =</span> dicionario, 
-                                     <span class="dt">aba =</span> <span class="st">&quot;DM_IES&quot;</span>, 
-                                     <span class="dt">retorna_lista =</span> <span class="ot">FALSE</span>)
-<span class="co"># Leitura da base de dados  </span>
-base &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_read</span>(<span class="dt">base =</span> <span class="kw">paste0</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_IES.CSV&quot;</span>),
-                      <span class="dt">sep =</span> <span class="st">&quot;|&quot;</span>, 
-                      <span class="dt">dec =</span> <span class="st">&quot;.&quot;</span>, 
-                      <span class="dt">header =</span> <span class="ot">TRUE</span>, 
-                      <span class="dt">encoding =</span> <span class="st">&quot;Latin-1&quot;</span>,
-                      <span class="dt">verbose =</span> <span class="ot">FALSE</span>, 
-                      <span class="dt">showProgress =</span> <span class="ot">FALSE</span>)
-<span class="co"># Aplicando classes aos dados</span>
-base_ies &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_aplica_classes</span>(<span class="dt">base =</span> base, <span class="dt">classes =</span> classes) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">    </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">Sigla =</span> SG_IES,
-                  <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, 
-                  <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,
-                  <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA)</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Informe o ano dos dados e o local completo de onde deseja salvar os dados</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># conforme exemplos abaixo. Recomendamos criar uma pasta para salvar os</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># dados e torná-los mais acessíveis nas aulas.</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">rnp<span class="op">::</span><span class="kw">rnp_get_inep_censo</span>(<span class="dt">ano =</span> <span class="dv">2017</span>, <span class="dt">salvar =</span> <span class="st">&quot;Dados/INEP/&quot;</span>)</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co"># Classes para base de dados das IES</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">dicionario &lt;-<span class="st"> &quot;Dados/INEP/ANEXOS/ANEXO I - Dicionario de Dados e Tabelas</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="st">Auxiliares/Dicionario_de_Dados.xlsx&quot;</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">classes &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_get_classes_inep</span>(<span class="dt">caminho =</span> dicionario, </a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">                                     <span class="dt">aba =</span> <span class="st">&quot;DM_IES&quot;</span>, </a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">                                     <span class="dt">retorna_lista =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co"># Leitura da base de dados  </span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">base &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_read</span>(<span class="dt">base =</span> <span class="kw">paste0</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_IES.CSV&quot;</span>),</a>
+<a class="sourceLine" id="cb2-13" data-line-number="13">                      <span class="dt">sep =</span> <span class="st">&quot;|&quot;</span>, </a>
+<a class="sourceLine" id="cb2-14" data-line-number="14">                      <span class="dt">dec =</span> <span class="st">&quot;.&quot;</span>, </a>
+<a class="sourceLine" id="cb2-15" data-line-number="15">                      <span class="dt">header =</span> <span class="ot">TRUE</span>, </a>
+<a class="sourceLine" id="cb2-16" data-line-number="16">                      <span class="dt">encoding =</span> <span class="st">&quot;Latin-1&quot;</span>,</a>
+<a class="sourceLine" id="cb2-17" data-line-number="17">                      <span class="dt">verbose =</span> <span class="ot">FALSE</span>, </a>
+<a class="sourceLine" id="cb2-18" data-line-number="18">                      <span class="dt">showProgress =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co"># Aplicando classes aos dados</span></a>
+<a class="sourceLine" id="cb2-20" data-line-number="20">base_ies &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_aplica_classes</span>(<span class="dt">base =</span> base, <span class="dt">classes =</span> classes) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="st">    </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">Sigla =</span> SG_IES,</a>
+<a class="sourceLine" id="cb2-22" data-line-number="22">                  <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, </a>
+<a class="sourceLine" id="cb2-23" data-line-number="23">                  <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,</a>
+<a class="sourceLine" id="cb2-24" data-line-number="24">                  <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA)</a></code></pre></div>
 <blockquote>
 <p>Note que o argumento <code>salvar</code> na função <code>rnp_get_inep_censo()</code> dever conter o caminho para a pasta onde os dados baixados serão salvos.
 Se não for passada uma pasta ou seja, <code>salvar = NULL</code> o R baixará os dados na pasta da seção onde o R foi carregagado. Para saber qual é este local digite <code>getwd()</code> no console do R.</p>
 </blockquote>
 <p>Você poderá também ler os dados sem decompactar com o pacote <code>readr</code>, mas recomendamos descompartar para leitura mais rápida com a função <code>rnp_read()</code>.</p>
-<pre class="sourceCode r"><code class="sourceCode r">base_curso &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_delim</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_CURSO.zip&quot;</span>, 
-                        <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>, <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;Latin1&quot;</span>))</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">base_curso &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_delim</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_CURSO.zip&quot;</span>, </a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">                        <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>, <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;Latin1&quot;</span>))</a></code></pre></div>
 <p>Também disponibiliamos no pacote <code>rnp</code> os dados <code>dm_curso, dm_docente, dm_ies e dm_local</code>. Para acessar, basta carregar o pacote e utilizar os dados conforme exemplo abaixo.</p>
 <blockquote>
 <p>Especificamete para os exemplo deste livro, os dados foram tratados com as descrições das devidas classes e também removemos algumas variáveis com muitos valores nulos. Mantemos apenas as mais importates. Acreditamos que para fins de apŕendizado, estes dados são suficientes. Prém, para ter os ados originais, sugerimos seguir as dicas anteriores.</p>
 </blockquote>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Carrega pacote</span>
-<span class="kw">require</span>(rnp, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)
-<span class="co"># Ajuda do conjunto de dados</span>
-?rnp<span class="op">::</span>dm_curso
-?rnp<span class="op">::</span>dm_docente
-?rnp<span class="op">::</span>dm_ies
-?rnp<span class="op">::</span>dm_local
-base_curso &lt;-<span class="st"> </span>rnp<span class="op">::</span>dm_curso</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># Carrega pacote</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">require</span>(rnp, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># Ajuda do conjunto de dados</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">?rnp<span class="op">::</span>dm_curso</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">?rnp<span class="op">::</span>dm_docente</a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">?rnp<span class="op">::</span>dm_ies</a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">?rnp<span class="op">::</span>dm_local</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">base_curso &lt;-<span class="st"> </span>rnp<span class="op">::</span>dm_curso</a></code></pre></div>
 <hr />
 
 
@@ -339,16 +340,18 @@ base_curso &lt;-<span class="st"> </span>rnp<span class="op">::</span>dm_curso</
         </div>
       </div>
 
-<a href="estatistica.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="estatística.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
 <script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/clipboard.min.js"></script>
 <script src="libs/gitbook/js/plugin-search.js"></script>
 <script src="libs/gitbook/js/plugin-sharing.js"></script>
 <script src="libs/gitbook/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script src="libs/gitbook/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -356,12 +359,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -373,6 +375,10 @@ gitbook.start({
 "text": null
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
@@ -391,8 +397,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

@@ -158,7 +158,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1.4" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#exercícios"><i class="fa fa-check"></i><b>2.1.4</b> Exercícios</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#variáveis-numéricas"><i class="fa fa-check"></i><b>2.2</b> Variáveis numéricas</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#medidas-estatísticas-de-centraliade"><i class="fa fa-check"></i><b>2.2.1</b> Medidas estatísticas de centraliade</a></li>
+<li class="chapter" data-level="2.2.1" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#medidas-estatísticas-de-centralidade"><i class="fa fa-check"></i><b>2.2.1</b> Medidas estatísticas de centralidade</a></li>
 <li class="chapter" data-level="2.2.2" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#medidas-estatísticas-de-dispersão"><i class="fa fa-check"></i><b>2.2.2</b> Medidas estatísticas de dispersão</a></li>
 <li class="chapter" data-level="2.2.3" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#outras-medidas"><i class="fa fa-check"></i><b>2.2.3</b> Outras medidas</a></li>
 <li class="chapter" data-level="2.2.4" data-path="estatística-descritiva.html"><a href="estatística-descritiva.html#gráficos-para-uma-variável-numérica"><i class="fa fa-check"></i><b>2.2.4</b> Gráficos para uma variável numérica</a></li>
@@ -189,7 +189,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#variáveis-aleatórias"><i class="fa fa-check"></i><b>3.3</b> Variáveis aleatórias</a></li>
 <li class="chapter" data-level="3.4" data-path="introdução-à-probabilidade-com-r.html"><a href="introdução-à-probabilidade-com-r.html#distribuições-de-probabilidade"><i class="fa fa-check"></i><b>3.4</b> Distribuições de probabilidade</a></li>
 </ul></li>
-<li class="appendix"><span><b>Apendice</b></span></li>
+<li class="appendix"><span><b>Apêndice</b></span></li>
 <li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
 </ul>
 
@@ -714,7 +714,7 @@ Temos que escolaridade é representado pela variável <span class="math inline">
 <p><br />
 </p>
 <blockquote>
-<p>Inicialemente parece complicado se localizar na tabela de frequência e estabelecer a notação corretamente. Neste caso, uma dica é varrer visualmente a tabela sempre com a ideia de que i representa representa os indices de cada linha da variável X e j representa os indices de cada coluna da variável Y.</p>
+<p>Inicialmente parece complicado se localizar na tabela de frequência e estabelecer a notação corretamente. Neste caso, uma dica é varrer visualmente a tabela sempre com a ideia de que i representa representa os índices de cada linha da variável X e j representa os índices de cada coluna da variável Y.</p>
 </blockquote>
 </div>
 </div>
@@ -897,7 +897,7 @@ Figura 2.4: Gráfico de mosaico para faixa de idade dos docentes por sexo
 <a class="sourceLine" id="cb23-10" data-line-number="10"><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme_gray</span>() <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>() <span class="op">+</span></a>
 <a class="sourceLine" id="cb23-11" data-line-number="11"><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">theme</span>(<span class="dt">axis.line =</span> <span class="kw">element_blank</span>())</a></code></pre></div>
 <p><img src="ebookrnp_files/figure-html/unnamed-chunk-40-1.png" width="480" style="display: block; margin: auto;" />
-As categorias privada com e privada sem fins lucrativos representam 70,1% dos dados, sendo as mais representativas. Públicas municipais são minoria (1,4%) e especial apenas (0.2%). Temos indicios de que políticas públicas para aumentar a participação de cursos especiais devem ser melhoradas.</p>
+As categorias privada com e privada sem fins lucrativos representam 70,1% dos dados, sendo as mais representativas. Públicas municipais são minoria (1,4%) e especial apenas (0.2%). Temos indícios de que políticas públicas para aumentar a participação de cursos especiais devem ser melhoradas.</p>
 
 <div class="exercise">
 <span id="exr:unnamed-chunk-41" class="exercise"><strong>Exercício 2.4  </strong></span>Olhando para a variável <code>DESC_TP_GRAU_ACADEMICO</code> responda quais as categorias de maior e menor ocorrências de cursos. Desconsidere a categoria missing.
@@ -950,8 +950,8 @@ As categorias privada com e privada sem fins lucrativos representam 70,1% dos da
 <div id="variáveis-numéricas" class="section level2">
 <h2><span class="header-section-number">2.2</span> Variáveis numéricas</h2>
 <p>Variáveis numéricas são se longe o tipo mais comum e analisável de dado, pois contemplam medidas de processos diversos. Por exemplo, idade de uma pessoa em dias, peso, altura, total de pessoas em um metrô, em uma fila de cinema e por aí vai. Por permitir cálculos estatísticos, este tipo de variável tem sido estudado há milênios e portanto, boa parte das técnicas estatísticas atuais de baseiam em dados numéricos. Neste tópico abordaremos as principais medidas estatísticas cobrindo centralidade, dispersão entre outras e os principais gráficos que podem ser empregados.</p>
-<div id="medidas-estatísticas-de-centraliade" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Medidas estatísticas de centraliade</h3>
+<div id="medidas-estatísticas-de-centralidade" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Medidas estatísticas de centralidade</h3>
 <p>Quando olhamos um conjunto de dados de uma variável numérica logo pensamos em alguma forma de resumir estes dados para gerar algum tipo de informação. As medidas <strong>estatísticas de centralidade</strong> representam resumos numéricos que apontam para o centro do conjunto de dados. A figura <a href="estatística.html#fig:fig06">1.7</a> ilustra a ideia e também indica uma vulnerabilidade da <strong>média</strong> que são os extremos. Pontos extremos podem inserir viés no valor e na interpretação de uma média, mas para complementar a média temos a <strong>mediana</strong>, <strong>moda</strong> e <strong>quartis</strong> que veremos nos tópicos a seguir.</p>
 <div class="figure" style="text-align: center"><span id="fig:fig07"></span>
 <img src="../Imagens/ebook_anima_06.png" alt="Na média, tudo bem" width="100%" />
@@ -966,13 +966,13 @@ Figura 2.5: Na média, tudo bem
 <h4><span class="header-section-number">2.2.1.1</span> Média (<span class="math inline">\(\bar X, \mu\)</span>)</h4>
 <p>Existem muitos tipos de média e entre elas temos a média aritmética, média ponderada, média geométrica e a média harmônica. Em qualquer uma delas, o intuito é resumir a centralidade dos dados em relação a seus extremos dando nenhum, mais ou menos peso para cada observação. Representamos a média aritmética de uma amostra pela letra latina <span class="math inline">\(\bar X\)</span> (xis-barra) e a média populacional pela letra grega <span class="math inline">\(\mu\)</span> e calculamos com a mesma expressão matemática.</p>
 <blockquote>
-<p>Veremos no capítulo sobre teoria das probabilidades que a média de uma veriável aleatória <span class="math inline">\(X\)</span> é chamada de <strong>valor esperado ou esperança de <span class="math inline">\(X\)</span> e geralmente é definido por <span class="math inline">\(E[X]\)</span></strong>.</p>
+<p>Veremos no capítulo sobre teoria das probabilidades que a média de uma variável aleatória <span class="math inline">\(X\)</span> é chamada de <strong>valor esperado ou esperança de <span class="math inline">\(X\)</span> e geralmente é definido por <span class="math inline">\(E[X]\)</span></strong>.</p>
 </blockquote>
 <p><strong>Média aritmética</strong>: é a soma de todos os valores e dividido pelo total deles. Ou seja, o resultado dessa divisão equivale a um valor médio entre todos os valores e é calculada por:</p>
 <p><span class="math display">\[\bar X = \frac{x_1 + x_2 + x_3 + \dots + x_n}{n}, i = 1, 2, 3, \dots, n\]</span></p>
 <p>onde <span class="math inline">\(x_1, x_2, x_3, \dots, x_n\)</span> representam cada valor correspondente a um elemento <span class="math inline">\(i\)</span> da amostra e <span class="math inline">\(n\)</span> o total de elementos.</p>
 <blockquote>
-<p>Este tipo de média é aplicado preferecialmente quando cada elemento tem peso igual a uma unidade, ou seja, quando não houver muita repetição.</p>
+<p>Este tipo de média é aplicado preferencialmente quando cada elemento tem peso igual a uma unidade, ou seja, quando não houver muita repetição.</p>
 </blockquote>
 
 <div class="example">
@@ -986,7 +986,7 @@ Figura 2.5: Na média, tudo bem
 <a class="sourceLine" id="cb25-5" data-line-number="5">                <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb25-6" data-line-number="6"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">summarise</span>(<span class="st">&quot;Total técnicos&quot;</span>  =<span class="st"> </span><span class="kw">mean</span>(TotalTecnicos),</a>
 <a class="sourceLine" id="cb25-7" data-line-number="7">                   <span class="st">&quot;Receita própria&quot; = mean(ReceitaPropria),</span></a>
-<a class="sourceLine" id="cb25-8" data-line-number="8"><span class="st">                   &quot;</span>Depesa pesquisa<span class="st">&quot; = mean(DespesaPesquisa)) %&gt;% </span></a>
+<a class="sourceLine" id="cb25-8" data-line-number="8"><span class="st">                   &quot;</span>Repesa pesquisa<span class="st">&quot; = mean(DespesaPesquisa)) %&gt;% </span></a>
 <a class="sourceLine" id="cb25-9" data-line-number="9"><span class="st">  knitr::kable(caption = &quot;</span>Média anual para dados de IES<span class="st">&quot;, </span></a>
 <a class="sourceLine" id="cb25-10" data-line-number="10"><span class="st">               format = tb_formata) %&gt;% </span></a>
 <a class="sourceLine" id="cb25-11" data-line-number="11"><span class="st">  kableExtra::kable_styling(latex_options = &quot;</span>hold_position<span class="st">&quot;)</span></a></code></pre></div>
@@ -996,7 +996,7 @@ Figura 2.5: Na média, tudo bem
 <tr class="header">
 <th align="right">Total técnicos</th>
 <th align="right">Receita própria</th>
-<th align="right">Depesa pesquisa</th>
+<th align="right">Repesa pesquisa</th>
 </tr>
 </thead>
 <tbody>
@@ -1326,7 +1326,7 @@ Assim, sendo podemos expressar a amplitude ou range por</p>
 <p>Vale salientar que o cv e o desvio padrão se aplicam a dados estritamente positivos.</p>
 </blockquote>
 <ul>
-<li><strong>Interpretação</strong>: por ser uma medida adimensional, o cv é uma medida prática para compararar e interpretar a variabilidade entre dois conjuntos de dados de tipos diferentes e pode ser interpretada em termos percentuais. Veja o exemplo a seguir.</li>
+<li><strong>Interpretação</strong>: por ser uma medida adimensional, o cv é uma medida prática para comparar e interpretar a variabilidade entre dois conjuntos de dados de tipos diferentes e pode ser interpretada em termos percentuais. Veja o exemplo a seguir.</li>
 </ul>
 
 <div class="example">
@@ -1386,7 +1386,7 @@ Assim, sendo podemos expressar a amplitude ou range por</p>
 ## 1 36 43 52  16 12 76       951 392036 0.002426</code></pre>
 <p>Conforme a analise acima, vemos que apenas <span class="math inline">\(\frac{951}{392036} = 0,24\%\)</span> dos docentes são outliers possuindo idade acima de 76 anos.</p>
 <blockquote>
-<p><em>Outliers</em> possuem grande importância na estatística e nunca devem ser negligenciados, pois podem trazer informação valiosa para a análise. Existem muitas técnicas de detecção de outiers mais robustas que esta que vimos a partir dos quartis. Ao leitor interessado ver <span class="citation">(Barnett and Lewis <a href="#ref-barnett1974outliers">1974</a>)</span> e para uma visão baseada em R ver <span class="citation">(Komsta <a href="#ref-outliers">2011</a>)</span>.</p>
+<p><em>Outliers</em> possuem grande importância na estatística e nunca devem ser negligenciados, pois podem trazer informação valiosa para a análise. Existem muitas técnicas de detecção de outliers mais robustas que esta que vimos a partir dos quartis. Ao leitor interessado ver <span class="citation">(Barnett and Lewis <a href="#ref-barnett1974outliers">1974</a>)</span> e para uma visão baseada em R ver <span class="citation">(Komsta <a href="#ref-outliers">2011</a>)</span>.</p>
 </blockquote>
 </div>
 <div id="os-cinco-números" class="section level4">
@@ -1617,8 +1617,8 @@ Figura 2.12: Gráfico de pontos total de técnicos versus receita própria
 </p>
 </div>
 </div>
-<div id="grafico-de-linhas" class="section level4">
-<h4><span class="header-section-number">2.2.5.2</span> Grafico de linhas</h4>
+<div id="gráfico-de-linhas" class="section level4">
+<h4><span class="header-section-number">2.2.5.2</span> Gráfico de linhas</h4>
 <p>O gráfico de linhas possui aplicação para duas variáveis contínuas e também para séries temporais, onde um dos eixos é uma variável numérica de data.</p>
 <div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" data-line-number="1">p &lt;-<span class="st"> </span>base_ies <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb63-2" data-line-number="2"><span class="st">    </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,</a>
@@ -1888,7 +1888,7 @@ Figura 2.14: Box-plot de idade vs escolaridade
 </div>
 <p>No Box-plot conseguimos ver que docentes com graduação apenas são minoria como visto na tabela e doutores são maioria. Notamos também que, com exceção daqueles sem graduação todos os grupos possuem dispersão parecida uma vez que a distância entre <span class="math inline">\(Q_1\)</span> e <span class="math inline">\(Q_3\)</span> é pequena.</p>
 <blockquote>
-<p>Para todos os graficos agrupados também é possível quebrar a visualização em um gráfico por categoria adicionando uma terceira variável com facet_wrap() .</p>
+<p>Para todos os gráficos agrupados também é possível quebrar a visualização em um gráfico por categoria adicionando uma terceira variável com facet_wrap() .</p>
 </blockquote>
 <div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb69-1" data-line-number="1">p &lt;-<span class="st"> </span>base_docentes <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb69-2" data-line-number="2"><span class="st">  </span>ggplot2<span class="op">::</span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> sexo, <span class="dt">y =</span> idade, <span class="dt">fill =</span> escolaridade))</a>
@@ -1983,14 +1983,14 @@ Figura 2.19: Histograma de idade vs escolaridade
 </div>
 <div id="medidas-de-associação-e-correlação" class="section level2">
 <h2><span class="header-section-number">2.4</span> Medidas de associação e correlação</h2>
-<p>Análises univariadas são muito úteis para determinarmos particularidades de dados porém, em muitas situações, desejamos medir relações de interdendência entre duas ou mais variáveis. Como vimos em gráficos para duas variáveis numérias; gráficos para duas variáveis categóricas e também em tabelas de contingência, é possivel extrair carcaterísticas importantes dos valores e/ou das classes de cada variável de várias formas. Contudo, queremos quantificar a relação global de duas ou mais variáveis e neste sentido, as medidas de associação e de correlação tem papel fundamental. Suponha que desejamos determinar de a variável idade dos docentes está associada à escolaridade ou se o total de técnicos está correlacionado com a receita total das IES.
-Trataremos nesta sessão algumas medidas de associação entre duas variáveis categóricas onde trabalharemos com as estatísticas <span class="math inline">\(\chi^2\)</span> (Qui-quadrado), <span class="math inline">\(V\)</span> de Cramer, <span class="math inline">\(C\)</span> coeficiente de contingência. Para as variáveis numéricas trabalharemos com as estatísticas de correlação <span class="math inline">\(\rho\)</span> de Peason e Coeficiente de correlação rank de Spearman que são medidas mais recorrentes em aplicações práticas.</p>
+<p>Análises univariadas são muito úteis para determinarmos particularidades de dados porém, em muitas situações, desejamos medir relações de interdependência entre duas ou mais variáveis. Como vimos em gráficos para duas variáveis numérias; gráficos para duas variáveis categóricas e também em tabelas de contingência, é possível extrair características importantes dos valores e/ou das classes de cada variável de várias formas. Contudo, queremos quantificar a relação global de duas ou mais variáveis e neste sentido, as medidas de associação e de correlação tem papel fundamental. Suponha que desejamos determinar de a variável idade dos docentes está associada à escolaridade ou se o total de técnicos está correlacionado com a receita total das IES.
+Trataremos nesta sessão algumas medidas de associação entre duas variáveis categóricas onde trabalharemos com as estatísticas <span class="math inline">\(\chi^2\)</span> (Qui-quadrado), <span class="math inline">\(V\)</span> de Cramer, <span class="math inline">\(C\)</span> coeficiente de contingência. Para as variáveis numéricas trabalharemos com as estatísticas de correlação <span class="math inline">\(\rho\)</span> de Pearson e Coeficiente de correlação rank de Spearman que são medidas mais recorrentes em aplicações práticas.</p>
 <div id="associação-entre-duas-variáveis-discretas" class="section level3">
 <h3><span class="header-section-number">2.4.1</span> Associação entre duas variáveis discretas</h3>
 <p>Duas variáveis discretas são ditas <strong>independentes</strong> ou <strong>não associadas</strong> quando as observações de uma não influenciam as observações da outra. Por exemplo, quando duas pessoas jogam uma moeda separadamente dez vezes, o resultados da primeira pessoa não são afetados pelos resultados da segunda pessoa.</p>
 <div id="estatística-chi2" class="section level4">
 <h4><span class="header-section-number">2.4.1.1</span> Estatística <span class="math inline">\(\chi^2\)</span></h4>
-<p>A estatística <span class="math inline">\(\chi^2\)</span> é muito utilizada para quantificar a associação global de duas variáveis categóricas dispostas em uma tabela de contingência com <span class="math inline">\(k \times l\)</span> linhas vs colunas. Esta estaísticas é dada por:</p>
+<p>A estatística <span class="math inline">\(\chi^2\)</span> é muito utilizada para quantificar a associação global de duas variáveis categóricas dispostas em uma tabela de contingência com <span class="math inline">\(k \times l\)</span> linhas vs colunas. Esta estatísticas é dada por:</p>
 <p><span class="math display">\[\chi^2 = \sum_{i=1}^{k} \sum_{j=1}^{l} \frac{(n_{ij} - \widetilde{n}_{ij})^2}{\widetilde{n}_{ij}}\]</span></p>
 <p>onde <span class="math inline">\(\widetilde{n}_{ij}\)</span> é a frequência esperada de <span class="math inline">\((x_i;y_j)\)</span> dada pelo produto das frequências absolutas marginais e calculado por</p>
 <p><span class="math display">\[\widetilde{n}_{ij} = \frac{n_{i+}\times n_{+j}}{n}\]</span></p>
@@ -2000,7 +2000,7 @@ Trataremos nesta sessão algumas medidas de associação entre duas variáveis c
 <li>Todas as frequências esperadas são maiores ou iguais a 1;</li>
 <li>Não mais de 20% das frequências esperadas são inferiores a 5;</li>
 </ul>
-<p>Caso os desvios entre as frequências observadas e esperadas seja alto temos evidência de associação forte porque as frequências relativas esperadas são calculadas assumindo independência entre as duas variáveis. Desta forma, se o posto ocorrer, ou seja, se as frequências relativas observadas e esparadas são idênticas ou similares a associação é fraca e as variáveis são independentes. O range da estatística está limitado a</p>
+<p>Caso os desvios entre as frequências observadas e esperadas seja alto temos evidência de associação forte porque as frequências relativas esperadas são calculadas assumindo independência entre as duas variáveis. Desta forma, se o posto ocorrer, ou seja, se as frequências relativas observadas e esperadas são idênticas ou similares a associação é fraca e as variáveis são independentes. O range da estatística está limitado a</p>
 <p><span class="math display">\[0 \le \chi^2 \le n\times(min(k,l)-1)\]</span></p>
 <p>Assim, uma forma de verificar a força da associação é comparar o valor de <span class="math inline">\(\chi^2\)</span> calculado com o valor máximo que <span class="math inline">\(\chi^2\)</span> pode assumir, ou seja <span class="math inline">\(n\times(min(k,l)-1)\)</span> onde <span class="math inline">\(n\)</span> é o total geral. Esta métrica depende unicamente do tamanho da amostra e total de classes de cada variável da tabela de contingência.</p>
 <blockquote>
@@ -2079,10 +2079,10 @@ Trataremos nesta sessão algumas medidas de associação entre duas variáveis c
 </div>
 <div id="estatística-v-de-cramér" class="section level4">
 <h4><span class="header-section-number">2.4.1.2</span> Estatística <span class="math inline">\(V\)</span> de Cramér</h4>
-<p>Aestatística <span class="math inline">\(\chi^2\)</span> possui uma fragilidade que pode dificultar a interpretação, pois ela depende do range e este por sua vez depende do tamanho da amostra e da quantidade de classes em cada variável. A estatítica <span class="math inline">\(V\)</span> surge como uma forma de padronização da estatística <span class="math inline">\(\chi^2\)</span> e é calculada por:</p>
+<p>Estatística <span class="math inline">\(\chi^2\)</span> possui uma fragilidade que pode dificultar a interpretação, pois ela depende do range e este por sua vez depende do tamanho da amostra e da quantidade de classes em cada variável. A esteatítica <span class="math inline">\(V\)</span> surge como uma forma de padronização da estatística <span class="math inline">\(\chi^2\)</span> e é calculada por:</p>
 <p><span class="math display">\[V = \sqrt{\frac{\chi^2}{n \times (min(k,l)-1)}}\]</span></p>
 <p>Esta estatística torna a interpretação de <span class="math inline">\(\chi^2\)</span> mais simples, pois seu retorno é um número menor ou igual a uma unidade e quanto mais próximo de um, mais forte será a associação entre as duas variáveis.</p>
-<p>Tabelas de interpretação de estatísticas de associação como <span class="math inline">\(V\)</span> são questionáveis uma vez que o nível de associação pode variar de acordo com tipo de estudo, área de pesquisa ou até preferência do pesquisador. Porém, algunas autores se guiam pelas faixas da tabela <a href="estatística-descritiva.html#tab:tab12">2.12</a> para interpretar o nível da associação entre duas variáveis numa tabela de contingência. Estes valores são adapatados de <span class="citation">(Gravetter and Wallnau <a href="#ref-gravetter2016statistics">2016</a>)</span>.</p>
+<p>Tabelas de interpretação de estatísticas de associação como <span class="math inline">\(V\)</span> são questionáveis uma vez que o nível de associação pode variar de acordo com tipo de estudo, área de pesquisa ou até preferência do pesquisador. Porém, algumas autores se guiam pelas faixas da tabela <a href="estatística-descritiva.html#tab:tab12">2.12</a> para interpretar o nível da associação entre duas variáveis numa tabela de contingência. Estes valores são adaptados de <span class="citation">(Gravetter and Wallnau <a href="#ref-gravetter2016statistics">2016</a>)</span>.</p>
 <table>
 <caption><span id="tab:tab12">Tabela 2.12: </span>Interpretação da associação por V e C</caption>
 <thead>
@@ -2121,7 +2121,7 @@ Trataremos nesta sessão algumas medidas de associação entre duas variáveis c
 </div>
 
 <p><span class="math display">\[V = \sqrt{\frac{647.2}{392036 \times (min(5,2)-1)}} = \sqrt{\frac{647.2}{392036 \times (2-1)}} = 0.0406\]</span></p>
-<p>Como <span class="math inline">\(V = 0.0406 &lt; 0.10\)</span> concluimos que não existe associação estatísticamente significativa entre <code>escolaridade</code> e <code>sexo</code>.</p>
+<p>Como <span class="math inline">\(V = 0.0406 &lt; 0.10\)</span> concluímos que não existe associação estatisticamente significativa entre <code>escolaridade</code> e <code>sexo</code>.</p>
 
 <div class="exercise">
 <span id="exr:unnamed-chunk-96" class="exercise"><strong>Exercício 2.11  </strong></span>A base de dados <code>dm_curso</code> possui as variáveis <code>DESC_IN_MATERIAL_BRAILLE</code> e <code>DESC_IN_MATERIAL_TATIL</code> que se referem a recursos extras disponibilizados para os cursos. Verifique se estas variáveis estão associadas através das estatísticas <span class="math inline">\(\chi^2\)</span> e <span class="math inline">\(V\)</span>
@@ -2156,9 +2156,9 @@ Trataremos nesta sessão algumas medidas de associação entre duas variáveis c
 </div>
 <div id="estatística-c-coeficiente-de-contingência" class="section level4">
 <h4><span class="header-section-number">2.4.1.3</span> Estatística <span class="math inline">\(C\)</span> coeficiente de contingência</h4>
-<p>O coeficiente de contingêcia é outra medida de associação que depende da estatística <span class="math inline">\(\chi^ 2\)</span> e foi pensada para ser uma versão corrigida da estatística <span class="math inline">\(\chi^2\)</span>. Os valor de <span class="math inline">\(C\)</span>, assim como os de <span class="math inline">\(V\)</span> estão no intervalo <span class="math inline">\([0,1]\)</span> e quanto maior mais forte será a associação entre as duas variáveis na tabela de contingência.</p>
+<p>O coeficiente de contingência é outra medida de associação que depende da estatística <span class="math inline">\(\chi^ 2\)</span> e foi pensada para ser uma versão corrigida da estatística <span class="math inline">\(\chi^2\)</span>. Os valor de <span class="math inline">\(C\)</span>, assim como os de <span class="math inline">\(V\)</span> estão no intervalo <span class="math inline">\([0,1]\)</span> e quanto maior mais forte será a associação entre as duas variáveis na tabela de contingência.</p>
 <p><span class="math display">\[C = \sqrt{\frac{min(k,l)}{min(k,l)-1}} \times \sqrt{\frac{\chi^2}{\chi^2 + n}} \]</span></p>
-<p>Estas três estatísticas de associação podem ser calculadas pela função <code>rnp::rnp_associacao()</code> no nosso pacote ou atrvés da função <code>vcd::assocstats()</code> do pacote <code>vcd</code>.</p>
+<p>Estas três estatísticas de associação podem ser calculadas pela função <code>rnp::rnp_associacao()</code> no nosso pacote ou através da função <code>vcd::assocstats()</code> do pacote <code>vcd</code>.</p>
 
 <div class="exercise">
 <span id="exr:unnamed-chunk-99" class="exercise"><strong>Exercício 2.12  </strong></span>Vamos deterinar as estatísticas <span class="math inline">\(\chi^2\)</span>, <span class="math inline">\(V\)</span> e <span class="math inline">\(C\)</span> para o último exemplo.
@@ -2219,7 +2219,7 @@ Trataremos nesta sessão algumas medidas de associação entre duas variáveis c
 </table>
 <p>Note que os números são extremamente grandes e tudo que podemos tirar é que a covariância é positiva entre as duas variáveis, mas não conseguimos estimar a força desta relação.</p>
 <blockquote>
-<p>Os elementos da diagonal principal da matriz de covariâncias representam a variãncia de cada variável e os valores fora da diagonal são covariâncais.
+<p>Os elementos da diagonal principal da matriz de covariâncias representam a variância de cada variável e os valores fora da diagonal são covariâncias.
 A matriz é espelhada e para interpretá-la basta ler acima ou abaixo da diagonal principal.</p>
 </blockquote>
 </div>
@@ -2316,9 +2316,9 @@ Figura 2.20: Tendência da correlação
 </div>
 <div id="correlação-rank-de-spearman" class="section level4">
 <h4><span class="header-section-number">2.4.2.3</span> Correlação rank de Spearman</h4>
-<p>Para ilustrar esta correlação, vamos imaginar que dois jurados avaliem a qualidade do ensino em cada uma das IES mapeadas no censo, por algum método de forma independente e atribuam uma nota numérica de 0 a 100 onde notas baixas sejam ruins e altas sejam boas. Vamos chamar esta nota de escore e definir por <span class="math inline">\(x_i\)</span>. Ao ordenarmos todas as IES pelas notas das maiores para as menores teremos um rank que vai de 1 para o peimeiro lugar até o total de IES (assumindo que não há empates). Ao selecionarmos uma IES qualqer do conjunto de dados, teremos dois ranks, <span class="math inline">\(R(x_i)\)</span> e <span class="math inline">\(R(y_i)\)</span> para ela e consequentemente uma diferença entre os ranks dada por <span class="math inline">\(d_i = R(x_i) - R(y_i)\)</span>. Por exemplo, se a UFPR teve os ranks 20 e 25, temos que <span class="math inline">\(d_i = 20-25 = 5\)</span>. O coeficiente de correlação rank de Spearman busca medir a força da associação entre os dois julgamentos dos dois jurados. Calculamos o coeficiente de correlação rank de Spearman por</p>
+<p>Para ilustrar esta correlação, vamos imaginar que dois jurados avaliem a qualidade do ensino em cada uma das IES mapeadas no censo, por algum método de forma independente e atribuam uma nota numérica de 0 a 100 onde notas baixas sejam ruins e altas sejam boas. Vamos chamar esta nota de escore e definir por <span class="math inline">\(x_i\)</span>. Ao ordenarmos todas as IES pelas notas das maiores para as menores teremos um rank que vai de 1 para o primeiro lugar até o total de IES (assumindo que não há empates). Ao selecionarmos uma IES qualquer do conjunto de dados, teremos dois ranks, <span class="math inline">\(R(x_i)\)</span> e <span class="math inline">\(R(y_i)\)</span> para ela e consequentemente uma diferença entre os ranks dada por <span class="math inline">\(d_i = R(x_i) - R(y_i)\)</span>. Por exemplo, se a UFPR teve os ranks 20 e 25, temos que <span class="math inline">\(d_i = 20-25 = 5\)</span>. O coeficiente de correlação rank de Spearman busca medir a força da associação entre os dois julgamentos dos dois jurados. Calculamos o coeficiente de correlação rank de Spearman por</p>
 <p><span class="math display">\[ R = 1 - \frac{6 \times \sum_{i = 1}^{n} d^2_i}{n \times (n^2 - 1)}\]</span>
-Este tipo de correlação se aplica para variáveis contínuas e também ordinais e conforme já exposto, busca medir a correlação através dos ranks de cada variável e varia de <span class="math inline">\(-1\)</span> a <span class="math inline">\(+1\)</span>. Quando <span class="math inline">\(R=+1\)</span> temos que as duas variáveis foram rankeadas exatamente iguais (concordãncia ou associação perfeita) e <span class="math inline">\(R=-1\)</span> quando ocorreu o oposto (inconcordância).</p>
+Este tipo de correlação se aplica para variáveis contínuas e também ordinais e conforme já exposto, busca medir a correlação através dos ranks de cada variável e varia de <span class="math inline">\(-1\)</span> a <span class="math inline">\(+1\)</span>. Quando <span class="math inline">\(R=+1\)</span> temos que as duas variáveis foram rankeadas exatamente iguais (concordância ou associação perfeita) e <span class="math inline">\(R=-1\)</span> quando ocorreu o oposto (não concordância).</p>
 
 <div class="example">
 <span id="exm:unnamed-chunk-106" class="example"><strong>Exemplo 2.24  </strong></span>Determinar e interpretar a correlação entre as duas variáveis <code>TotalTecnicos</code> e <code>ReceitaPropria</code> para as 10 primeiaras observações da base de dados <code>dm_ies</code>.
@@ -2437,7 +2437,7 @@ Este tipo de correlação se aplica para variáveis contínuas e também ordinai
 <div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb98-1" data-line-number="1"><span class="co"># Calculando via R</span></a>
 <a class="sourceLine" id="cb98-2" data-line-number="2"><span class="kw">cor</span>(temp<span class="op">$</span>TotalTecnicos, temp<span class="op">$</span>ReceitaPropria, <span class="dt">method =</span> <span class="st">&quot;spearman&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] -0.2848</code></pre>
-<p>Concluimos que, via correlação de Spearman, temos associação negativa baixa entre total de técnicos e total de receita própria. Como vimos, o coeficiente de corralação é determinado pela função <code>cor()</code> padrão do <code>R</code> e ela cobre três tipos de coeficientes. Especialmente para o R NA PRÁTICA, criamos a função <code>rnp_correlacao()</code> que determina a correlação de Pearson, Spearman e Kendal. Esta última não abordaremos aqui, mas ela também é indicada para variáveis ordinais porém focada em pares concordantes versus discordantes. para os leitores interessados sugerimos <span class="citation">(Kendall <a href="#ref-kendall1938new">1938</a>)</span>.</p>
+<p>Concluímos que, via correlação de Spearman, temos associação negativa baixa entre total de técnicos e total de receita própria. Como vimos, o coeficiente de correlação é determinado pela função <code>cor()</code> padrão do <code>R</code> e ela cobre três tipos de coeficientes. Especialmente para o R NA PRÁTICA, criamos a função <code>rnp_correlacao()</code> que determina a correlação de Pearson, Spearman e Kendal. Esta última não abordaremos aqui, mas ela também é indicada para variáveis ordinais porém focada em pares concordantes versus discordantes. para os leitores interessados sugerimos <span class="citation">(Kendall <a href="#ref-kendall1938new">1938</a>)</span>.</p>
 <div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb100-1" data-line-number="1">temp &lt;-<span class="st"> </span>base_ies <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb100-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">transmute</span>(<span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL,</a>
 <a class="sourceLine" id="cb100-3" data-line-number="3">                   <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,</a>

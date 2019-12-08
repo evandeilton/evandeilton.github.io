@@ -3,20 +3,23 @@
 R é uma das linguagens que mais cresce atualmente no mundo da programação científica. 
 Esta linguagem tem sido uma das mais requisitadas por empresas, centros de pesquisa e por 
 recrutadores das áreas de analytics e data science. Isso graças ao poder de processamento, 
-aos recursos e à sua capacidade de expansão. R é uma linguagem científica, cross-plataforma, 
+à vasta quantidade de recursos e à sua capacidade de expansão. R é uma linguagem cross-plataforma, 
 orientada a objetos, free e open source com uma comunidade de desenvolvedores e colaboradores 
 global extremamente ativa.
 
-# Estatística Descomplicada com R
+# Estatística Descritiva para Data Science
 
-Bem vindo ao primeiro módulo de **Estatística descomplicada com o R** que é uma produção exclusiva para do 
-projeto R NA PRÁTICA. [Acesse a versão online aqui](https://evandeilton.github.io). Esta série será composta por quatro módulos e neste primeiro, abordaremos os principais 
+Bem vindo ao primeiro módulo de **Estatística Descritiva para Data Science** que é uma produção exclusiva para do 
+projeto **R NA PRÁTICA**. [Acesse a versão online aqui](https://evandeilton.github.io).
+Esta série será composta por quatro módulos e neste primeiro, abordaremos os principais 
 conceitos estatísticos e análise descritiva. O objetivo maior desta parte é revisar os conceitos mais 
 importantes do inicio dos estudos estatísticos. Abordaremos a parte conceitual com algumas definições 
 e termos estatísticos, tabelas de frequências, bem como as principais medidas descritivas (média, mediana e outras).
-Veremos por fim, os principais gráficos estatísticos mais utilizados. Para reforçar os conhecimentos, 
-faremos exercícios práticos com apoio do R com foco em bases de dados reais do INEP - Instituto Nacional
-de Estudos e Pesquisas Educacionais Anísio Teixeira do ano de 2017.
+Veremos ainda os principais gráficos estatísticos mais utilizados. Por fim, faremos uma análise descritiva completa
+de uma base de dados do Kaggle.
+
+Durante todo o curso reforçaremos o entendimento dos conceitos, através de exercícios práticos com apoio do
+R explorando em bases de dados reais do INEP - Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira do ano de 2017. 
 
 No final deste módulo você será capaz de:
 
@@ -26,6 +29,7 @@ No final deste módulo você será capaz de:
   * Trabalhar com as principais medidas estatísticas (media, mediana, desvio padrão, etc.);
   * Entender correlação e covariância;
   * Construir gráficos estatísticos para os tipos corretos de dados com o pacote ggplot2.
+  * Aplicar um roteiro de análise descritiva para análises descritvas eficientes utilizando R e RMarkdown.
 
 -------------------------------
 
@@ -38,7 +42,7 @@ O **R NA PRÁTICA** foi originalmente uma ideia que surgiu com o desejo de ajuda
 O R NA PRATICA engloba cinco módulos. O primeiro já está completo e disponível. Os demais estão em fase de desenvolvimento:
  
   * Módulo - I   (Data Wrangling com R para Ciência de Dados)
-  * Módulo - II  (Estatística descomplicada com R)
+  * Módulo - II  (Estatística Descritiva para Data Science)
   * Módulo - III (Introdução à probabilidade com R)
   * Módulo - VI  (Testes de hipóteses com R)
   * Módulo - V   (Modelagem estatística com R)
@@ -56,10 +60,10 @@ Neste módulo exploramos o conceito Data Wrangling que é um tanto genérico em 
   * Será capaz de resolver cases de estudo e problemas com dados e situações reais.
   * Terá um vasto material de consulta com amostras de códigos e bases de dados de exemplos de todas as video aulas para reforçar seus conhecimentos e aplicações no dia-a-dia.
 
-### Módulo - II (Estatística descomplicada com R )
+### Módulo - II (Estatística Descritiva para Data Science)
 Este livro é parte do segundo módulo do R NA PRÁTICA e está em constante atualização.
 
-Em desenvolvimento (0%================80%=======100%)
+Em desenvolvimento (0%==========================100%)
 
 ### Módulo - III (Introdução à probabilidade com R)
 
@@ -102,5 +106,4 @@ Caso encontre algum bug ou tenha interesse em solicitar alguma inclusão de fun�
   if(!require(prettydoc)){
     install.packages("prettydoc")
   }
-  vignette("rnp")
 ```

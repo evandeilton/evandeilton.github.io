@@ -29,7 +29,7 @@ No final deste módulo você será capaz de:
   * Trabalhar com as principais medidas estatísticas (media, mediana, desvio padrão, etc.);
   * Entender correlação e covariância;
   * Construir gráficos estatísticos para os tipos corretos de dados com o pacote ggplot2.
-  * Aplicar um roteiro de análise descritiva para análises descritvas eficientes utilizando R e RMarkdown.
+  * Aplicar um roteiro para análises descritvas eficientes utilizando R e RMarkdown.
 
 -------------------------------
 

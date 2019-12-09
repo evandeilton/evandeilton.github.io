@@ -24,6 +24,7 @@
 <meta name="author" content="José Evandeilton Lopes" />
 
 
+<meta name="date" content="2019-08-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -68,7 +69,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -114,7 +115,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style/style.css" type="text/css" />
+<link rel="stylesheet" href="style\style.css" type="text/css" />
 </head>
 
 <body>
@@ -212,7 +213,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1 class="title">R NA PRÁTICA: Introdução à Estatística para Data Science</h1>
 <h2 class="subtitle"><em>Estatística Descritiva</em></h2>
 <p class="author"><em>José Evandeilton Lopes</em></p>
-<p class="date"><em>29/11/2019</em></p>
+<p class="date"><em>08/12/2019</em></p>
 </div>
 <div id="introdução" class="section level1 unnumbered">
 <h1>Introdução</h1>
@@ -266,18 +267,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="pacotes" class="section level3 unnumbered">
 <h3>Pacotes</h3>
 <p>Trabalharemos com o <a href="https://cloud.r-project.org/">software R</a> e com a IDE (Ambiente de Desenvolvimento Integrado, traduzindo do inglês) <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio Desktop</a>. Nos links você poderá baixar os dois programas e configurar de acordo com o seu sistema operacional.</p>
+<p>Na impossibilidade de ter os programas instalados em seu micro, recomendamos trabalhar com o <a href="https://rstudio.cloud/">RStudio Cloud</a> que é um serviço online da RStudio na nuvem com todos os recursos do R e a conveniência de ser acessível via internet a partir da maioria dos dispositivos. Você pode criar uma conta ou logar-se com a sua rede social favorita como github ou Google, por exemplo. Pacotes do CRAN podem ser instalados normalmente, mas pode haver problemas com a instalação de pacotes do github. A figura <a href="index.html#fig:rscloud">0.1</a> mostra um exemplo da aparência da página com o RStudio online carregado.</p>
+<div class="figure" style="text-align: center"><span id="fig:rscloud"></span>
+<img src="Imagens/rstudiocloud.png" alt="RStudio Cloud" width="100%" />
+<p class="caption">
+Figura 0.1: RStudio Cloud
+</p>
+</div>
 <p>Trabalharemos sempre que possível com o operador <code>%&gt;% (pipe)</code> e com funções dos pacotes do <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> e outros relacionados. Especialmente para o R NA PRÁTICA, desenvolvemos o pacote <a href="https://github.com/evandeilton/rnp"><code>rnp</code></a> que poderá ser baixado direto to <code>github</code>. Este pacote está em constante atualização e possui recursos extras para deste livro e também de outros materiais do R NA PRÁTICA em desenvolvimento.</p>
 <p>Rode o comando abaixo para instalar, caso ainda não tenha o pacote.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Instalar devtools, caso não exista na máquina.</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;devtools&quot;</span>)) {</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"> <span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">}</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co"># Instalar o rnp</span></a>
-<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="kw">require</span>(devtools, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;rnp&quot;</span>)) {</a>
-<a class="sourceLine" id="cb1-9" data-line-number="9"> devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;evandeilton/rnp&quot;</span>) </a>
-<a class="sourceLine" id="cb1-10" data-line-number="10">}</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># Instalar devtools, caso não exista na máquina.</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;devtools&quot;</span>)) {</a>
+<a class="sourceLine" id="cb1-3" title="3"> <span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb1-4" title="4">}</a>
+<a class="sourceLine" id="cb1-5" title="5"></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="co"># Instalar o rnp</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="kw">require</span>(devtools, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(<span class="st">&quot;rnp&quot;</span>)) {</a>
+<a class="sourceLine" id="cb1-9" title="9"> devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;evandeilton/rnp&quot;</span>) </a>
+<a class="sourceLine" id="cb1-10" title="10">}</a></code></pre></div>
 <blockquote>
 <p>Caso sua instalação do R seja nova, ao instalar o <code>rnp</code>, automaticamente todas as dependências serão baixadas e seu R estará equipado com todos os recursos necessários para trabalhar com este livro. A cada novo módulo adicionaremos novas dependências caso surjam.</p>
 </blockquote>
@@ -285,49 +293,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="conjuntos-de-dados" class="section level3 unnumbered">
 <h3>Conjuntos de dados</h3>
 <p>Trabalharemos com conjuntos de dados do Censo do Ensino Superior no Brasil feito anualmente pelo <a href="www.inep.gov.br/">INEP (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira)</a>, especificamente para o ano de 2017. Os dados podem ser baixados diretamente na seção de microdados do site neste link <a href="http://portal.inep.gov.br/microdados">Censo da Educação Superior de 2017</a>, ou se preferir, baixar diretamente com o comando abaixo. Em seguida descompactar os dados utilizando seu descompactador favorito.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Informe o ano dos dados e o local completo de onde deseja salvar os dados</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># conforme exemplos abaixo. Recomendamos criar uma pasta para salvar os</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># dados e torná-los mais acessíveis nas aulas.</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4">rnp<span class="op">::</span><span class="kw">rnp_get_inep_censo</span>(<span class="dt">ano =</span> <span class="dv">2017</span>, <span class="dt">salvar =</span> <span class="st">&quot;Dados/INEP/&quot;</span>)</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co"># Classes para base de dados das IES</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6">dicionario &lt;-<span class="st"> &quot;Dados/INEP/ANEXOS/ANEXO I - Dicionario de Dados e Tabelas</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="st">Auxiliares/Dicionario_de_Dados.xlsx&quot;</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8">classes &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_get_classes_inep</span>(<span class="dt">caminho =</span> dicionario, </a>
-<a class="sourceLine" id="cb2-9" data-line-number="9">                                     <span class="dt">aba =</span> <span class="st">&quot;DM_IES&quot;</span>, </a>
-<a class="sourceLine" id="cb2-10" data-line-number="10">                                     <span class="dt">retorna_lista =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co"># Leitura da base de dados  </span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12">base &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_read</span>(<span class="dt">base =</span> <span class="kw">paste0</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_IES.CSV&quot;</span>),</a>
-<a class="sourceLine" id="cb2-13" data-line-number="13">                      <span class="dt">sep =</span> <span class="st">&quot;|&quot;</span>, </a>
-<a class="sourceLine" id="cb2-14" data-line-number="14">                      <span class="dt">dec =</span> <span class="st">&quot;.&quot;</span>, </a>
-<a class="sourceLine" id="cb2-15" data-line-number="15">                      <span class="dt">header =</span> <span class="ot">TRUE</span>, </a>
-<a class="sourceLine" id="cb2-16" data-line-number="16">                      <span class="dt">encoding =</span> <span class="st">&quot;Latin-1&quot;</span>,</a>
-<a class="sourceLine" id="cb2-17" data-line-number="17">                      <span class="dt">verbose =</span> <span class="ot">FALSE</span>, </a>
-<a class="sourceLine" id="cb2-18" data-line-number="18">                      <span class="dt">showProgress =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co"># Aplicando classes aos dados</span></a>
-<a class="sourceLine" id="cb2-20" data-line-number="20">base_ies &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_aplica_classes</span>(<span class="dt">base =</span> base, <span class="dt">classes =</span> classes) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="st">    </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">Sigla =</span> SG_IES,</a>
-<a class="sourceLine" id="cb2-22" data-line-number="22">                  <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, </a>
-<a class="sourceLine" id="cb2-23" data-line-number="23">                  <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,</a>
-<a class="sourceLine" id="cb2-24" data-line-number="24">                  <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># Informe o ano dos dados e o local completo de onde deseja salvar os dados</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co"># conforme exemplos abaixo. Recomendamos criar uma pasta para salvar os</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co"># dados e torná-los mais acessíveis nas aulas.</span></a>
+<a class="sourceLine" id="cb2-4" title="4">rnp<span class="op">::</span><span class="kw">rnp_get_inep_censo</span>(<span class="dt">ano =</span> <span class="dv">2017</span>, <span class="dt">salvar =</span> <span class="st">&quot;Dados/INEP/&quot;</span>)</a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="co"># Classes para base de dados das IES</span></a>
+<a class="sourceLine" id="cb2-6" title="6">dicionario &lt;-<span class="st"> &quot;Dados/INEP/ANEXOS/ANEXO I - Dicionario de Dados e Tabelas</span></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="st">Auxiliares/Dicionario_de_Dados.xlsx&quot;</span></a>
+<a class="sourceLine" id="cb2-8" title="8">classes &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_get_classes_inep</span>(<span class="dt">caminho =</span> dicionario, </a>
+<a class="sourceLine" id="cb2-9" title="9">                                     <span class="dt">aba =</span> <span class="st">&quot;DM_IES&quot;</span>, </a>
+<a class="sourceLine" id="cb2-10" title="10">                                     <span class="dt">retorna_lista =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="co"># Leitura da base de dados  </span></a>
+<a class="sourceLine" id="cb2-12" title="12">base &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_read</span>(<span class="dt">base =</span> <span class="kw">paste0</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_IES.CSV&quot;</span>),</a>
+<a class="sourceLine" id="cb2-13" title="13">                      <span class="dt">sep =</span> <span class="st">&quot;|&quot;</span>, </a>
+<a class="sourceLine" id="cb2-14" title="14">                      <span class="dt">dec =</span> <span class="st">&quot;.&quot;</span>, </a>
+<a class="sourceLine" id="cb2-15" title="15">                      <span class="dt">header =</span> <span class="ot">TRUE</span>, </a>
+<a class="sourceLine" id="cb2-16" title="16">                      <span class="dt">encoding =</span> <span class="st">&quot;Latin-1&quot;</span>,</a>
+<a class="sourceLine" id="cb2-17" title="17">                      <span class="dt">verbose =</span> <span class="ot">FALSE</span>, </a>
+<a class="sourceLine" id="cb2-18" title="18">                      <span class="dt">showProgress =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb2-19" title="19"><span class="co"># Aplicando classes aos dados</span></a>
+<a class="sourceLine" id="cb2-20" title="20">base_ies &lt;-<span class="st"> </span>rnp<span class="op">::</span><span class="kw">rnp_aplica_classes</span>(<span class="dt">base =</span> base, <span class="dt">classes =</span> classes) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb2-21" title="21"><span class="st">    </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">Sigla =</span> SG_IES,</a>
+<a class="sourceLine" id="cb2-22" title="22">                  <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, </a>
+<a class="sourceLine" id="cb2-23" title="23">                  <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,</a>
+<a class="sourceLine" id="cb2-24" title="24">                  <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA)</a></code></pre></div>
 <blockquote>
 <p>Note que o argumento <code>salvar</code> na função <code>rnp_get_inep_censo()</code> dever conter o caminho para a pasta onde os dados baixados serão salvos.
 Se não for passada uma pasta ou seja, <code>salvar = NULL</code> o R baixará os dados na pasta da seção onde o R foi carregado. Para saber qual é este local digite <code>getwd()</code> no console do R.</p>
 </blockquote>
 <p>Você poderá também ler os dados sem descompactar com o pacote <code>readr</code>, mas recomendamos descompactar para leitura mais rápida com a função <code>rnp_read()</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">base_curso &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_delim</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_CURSO.zip&quot;</span>, </a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">                        <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>, <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;Latin1&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">base_curso &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_delim</span>(<span class="st">&quot;Dados/INEP/DADOS/DM_CURSO.zip&quot;</span>, </a>
+<a class="sourceLine" id="cb3-2" title="2">                        <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>, <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">encoding =</span> <span class="st">&quot;Latin1&quot;</span>))</a></code></pre></div>
 <p>Também disponibilizamos no pacote <code>rnp</code> os dados <code>dm_curso, dm_docente, dm_ies e dm_local</code>. Para acessar, basta carregar o pacote e utilizar os dados conforme exemplo abaixo.</p>
 <blockquote>
 <p>Especificamente para os exemplo deste livro, os dados foram tratados com as descrições das devidas classes e também removemos algumas variáveis com muitos valores nulos. Mantemos apenas as mais importantes. Acreditamos que para fins de apŕendizado, estes dados são suficientes. Porém, para ter os dados originais, sugerimos seguir as dicas anteriores.</p>
 </blockquote>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># Carrega pacote</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">require</span>(rnp, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># Ajuda do conjunto de dados</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">?rnp<span class="op">::</span>dm_curso</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">?rnp<span class="op">::</span>dm_docente</a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">?rnp<span class="op">::</span>dm_ies</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7">?rnp<span class="op">::</span>dm_local</a>
-<a class="sourceLine" id="cb4-8" data-line-number="8">base_curso &lt;-<span class="st"> </span>rnp<span class="op">::</span>dm_curso</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="co"># Carrega pacote</span></a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="kw">require</span>(rnp, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="co"># Ajuda do conjunto de dados</span></a>
+<a class="sourceLine" id="cb4-4" title="4">?rnp<span class="op">::</span>dm_curso</a>
+<a class="sourceLine" id="cb4-5" title="5">?rnp<span class="op">::</span>dm_docente</a>
+<a class="sourceLine" id="cb4-6" title="6">?rnp<span class="op">::</span>dm_ies</a>
+<a class="sourceLine" id="cb4-7" title="7">?rnp<span class="op">::</span>dm_local</a>
+<a class="sourceLine" id="cb4-8" title="8">base_curso &lt;-<span class="st"> </span>rnp<span class="op">::</span>dm_curso</a></code></pre></div>
 <hr />
 
 

@@ -24,6 +24,7 @@
 <meta name="author" content="José Evandeilton Lopes" />
 
 
+<meta name="date" content="2019-08-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -68,7 +69,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -114,7 +115,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style/style.css" type="text/css" />
+<link rel="stylesheet" href="style\style.css" type="text/css" />
 </head>
 
 <body>
@@ -254,7 +255,7 @@ Figura 1.2: Não tenho mais dúvidas
 <div id="fases-do-trabalho-estatístico" class="section level2">
 <h2><span class="header-section-number">1.2</span> Fases do trabalho estatístico</h2>
 <p>No contexto das empresas, em geral o planejamento estatístico não existe ou não é feito de forma consistente e isso ocorre muitas vezes devido ao fato de as companhias geram dados de acordo com seus próprios produtos e processos e muitas vezes sem se dar conta de que os dados poderão gerar valor. Em muitos casos, o acúmulo desordenado de dados dificulta a obtenção de conhecimento e consequente tomada de decisão. Empresas competitivas entendem o valor dos dados e investem esforço, tempo e dinheiro para gerar bases de dados robustas e orientadas para o trabalho de <em>Data Science</em>. Por isso, sempre que possível devemos nos esforçar para inserir o trabalho estatístico no planejamento de processos seguindo recomendações científicas, pois isso garantirá que as melhores ferramentas e técnicas serão empregadas desde o início da geração dos dados e maximizará o valor esperado.</p>
-<p>Como planejar pesquisas estatísticas e experimentos são temas profundos e que não cobriremos neste texto, mas para os leitores interessados sugerimos os textos de <span class="citation">(Gil <a href="#ref-gil2008metodos">2008</a>)</span> para Métodos e Técnicas de Pesquisa; Fundamentos de metodologia científica do <span class="citation">(Köche <a href="#ref-koche2016fundamentos">2016</a>)</span>. Para planejamento de experimentos, sugerimos o texto de <span class="citation">(Montgomery <a href="#ref-montgomery2017design">2017</a>)</span>.</p>
+<p>Como planejar pesquisas estatísticas e experimentos são temas profundos e que não cobriremos neste texto, mas para os leitores interessados sugerimos os textos de <span class="citation">(Gil <a href="#ref-gil2008metodos" role="doc-biblioref">2008</a>)</span> para Métodos e Técnicas de Pesquisa; Fundamentos de metodologia científica do <span class="citation">(Köche <a href="#ref-koche2016fundamentos" role="doc-biblioref">2016</a>)</span>. Para planejamento de experimentos, sugerimos o texto de <span class="citation">(Montgomery <a href="#ref-montgomery2017design" role="doc-biblioref">2017</a>)</span>.</p>
 <p>A figura <a href="estatística.html#fig:fig00">1.3</a> exibe um <em>roadmap</em> das principais etapas do processo estatístico.</p>
 <div class="figure" style="text-align: center"><span id="fig:fig00"></span>
 <img src="../Imagens/ebook_processo_estats.png" alt="Fases do trabalho estatístico" width="100%" />
@@ -322,7 +323,7 @@ muitas pessoas tendem a pensar que se colocar os dados no computador e passar o 
 <p>Desde que o conceito de dado passou a existir, a estatística se faz presente. A seguir um pequeno texto que relaciona a estatística com <em>Data Science</em> e <em>Big Data</em>.</p>
 <p>Estatística e <em>Data Science</em> (Ciência de Dados) são partes inseparáveis. De certa forma, a estatística é um subconjunto da ciência de dados. Mas o que é <em>Data Science</em>? É difícil definir um conceito tão amplo porém, a <em>Wikipedia</em> Norte Americana coloca da seguinte forma:</p>
 <blockquote>
-<p><em>Data science, also known as data-driven science, is an interdisciplinary field about scientific methods, processes and systems to extract knowledge or insights from data in various forms, either structured or unstructured, similar to Knowledge Discovery in Databases (KDD)</em>. Fonte: <a href="https://www.wikiwand.com/en/Data_science" class="uri">https://www.wikiwand.com/en/Data_science</a>, acesso em “29/11/2019”</p>
+<p><em>Data science, also known as data-driven science, is an interdisciplinary field about scientific methods, processes and systems to extract knowledge or insights from data in various forms, either structured or unstructured, similar to Knowledge Discovery in Databases (KDD)</em>. Fonte: <a href="https://www.wikiwand.com/en/Data_science" class="uri">https://www.wikiwand.com/en/Data_science</a>, acesso em “08/12/2019”</p>
 </blockquote>
 <p>No texto acima podemos isolar o termo <em>interdisciplinary</em> que remete a um conjunto de muitas áreas do conhecimento. Podemos marcar desta definição aos conceitos:</p>
 <ul>
@@ -330,11 +331,11 @@ muitas pessoas tendem a pensar que se colocar os dados no computador e passar o 
 <li><strong>Processos</strong> - Organização de passos para atingir um objetivo;</li>
 <li><strong>Sistemas</strong> - Sistemas informatizados, por exemplo, são ferramentas superpoderosas para realizar <em>Data Science</em>.</li>
 </ul>
-<p>Tudo com objetivo de obter conhecimento com base em dados, sejam eles estruturados ou não estruturados. Expandindo mais um pouco, pode-se incluir o termo <em>Big Data</em> que envolve dados estruturados ou não estruturados em grandes volumes. O conceito de <em>Big Data</em> também é complexo e discutível. <span class="citation">(De Mauro, Greco, and Grimaldi <a href="#ref-de2016formal">2016</a>)</span> propõem uma definição deste termo como segue.</p>
+<p>Tudo com objetivo de obter conhecimento com base em dados, sejam eles estruturados ou não estruturados. Expandindo mais um pouco, pode-se incluir o termo <em>Big Data</em> que envolve dados estruturados ou não estruturados em grandes volumes. O conceito de <em>Big Data</em> também é complexo e discutível. <span class="citation">(De Mauro, Greco, and Grimaldi <a href="#ref-de2016formal" role="doc-biblioref">2016</a>)</span> propõem uma definição deste termo como segue.</p>
 <blockquote>
 <p><em>Big Data is the Information asset characterized by such a High Volume, Velocity and Variety to require specific Technology and Analytical Methods for its transformation into Value.</em></p>
 </blockquote>
-<p>Deixamos ao leitor interessado consultar <span class="citation">(De Mauro, Greco, and Grimaldi <a href="#ref-de2016formal">2016</a>)</span> para mais definições sobre <em>Big Data</em>.</p>
+<p>Deixamos ao leitor interessado consultar <span class="citation">(De Mauro, Greco, and Grimaldi <a href="#ref-de2016formal" role="doc-biblioref">2016</a>)</span> para mais definições sobre <em>Big Data</em>.</p>
 <p>Podemos isolar nesta definição os termos:</p>
 <ul>
 <li><strong>Volume Alto</strong> - O termos alto pode ser relativo e depende do tipo de computador que está suportando a análise. Nós entendemos como volume alto qualquer base de dados que não pode ser processada por um sistema de tabulação como <em>LibreOffice calc</em> e seu concorrente da <em>Microsoft</em>;</li>
@@ -350,24 +351,24 @@ muitas pessoas tendem a pensar que se colocar os dados no computador e passar o 
 <div id="conceitos-e-definições" class="section level2">
 <h2><span class="header-section-number">1.6</span> Conceitos e definições</h2>
 <p>A partir de agora iniciamos os estudos de estatística e para melhor compreender alguns conceitos, vamos trabalhar com o conjunto de dados da IES do Censo da Educação Superior no Brasil de 2017.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co"># Carregando pacote rnp</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="kw">require</span>(rnp, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co"># Dados IES</span></a>
-<a class="sourceLine" id="cb5-5" data-line-number="5">base_ies &lt;-<span class="st"> </span>rnp<span class="op">::</span>dm_ies </a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co"># Tabela</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8">base_ies <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">Sigla =</span> SG_IES,</a>
-<a class="sourceLine" id="cb5-10" data-line-number="10">                <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, </a>
-<a class="sourceLine" id="cb5-11" data-line-number="11">                <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,</a>
-<a class="sourceLine" id="cb5-12" data-line-number="12">                <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(Sigla, TotalTecnicos, ReceitaPropria,DespesaPesquisa) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">align =</span> <span class="st">&quot;llrrr&quot;</span>, </a>
-<a class="sourceLine" id="cb5-16" data-line-number="16">             <span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata,</a>
-<a class="sourceLine" id="cb5-17" data-line-number="17">             <span class="dt">caption =</span> <span class="st">&quot;Dez primeiras observações base de IES&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-18" data-line-number="18"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="co"># Carregando pacote rnp</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw">require</span>(rnp, <span class="dt">quietly =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb5-3" title="3"></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="co"># Dados IES</span></a>
+<a class="sourceLine" id="cb5-5" title="5">base_ies &lt;-<span class="st"> </span>rnp<span class="op">::</span>dm_ies </a>
+<a class="sourceLine" id="cb5-6" title="6"></a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="co"># Tabela</span></a>
+<a class="sourceLine" id="cb5-8" title="8">base_ies <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-9" title="9"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate</span>(<span class="dt">Sigla =</span> SG_IES,</a>
+<a class="sourceLine" id="cb5-10" title="10">                <span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL, </a>
+<a class="sourceLine" id="cb5-11" title="11">                <span class="dt">ReceitaPropria =</span> VL_RECEITA_PROPRIA,</a>
+<a class="sourceLine" id="cb5-12" title="12">                <span class="dt">DespesaPesquisa =</span> VL_DESPESA_PESQUISA) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-13" title="13"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw">select</span>(Sigla, TotalTecnicos, ReceitaPropria,DespesaPesquisa) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-14" title="14"><span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-15" title="15"><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">digits =</span> <span class="dv">2</span>, <span class="dt">align =</span> <span class="st">&quot;llrrr&quot;</span>, </a>
+<a class="sourceLine" id="cb5-16" title="16">             <span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata,</a>
+<a class="sourceLine" id="cb5-17" title="17">             <span class="dt">caption =</span> <span class="st">&quot;Dez primeiras observações base de IES&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-18" title="18"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</a></code></pre></div>
 <table>
 <caption><span id="tab:tab01">Tabela 1.1: </span>Dez primeiras observações base de IES</caption>
 <thead>
@@ -495,7 +496,7 @@ Figura 1.7: Tipos de variáveis
 </div>
 <div id="tidydata" class="section level3">
 <h3><span class="header-section-number">1.6.5</span> <em>tidydata</em></h3>
-<p>Em seu artigo, <span class="citation">(Wickham and others <a href="#ref-wickham2014tidy">2014</a>)</span> discutem e mostram uma forma repensada de organizar tabelas estruturadas para análise de dados. De forma simples, um significado para <em><code>tidy data</code></em> é: dados arrumados, organizados.
+<p>Em seu artigo, <span class="citation">(Wickham and others <a href="#ref-wickham2014tidy" role="doc-biblioref">2014</a>)</span> discutem e mostram uma forma repensada de organizar tabelas estruturadas para análise de dados. De forma simples, um significado para <em><code>tidy data</code></em> é: dados arrumados, organizados.
 Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:</p>
 <ul>
 <li>Cada observação é uma linha;</li>
@@ -503,14 +504,14 @@ Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:<
 </li>
 <li>Cada valor está em uma célula (linha x coluna);</li>
 </ul>
-<p>Dados neste formato ajudam a tornar a análise mais rápida, principalmente com as ferramentas do <code>tidyverso</code> <span class="citation">(Wickham <a href="#ref-wickham2017tidyverse">2017</a>)</span>. A Tabela <a href="estatística.html#tab:tab01">1.1</a> mostra uma configuração de dados <code>tidy</code>, onde cada linha representa uma observação ou indivíduo que no caso é uma IES; cada coluna representa uma variável ou característica, por exemplo <code>Sigla</code> ou <code>ReceitaPropria</code> da IES e o cruzamento entre linhas e colunas são os valores correspondentes.</p>
+<p>Dados neste formato ajudam a tornar a análise mais rápida, principalmente com as ferramentas do <code>tidyverso</code> <span class="citation">(Wickham <a href="#ref-wickham2017tidyverse" role="doc-biblioref">2017</a>)</span>. A Tabela <a href="estatística.html#tab:tab01">1.1</a> mostra uma configuração de dados <code>tidy</code>, onde cada linha representa uma observação ou indivíduo que no caso é uma IES; cada coluna representa uma variável ou característica, por exemplo <code>Sigla</code> ou <code>ReceitaPropria</code> da IES e o cruzamento entre linhas e colunas são os valores correspondentes.</p>
 <p><strong>Observação:</strong> Nas empresas o conceito de <code>tidy data</code> geralmente é atribuído ao que chamam de <code>ABT (Analytics Base Table)</code>. Este é o estado da arte que nem sempre é fácil de se chagar, mas uma vez lá, os dados estarão prontos para todo tipo de análise estatística e modelagem.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co"># Exemplos de tidydasets</span></a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(</a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">  <span class="kw">list</span>(<span class="kw">head</span>(mtcars[,<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dv">10</span>), <span class="kw">head</span>(dplyr<span class="op">::</span>starwars[,<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dv">10</span>)),</a>
-<a class="sourceLine" id="cb6-4" data-line-number="4">  <span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata, </a>
-<a class="sourceLine" id="cb6-5" data-line-number="5">  <span class="dt">caption =</span> <span class="st">&quot;Amostra de outras tabelas de dados organizados&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="co"># Exemplos de tidydasets</span></a>
+<a class="sourceLine" id="cb6-2" title="2">knitr<span class="op">::</span><span class="kw">kable</span>(</a>
+<a class="sourceLine" id="cb6-3" title="3">  <span class="kw">list</span>(<span class="kw">head</span>(mtcars[,<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dv">10</span>), <span class="kw">head</span>(dplyr<span class="op">::</span>starwars[,<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>], <span class="dv">10</span>)),</a>
+<a class="sourceLine" id="cb6-4" title="4">  <span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata, </a>
+<a class="sourceLine" id="cb6-5" title="5">  <span class="dt">caption =</span> <span class="st">&quot;Amostra de outras tabelas de dados organizados&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</a></code></pre></div>
 <table class="kable_wrapper">
 <caption>
 <span id="tab:tab02">Tabela 1.2: </span>Amostra de outras tabelas de dados organizados
@@ -681,7 +682,7 @@ Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:<
 </table>
 <div style="page-break-after: always;"></div>
 <hr />
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">.</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">.</a></code></pre></div>
 </div>
 <div id="exercícios-resolvidos" class="section level3">
 <h3><span class="header-section-number">1.6.6</span> Exercícios resolvidos</h3>
@@ -699,7 +700,7 @@ Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:<
  <span class="solution"><em>Solução. </em></span> Neste caso, a população se confunde com um censo, pois a base das IES faz parte do levantamento censitário de 2017 e contempla, a princípio todas as IES do Brasil
 </div>
 
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">paste</span>(<span class="kw">nrow</span>(base_ies), <span class="st">&quot;Universidades.&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">paste</span>(<span class="kw">nrow</span>(base_ies), <span class="st">&quot;Universidades.&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;2448 Universidades.&quot;</code></pre>
 
 <div class="exercise">
@@ -711,10 +712,10 @@ Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:<
  <span class="solution"><em>Solução. </em></span> Uma amostra poderia ser todas as IES grandes com mais de 2000 técnicos.
 </div>
 
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">paste</span>(<span class="st">&quot;A base tem&quot;</span>, </a>
-<a class="sourceLine" id="cb10-2" data-line-number="2">      base_ies <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">transmute</span>(<span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="st">        </span><span class="kw">filter</span>(TotalTecnicos <span class="op">&gt;</span><span class="st"> </span><span class="dv">2000</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb10-4" data-line-number="4"><span class="st">        </span><span class="kw">nrow</span>(), <span class="st">&quot;IES com mais de 2000 técnicos&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="kw">paste</span>(<span class="st">&quot;A base tem&quot;</span>, </a>
+<a class="sourceLine" id="cb10-2" title="2">      base_ies <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">transmute</span>(<span class="dt">TotalTecnicos =</span> QT_TEC_TOTAL) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="st">        </span><span class="kw">filter</span>(TotalTecnicos <span class="op">&gt;</span><span class="st"> </span><span class="dv">2000</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="st">        </span><span class="kw">nrow</span>(), <span class="st">&quot;IES com mais de 2000 técnicos&quot;</span>)</a></code></pre></div>
 <pre><code>## [1] &quot;A base tem 29 IES com mais de 2000 técnicos&quot;</code></pre>
 
 <div class="exercise">
@@ -782,11 +783,11 @@ Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:<
  <span class="solution"><em>Solução. </em></span> A base IES possui 2448 linhas (observações) e 47 colunas (variáveis). Esta informação poderá ser obtida através da função <code>rnp_atributos()</code>.
 </div>
 
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="co"># Listando os atributos da base de ies para as 10 primeiras colunas</span></a>
-<a class="sourceLine" id="cb12-2" data-line-number="2">rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_ies) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb12-5" data-line-number="5"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="co"># Listando os atributos da base de ies para as 10 primeiras colunas</span></a>
+<a class="sourceLine" id="cb12-2" title="2">rnp<span class="op">::</span><span class="kw">rnp_atributos</span>(base_ies) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-4" title="4"><span class="st">  </span>knitr<span class="op">::</span><span class="kw">kable</span>(<span class="dt">booktabs =</span> <span class="ot">TRUE</span>, <span class="dt">format =</span> tb_formata) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-5" title="5"><span class="st">  </span>kableExtra<span class="op">::</span><span class="kw">kable_styling</span>(<span class="dt">latex_options =</span> <span class="st">&quot;hold_position&quot;</span>)</a></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -889,7 +890,7 @@ Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:<
  <span class="solution"><em>Solução. </em></span> Como temos o relacionamento de três variáveis, neste caso temos uma análise multivariada.
 </div>
 
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">.</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">.</a></code></pre></div>
 <hr />
 <div style="page-break-after: always;"></div>
 </div>
@@ -898,13 +899,13 @@ Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:<
 <h3>Referências</h3>
 <div id="refs" class="references">
 <div id="ref-de2016formal">
-<p>De Mauro, Andrea, Marco Greco, and Michele Grimaldi. 2016. “A Formal Definition of Big Data Based on Its Essential Features.” <em>Library Review</em> 65 (3). Emerald Group Publishing Limited: 122–35.</p>
+<p>De Mauro, Andrea, Marco Greco, and Michele Grimaldi. 2016. “A Formal Definition of Big Data Based on Its Essential Features.” <em>Library Review</em> 65 (3): 122–35.</p>
 </div>
 <div id="ref-gil2008metodos">
 <p>Gil, Antonio Carlos. 2008. <em>Métodos E Técnicas de Pesquisa Social</em>. 6. ed. Ediitora Atlas SA.</p>
 </div>
 <div id="ref-koche2016fundamentos">
-<p>Köche, José Carlos. 2016. <em>Fundamentos de Metodologia Cientı'fica</em>. Editora Vozes.</p>
+<p>Köche, José Carlos. 2016. <em>Fundamentos de Metodologia Cientı́fica</em>. Editora Vozes.</p>
 </div>
 <div id="ref-montgomery2017design">
 <p>Montgomery, Douglas C. 2017. <em>Design and Analysis of Experiments</em>. John wiley &amp; sons.</p>
@@ -913,7 +914,7 @@ Um conjunto de dados para ser <code>tidy</code> precisa ter três ingredientes:<
 <p>Wickham, Hadley. 2017. “Tidyverse: Easily Install and Load’tidyverse’packages.” <em>R Package Version</em> 1 (1).</p>
 </div>
 <div id="ref-wickham2014tidy">
-<p>Wickham, Hadley, and others. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10). Foundation for Open Access Statistics: 1–23.</p>
+<p>Wickham, Hadley, and others. 2014. “Tidy Data.” <em>Journal of Statistical Software</em> 59 (10): 1–23.</p>
 </div>
 </div>
             </section>
